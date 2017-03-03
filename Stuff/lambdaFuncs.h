@@ -5,6 +5,13 @@
 #include <algorithm>
 #include <vector>
 
+//One guy claimed that lambda functions is good to maintain
+//functional programming due to limiting function into restricted size.
+//The function, to my understanding is inlining a lot, rather than
+//creating entirely new functions. Better in performance? I dunno.
+//Does it feel better to use? Perhaps in combination of algorithms.
+//Declaring the lambda before a for-loop, to use it inside might be cool tho.
+
 inline void lambdaHelloWord()
 {
 	//basic
@@ -62,10 +69,4 @@ inline void lambdaSTL()
 	//{
 	//	cout << *itr;
 	//}
-}
-
-inline void lambda()
-{
-
-
 }
