@@ -22,6 +22,12 @@
     <Filter Include="Move Semantics">
       <UniqueIdentifier>{d0dda8b6-9c76-4bf9-9e4d-4d5d787cf5f5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="LambdaFuncs">
+      <UniqueIdentifier>{76fd4abc-b836-46dc-9d0b-5d0bec70b0f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Multithreading">
+      <UniqueIdentifier>{7941630c-4f48-4535-8016-5fa82caaf83e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -61,6 +67,12 @@
     </ClInclude>
     <ClInclude Include="MoveSemantics.h">
       <Filter>Move Semantics</Filter>
+    </ClInclude>
+    <ClInclude Include="lambdaFuncs.h">
+      <Filter>LambdaFuncs</Filter>
+    </ClInclude>
+    <ClInclude Include="Multithreading.h">
+      <Filter>Polymorphism</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

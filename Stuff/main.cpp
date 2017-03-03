@@ -10,6 +10,8 @@ using namespace std;
 
 #include "MoveSemantics.h"
 
+#include "lambdaFuncs.h"
+
 #include <memory>
 #include <array>
 
@@ -64,7 +66,7 @@ int main()
 	{
 		const int CAP = 5;
 		std::array<int, CAP> nummer;
-		for (size_t i = 0; i < CAP; i++)
+		for (int i = 0; i < CAP; i++)
 		{
 			nummer[i] = i + 1;
 		}
@@ -114,7 +116,9 @@ int main()
 
 	//Lambda
 	{
-		
+		lambdaHelloWord();
+		lambdaBasicExample();
+		lambdaPassParameter();
 	}
 
 	system("pause");

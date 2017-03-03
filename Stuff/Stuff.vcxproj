@@ -151,7 +151,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Car.h" />
+    <ClInclude Include="lambdaFuncs.h" />
     <ClInclude Include="MoveSemantics.h" />
+    <ClInclude Include="Multithreading.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Seat.h" />
     <ClInclude Include="Square.h" />
