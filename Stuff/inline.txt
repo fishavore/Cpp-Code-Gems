@@ -1,0 +1,23 @@
+The keyword inline is not always necessary as the compiler will do this for us.
+
+do:
+use inline instead of #define
+very small functions are good candidates for inline: faster code and smaller executables (more chances to stay in the code cache)
+the function is small and called very often
+
+don't:
+large functions: leads to larger executables, which significantly impairs performance regardless of the faster execution that results from the calling overhead
+inline functions that are I/O bound
+the function is seldom used
+constructors and destructors: even when empty, the compiler generates code for them
+breaking binary compatibility when developing libraries:
+inline an existing function
+change an inline function or make an inline function non-inline: prior version of the library call the old implementation
+when developing a library, in order to make a class extensible in the future you should:
+
+add non-inline virtual destructor even if the body is empty
+make all constructors non-inline
+write non-inline implementations of the copy constructor and assignment operator unless the class cannot be copied by value
+Remember that the inline keyword is a hint to the compiler: the compiler may decide not to inline a function and it can decide to inline functions that were not marked inline in the first place. I generally avoid marking function inline (apart maybe when writing very very small functions).
+
+About performance, the wise approach is (as always) to profile the application, then eventually inline a set of functions representing a bottleneck.

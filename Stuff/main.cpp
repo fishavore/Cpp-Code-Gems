@@ -121,6 +121,11 @@ int main()
 		lambdaPassParameter();
 	}
 
+	//multithreading
+	{
+		
+	}
+
 	system("pause");
 	return 0;
 }

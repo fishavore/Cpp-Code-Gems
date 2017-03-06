@@ -28,6 +28,12 @@
     <Filter Include="Multithreading">
       <UniqueIdentifier>{7941630c-4f48-4535-8016-5fa82caaf83e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Performance">
+      <UniqueIdentifier>{286263ec-90c7-4e36-8202-8e30086c42cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Information Text">
+      <UniqueIdentifier>{04e82b4c-04e9-42ea-8645-02597a3d84df}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -74,5 +80,10 @@
     <ClInclude Include="Multithreading.h">
       <Filter>Polymorphism</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="inline.txt">
+      <Filter>Information Text</Filter>
+    </Text>
   </ItemGroup>
 </Project>
