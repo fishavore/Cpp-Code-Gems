@@ -1,0 +1,31 @@
+String constants and floating point constants are stored in static memory in optimized code.
+Example:
+// Example 7.2
+a = b * 3.5;
+c = d + 3.5;
+Here, the constant 3.5 will be stored in static memory. Most compilers will recognize that
+the two constants are identical so that only one constant needs to be stored. All identical
+constants in the entire program will be joined together in order to minimize the amount of
+cache space used for constants.
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+Floating point division
+Floating point division takes much longer time than addition, subtraction and multiplication
+(20 - 45 clock cycles).
+Floating point division by a constant should be done by multiplying with the reciprocal:
+// Example 14.14a
+double a, b;
+a = b / 1.2345;
+Change this to:
+// Example 14.14b
+double a, b;
+a = b * (1. / 1.2345);
+The compiler will calculate (1./1.2345) at compile time and insert the reciprocal in the
+code, so you will never spend time doing the division. Some compilers will replace the code 
+143
+in example 14.14a with 14.14b automatically but only if certain options are set to relax
+floating point precision (see page 74). It is therefore safer to do this optimization explicitly
+
+////////////////////////////////////////////////////////////////////////////////////////////

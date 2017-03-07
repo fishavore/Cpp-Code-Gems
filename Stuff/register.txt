@@ -1,0 +1,14 @@
+Register storage
+A limited number of variables can be stored in registers instead of main memory. A register
+is a small piece of memory inside the CPU used for temporary storage. Variables that are
+stored in registers are accessed very fast. All optimizing compilers will automatically choose
+the most often used variables in a function for register storage. The same register can be
+used for multiple variables as long as their uses (live ranges) do not overlap.
+28
+The number of registers is very limited. There are approximately six integer registers
+available for general purposes in 32-bit operating systems and fourteen integer registers in
+64-bit systems.
+Floating point variables use a different kind of registers. There are eight floating point
+registers available in 32-bit operating systems and sixteen in 64-bit operating systems.
+Some compilers have difficulties making floating point register variables in 32-bit mode
+unless the SSE2 instruction set (or higher) is enabled.
