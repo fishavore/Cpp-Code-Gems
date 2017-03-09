@@ -153,6 +153,7 @@
     <ClInclude Include="bitwise.h" />
     <ClInclude Include="Car.h" />
     <ClInclude Include="lambdaFuncs.h" />
+    <ClInclude Include="lookupTable.h" />
     <ClInclude Include="MoveSemantics.h" />
     <ClInclude Include="Multithreading.h" />
     <ClInclude Include="Rectangle.h" />

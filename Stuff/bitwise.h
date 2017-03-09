@@ -1,6 +1,10 @@
 #pragma once
 #include <iostream>
 
+//AND &
+//OR |
+//XOR ^
+
 inline void bitwiseBasic()
 {
 	const int CAP = 10;
@@ -19,8 +23,6 @@ inline void bitwiseBasic()
 	//01
 	//01
 	//AND => 01
-
-
 
 	for (int i = 0; i < CAP; i++)
 	{
@@ -65,3 +67,4 @@ inline void bitwiseBasic()
 
 	std::cout << "\n";
 }
+

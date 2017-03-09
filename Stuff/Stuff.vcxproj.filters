@@ -37,6 +37,9 @@
     <Filter Include="bitwise operator">
       <UniqueIdentifier>{90d8f1a8-269d-47cb-a0b9-a3583a7e0f44}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Look up tables">
+      <UniqueIdentifier>{4bb536a6-743f-485c-a1cf-928ff9e13ab3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -85,6 +88,9 @@
     </ClInclude>
     <ClInclude Include="bitwise.h">
       <Filter>bitwise operator</Filter>
+    </ClInclude>
+    <ClInclude Include="lookupTable.h">
+      <Filter>Look up tables</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

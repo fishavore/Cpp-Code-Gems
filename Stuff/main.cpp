@@ -12,6 +12,7 @@ using namespace std;
 
 #include "lambdaFuncs.h"
 #include "bitwise.h"
+#include "lookupTable.h"
 
 #include <memory>
 #include <array>
@@ -125,6 +126,11 @@ int main()
 	//bitoperators
 	{
 		bitwiseBasic();
+	}
+
+	//look up table
+	{
+		lookupTable();
 	}
 
 	system("pause");
