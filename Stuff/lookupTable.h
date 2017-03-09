@@ -27,6 +27,8 @@ inline void lookupTable()
 {
 	int n = 5;
 	std::string val;
+
+	//Not a look up table. This is a switch statement.
 	switch (n)
 	{
 	case 0:
@@ -57,7 +59,7 @@ inline void lookupTable()
 	std::cout << val << "\n";
 
 
-	//The actual lookup table.
+	//The lookup table. Just a simple const array bruh.
 	//Notice double const as to both the value and the pointer is const.
 	const std::string const stringArray[7] = { "Look", "up", "table", "LUL", "OMFG", "So nice", "Not switchstatements tho" };
 	if (n < 6)
