@@ -34,6 +34,9 @@
     <Filter Include="Information Text">
       <UniqueIdentifier>{04e82b4c-04e9-42ea-8645-02597a3d84df}</UniqueIdentifier>
     </Filter>
+    <Filter Include="bitwise operator">
+      <UniqueIdentifier>{90d8f1a8-269d-47cb-a0b9-a3583a7e0f44}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -79,6 +82,9 @@
     </ClInclude>
     <ClInclude Include="Multithreading.h">
       <Filter>Polymorphism</Filter>
+    </ClInclude>
+    <ClInclude Include="bitwise.h">
+      <Filter>bitwise operator</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

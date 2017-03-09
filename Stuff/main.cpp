@@ -11,6 +11,7 @@ using namespace std;
 #include "MoveSemantics.h"
 
 #include "lambdaFuncs.h"
+#include "bitwise.h"
 
 #include <memory>
 #include <array>
@@ -121,9 +122,9 @@ int main()
 		lambdaPassParameter();
 	}
 
-	//multithreading
+	//bitoperators
 	{
-		
+		bitwiseBasic();
 	}
 
 	system("pause");
