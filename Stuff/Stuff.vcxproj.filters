@@ -22,15 +22,6 @@
     <Filter Include="LambdaFuncs">
       <UniqueIdentifier>{76fd4abc-b836-46dc-9d0b-5d0bec70b0f8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Multithreading">
-      <UniqueIdentifier>{7941630c-4f48-4535-8016-5fa82caaf83e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Performance">
-      <UniqueIdentifier>{286263ec-90c7-4e36-8202-8e30086c42cc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Information Text">
-      <UniqueIdentifier>{04e82b4c-04e9-42ea-8645-02597a3d84df}</UniqueIdentifier>
-    </Filter>
     <Filter Include="bitwise operator">
       <UniqueIdentifier>{90d8f1a8-269d-47cb-a0b9-a3583a7e0f44}</UniqueIdentifier>
     </Filter>
@@ -42,6 +33,18 @@
     </Filter>
     <Filter Include="rvalue">
       <UniqueIdentifier>{fdcbabab-2fbc-4a51-94da-7844ddb53f6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="const">
+      <UniqueIdentifier>{79900369-0542-497b-86ad-f6e72d384341}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Other">
+      <UniqueIdentifier>{04e82b4c-04e9-42ea-8645-02597a3d84df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Smartpointers">
+      <UniqueIdentifier>{53d080fd-c192-4802-80a7-f9cc980bd7e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HelpFiles">
+      <UniqueIdentifier>{3e5a1439-085e-4633-9a77-02afc3edbb75}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -57,11 +60,11 @@
     <ClCompile Include="Wheel.cpp">
       <Filter>Polymorphism</Filter>
     </ClCompile>
-    <ClCompile Include="Square.cpp">
-      <Filter>Friends</Filter>
-    </ClCompile>
     <ClCompile Include="Rectangle.cpp">
-      <Filter>Friends</Filter>
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Square.cpp">
+      <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -74,17 +77,8 @@
     <ClInclude Include="Seat.h">
       <Filter>Polymorphism</Filter>
     </ClInclude>
-    <ClInclude Include="Square.h">
-      <Filter>Friends</Filter>
-    </ClInclude>
-    <ClInclude Include="Rectangle.h">
-      <Filter>Friends</Filter>
-    </ClInclude>
     <ClInclude Include="lambdaFuncs.h">
       <Filter>LambdaFuncs</Filter>
-    </ClInclude>
-    <ClInclude Include="Multithreading.h">
-      <Filter>Polymorphism</Filter>
     </ClInclude>
     <ClInclude Include="bitwise.h">
       <Filter>bitwise operator</Filter>
@@ -98,10 +92,25 @@
     <ClInclude Include="rvaluereference.h">
       <Filter>rvalue</Filter>
     </ClInclude>
+    <ClInclude Include="constExamples.h">
+      <Filter>const</Filter>
+    </ClInclude>
+    <ClInclude Include="smartpointers.h">
+      <Filter>Smartpointers</Filter>
+    </ClInclude>
+    <ClInclude Include="Rectangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Square.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="friends.h">
+      <Filter>Friends</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="inline.txt">
-      <Filter>Information Text</Filter>
+      <Filter>Other</Filter>
     </Text>
   </ItemGroup>
 </Project>

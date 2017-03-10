@@ -31,6 +31,9 @@ using namespace std;
 #include "bitwise.h"
 #include "lookupTable.h"
 #include "constexpression.h"
+#include "constExamples.h"
+#include "smartpointers.h"
+#include "friends.h"
 
 #include <memory>
 #include <array>
@@ -56,30 +59,12 @@ int main()
 
 	//Friend class
 	{
-		Rectangle rect;
-		rect.Print();
-		Square square = Square(5, 99);
-		cout << "lul: " << square.ReturnX() << endl;
-		rect.SetSide(square);
-		rect.Print();
+		friends();
 	}
 
 	//Smart pointers
-	//auto myobj = std::make_unique<MyClass>(constructor_param1, constructor_param2); // C++14
-	//auto myobj = std::unique_ptr<MyClass>(new MyClass(constructor_param1, constructor_param2)); // C++11
 	{
-		auto mySquare = std::make_unique<Square>(5, 101);
-		cout << "SmartPointer 1: " << mySquare->ReturnX() << endl;
-		//alt.
-		std::unique_ptr<Square> mySquare2 = std::make_unique<Square>(5, 102);
-		cout << "SmartPointer 2: " << mySquare2->ReturnX() << endl;
-		//Shared
-
-		auto mySquare3 = std::make_shared<Square>(5, 103);
-		cout << "SharedPointer 3: " << mySquare3->ReturnX() << endl;
-		std::shared_ptr<Square> mySquare4 = mySquare3;
-		//alt
-		cout << "SharedPointer 4: " << mySquare4->ReturnX() << endl;
+		smartpointers();
 	}
 
 	//std array
@@ -98,18 +83,7 @@ int main()
 
 	//const check
 	{
-		Wheel wheel;
-		wheel.setValue(5);
-		cout << "Othervalue" << wheel.getOtherValue() << endl;
-	}
-
-	//smart pointers
-	{
-		unique_ptr<Wheel> carPart(new Wheel());
-		carPart->Print();
-
-		shared_ptr<Seat> carPart2(new Seat());
-		carPart2->Print();
+		constExamples();
 	}
 
 	//rvalue reference

@@ -18,7 +18,7 @@ void Wheel::Brand()
 
 void Wheel::setValue(const int val)
 {
-	otherValue = val - 1;
+	otherValue = val;
 }
 
 int Wheel::getOtherValue()
