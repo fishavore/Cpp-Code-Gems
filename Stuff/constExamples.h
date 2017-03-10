@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
-namespace ConstExamplePrivate
+
+inline void constExamples()
 {
 	struct A
 	{
@@ -15,12 +16,7 @@ namespace ConstExamplePrivate
 		{
 			value = input;
 		}
-	};
-};
-
-inline void constExamples()
-{
-	ConstExamplePrivate::A A;
+	}A;
 	
 	A.setValue(5);
 	std::cout << "5: "<< A.getValue() << "\n";
@@ -34,4 +30,9 @@ inline void constExamples()
 	// Either the data was unsafe or they were still dynamic input. All I 
 	//could think of was to just make an enum/struct of some sort as an
 	//alternative.
+
+	
+	//Whether the constants are defined with enum, const, or #define
+	//makes no difference for the performance.
+	
 }

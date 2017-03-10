@@ -1,2 +1,5 @@
 1. Whether the constants are defined with enum, const, or #define
-makes no difference for the performance.
+makes no difference for the performance.2. Instead of:	a = b / 1.2345;You should:		a = b * (1. / 1.2345);
+The compiler will calculate (1./1.2345) at compile time and insert the reciprocal in the
+code, so you will never spend time doing the division. Some compilers will make this for
+you but only if certain options are set to relax floating point precision.

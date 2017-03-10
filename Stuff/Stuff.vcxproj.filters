@@ -112,5 +112,8 @@
     <Text Include="inline.txt">
       <Filter>Other</Filter>
     </Text>
+    <Text Include="ShortAdvice.txt">
+      <Filter>Other</Filter>
+    </Text>
   </ItemGroup>
 </Project>
