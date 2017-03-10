@@ -19,9 +19,6 @@
     <Filter Include="Friends">
       <UniqueIdentifier>{d603a32e-4d4c-4c9a-a72c-d29c611ebf82}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Move Semantics">
-      <UniqueIdentifier>{d0dda8b6-9c76-4bf9-9e4d-4d5d787cf5f5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="LambdaFuncs">
       <UniqueIdentifier>{76fd4abc-b836-46dc-9d0b-5d0bec70b0f8}</UniqueIdentifier>
     </Filter>
@@ -39,6 +36,12 @@
     </Filter>
     <Filter Include="Look up tables">
       <UniqueIdentifier>{4bb536a6-743f-485c-a1cf-928ff9e13ab3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="constexpr">
+      <UniqueIdentifier>{7ad78b65-8b21-490c-8ada-3fef6e050288}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rvalue">
+      <UniqueIdentifier>{fdcbabab-2fbc-4a51-94da-7844ddb53f6d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -77,9 +80,6 @@
     <ClInclude Include="Rectangle.h">
       <Filter>Friends</Filter>
     </ClInclude>
-    <ClInclude Include="MoveSemantics.h">
-      <Filter>Move Semantics</Filter>
-    </ClInclude>
     <ClInclude Include="lambdaFuncs.h">
       <Filter>LambdaFuncs</Filter>
     </ClInclude>
@@ -91,6 +91,12 @@
     </ClInclude>
     <ClInclude Include="lookupTable.h">
       <Filter>Look up tables</Filter>
+    </ClInclude>
+    <ClInclude Include="constexpression.h">
+      <Filter>constexpr</Filter>
+    </ClInclude>
+    <ClInclude Include="rvaluereference.h">
+      <Filter>rvalue</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

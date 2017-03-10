@@ -25,7 +25,7 @@ using namespace std;
 #include "Rectangle.h"
 #include "Square.h"
 
-#include "MoveSemantics.h"
+#include "rvaluereference.h"
 
 #include "lambdaFuncs.h"
 #include "bitwise.h"
@@ -114,15 +114,7 @@ int main()
 
 	//rvalue reference
 	{
-		int&& i = 42;
-		int j = 42;
-		//int&& k = j; // wont compile as j isn't a rvalue. it's a lvalue.
-
-		std::vector<int> fillThisVar, fillThisVar2;
-		process_copy(fillThisVar); //clumsy
-		process_copy(std::move(fillThisVar2)); //ok
-		cout << "rvalue: "<< fillThisVar[0] << " " << fillThisVar2[0] << endl;
-
+		rvaluereference();
 	}
 
 	//constexpr

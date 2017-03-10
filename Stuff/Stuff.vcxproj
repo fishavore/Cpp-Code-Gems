@@ -152,11 +152,12 @@
   <ItemGroup>
     <ClInclude Include="bitwise.h" />
     <ClInclude Include="Car.h" />
+    <ClInclude Include="constexpression.h" />
     <ClInclude Include="lambdaFuncs.h" />
     <ClInclude Include="lookupTable.h" />
-    <ClInclude Include="MoveSemantics.h" />
     <ClInclude Include="Multithreading.h" />
     <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="rvaluereference.h" />
     <ClInclude Include="Seat.h" />
     <ClInclude Include="Square.h" />
     <ClInclude Include="Wheel.h" />
