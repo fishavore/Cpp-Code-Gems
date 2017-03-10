@@ -68,3 +68,32 @@ inline void bitwiseBasic()
 	std::cout << "\n";
 }
 
+inline void bitwiseOneBranch()
+{
+	enum WeekDays
+	{
+		Monday			= 1,
+		Tuesday			= 2,
+		Wednesday		= 4,
+		Thursday		= 8,
+		Friday			= 16,
+		Saturday		= 32,
+		Sunday			= 64
+	}Day;
+
+	
+	
+	//This way we can have one single branch where each
+	//enum value represent 1 bit. Wednesday is: 0....0100
+	if (Day & (Tuesday | Wednesday | Friday)) 
+	{
+		//a 32bit interger can hold 32 values and
+		//in a 64bit system, we can hold 64bit.
+	}
+
+	//Compare this to using something as this:
+	if (Day == Tuesday || Day == Wednesday || Day == Friday) 
+	{
+		//this uses 3 branches rather than 1.
+	}
+}
