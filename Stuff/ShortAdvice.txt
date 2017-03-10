@@ -1,0 +1,2 @@
+1. Whether the constants are defined with enum, const, or #define
+makes no difference for the performance.
