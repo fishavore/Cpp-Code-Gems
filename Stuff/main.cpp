@@ -30,6 +30,7 @@ using namespace std;
 #include "lambdaFuncs.h"
 #include "bitwise.h"
 #include "lookupTable.h"
+#include "constexpression.h"
 
 #include <memory>
 #include <array>
@@ -126,11 +127,7 @@ int main()
 
 	//constexpr
 	{
-		int array[square(2)];
-		for (int i = 0; i < 4; i++)
-		{
-			array[i]++;
-		}
+		constexpression();
 	}
 
 	//Lambda

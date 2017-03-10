@@ -12,8 +12,3 @@ inline void process_copy(std::vector<int> && vec) //good
 {
 	vec.push_back(456);
 }
-
-inline constexpr int square(int x) //returns const expression
-{
-	return x*x;
-}
