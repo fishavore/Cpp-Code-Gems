@@ -8,7 +8,7 @@ inline void argumentOrder()
 	//setup for example
 	auto returnFunc = []() -> bool 
 	{ 
-		std::cout << "First comparison which should be cheapest. \n";
+		std::cout << "First comparison. \n";
 		return true; 
 	};
 	auto returnFunc2 = []() -> bool
@@ -18,7 +18,7 @@ inline void argumentOrder()
 	};
 	auto returnFunc3 = []() -> bool
 	{
-		std::cout << "Third comparison which should be most expensive.\n";
+		std::cout << "Third comparison.\n";
 		return true;
 	};
 	///////////////////////////////////////////
@@ -29,6 +29,11 @@ inline void argumentOrder()
 	{
 		std::cout<<"Arguments are read from left to right. \n";
 	}
+
+	//This means that depending on which operator you use. Say &&, you want
+	//to have the function that will return false most likely first.
+	//Another way of looking at it is to have the most expensive function
+	//last (to the right).
 	
 	//////////////////////////////////////////////////////////////////////
 	//setup 2
