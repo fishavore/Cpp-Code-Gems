@@ -107,6 +107,9 @@
     <ClInclude Include="friends.h">
       <Filter>Friends</Filter>
     </ClInclude>
+    <ClInclude Include="argumentOrder.h">
+      <Filter>Other</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="inline.txt">

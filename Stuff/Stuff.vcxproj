@@ -155,6 +155,7 @@
     <ClInclude Include="constExamples.h" />
     <ClInclude Include="constexpression.h" />
     <ClInclude Include="friends.h" />
+    <ClInclude Include="argumentOrder.h" />
     <ClInclude Include="lambdaFuncs.h" />
     <ClInclude Include="lookupTable.h" />
     <ClInclude Include="Rectangle.h" />

@@ -34,6 +34,7 @@ using namespace std;
 #include "constExamples.h"
 #include "smartpointers.h"
 #include "friends.h"
+#include "argumentOrder.h"
 
 #include <memory>
 #include <array>
@@ -111,6 +112,12 @@ int main()
 	//look up table
 	{
 		lookupTable();
+	}
+
+	//Other - Argument order.
+	{
+		argumentOrder();
+		assignmentOrder();
 	}
 
 	system("pause");
