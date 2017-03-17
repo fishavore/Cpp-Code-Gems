@@ -26,7 +26,6 @@ using namespace std;
 #include "Square.h"
 
 #include "rvaluereference.h"
-
 #include "lambdaFuncs.h"
 #include "bitwise.h"
 #include "lookupTable.h"
@@ -35,10 +34,29 @@ using namespace std;
 #include "smartpointers.h"
 #include "friends.h"
 #include "argumentOrder.h"
+#include "Multithreading.h"
 
+#include "Timer.h"
 #include <memory>
 #include <array>
 
+
+class Example
+{
+private:
+	long val;
+public:
+	Example() {};
+	void SetVal(long input)
+	{
+		val = input;
+	}
+
+	long GetVal()const
+	{ 
+		return val; 
+	};
+};
 
 
 int main()
@@ -120,7 +138,12 @@ int main()
 		assignmentOrder();
 	}
 
+	//Multithreading
+	{
+		multiThreading();
+	}
 
+	{
 
 	system("pause");
 	return 0;

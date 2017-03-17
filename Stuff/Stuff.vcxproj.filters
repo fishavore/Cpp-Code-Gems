@@ -46,6 +46,9 @@
     <Filter Include="HelpFiles">
       <UniqueIdentifier>{3e5a1439-085e-4633-9a77-02afc3edbb75}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Multithreading">
+      <UniqueIdentifier>{6c332370-6d5d-430d-a81f-c1640c656176}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -65,6 +68,9 @@
     </ClCompile>
     <ClCompile Include="Square.cpp">
       <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>HelpFiles</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -109,6 +115,12 @@
     </ClInclude>
     <ClInclude Include="argumentOrder.h">
       <Filter>Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Multithreading.h">
+      <Filter>Multithreading</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>HelpFiles</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

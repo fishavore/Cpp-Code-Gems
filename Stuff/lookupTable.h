@@ -6,6 +6,17 @@
 
 /*
 
+Author note:
+My own tests shows a different result. It might not actually be faster but instead slower.
+Make your own tests in order to verify the speed up!
+
+
+*/
+
+
+
+/*
+
 Look up tables can be used in various ways but the point of a lookup table is reducing
 computation time to just look up the value. The most simple case would be:
 
@@ -62,8 +73,7 @@ inline void lookupTable()
 
 
 	//The lookup table. Just a simple const array bruh.
-	//Notice double const as to both the value and the pointer is const. 
-	static const std::string const stringArray[7] = { "Look", "up", "table", "LUL", "OMFG", "So nice", "Not switchstatements tho" };
+	static const std::string stringArray[7] = { "Look", "up", "table", "LUL", "OMFG", "So nice", "Not switchstatements tho" };
 	if (n < 6)
 	{
 		std::cout << stringArray[n] << "\n";
