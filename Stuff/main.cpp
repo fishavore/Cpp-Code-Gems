@@ -40,25 +40,6 @@ using namespace std;
 #include <memory>
 #include <array>
 
-
-class Example
-{
-private:
-	long val;
-public:
-	Example() {};
-	void SetVal(long input)
-	{
-		val = input;
-	}
-
-	long GetVal()const
-	{ 
-		return val; 
-	};
-};
-
-
 int main()
 {
 	//Polymorphism
@@ -142,8 +123,6 @@ int main()
 	{
 		multiThreading();
 	}
-
-	{
 
 	system("pause");
 	return 0;
