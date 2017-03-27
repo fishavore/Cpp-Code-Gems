@@ -5,9 +5,8 @@ This solution was created in order to keep notes about optimisations, tips,
 tricks and other various things that could be useful one day. Micro-optimisations
 usually isn't necessary in most ways but to be a better programmer, it certainly
 wouldn't hurt to know them. I like to believe that it is better to know all the
-unnecessary stuff in order to know when *not* to use them. Good code isn't even
-the coolest syntax on the block but the one that is exactly what you were looking
-for.
+unnecessary stuff in order to know when *not* to use them. Good code isn't the 
+coolest syntax on the block but the one that is exactly what you were looking for.
 
 ////////////////////////////////////////////////////////////////////////////////////
 */
@@ -36,9 +35,13 @@ using namespace std;
 #include "argumentOrder.h"
 #include "Multithreading.h"
 
+#include "TestingHeader.h"
+
 #include "Timer.h"
 #include <memory>
 #include <array>
+
+
 
 int main()
 {
@@ -122,6 +125,17 @@ int main()
 	//Multithreading
 	{
 		multiThreading();
+	}
+
+
+
+	//Tests
+	{
+		TestStart();
+
+		double val = 5.0001;
+		float lol = (float)val;
+		cout << lol << endl;
 	}
 
 	system("pause");

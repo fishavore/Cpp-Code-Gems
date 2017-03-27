@@ -165,6 +165,7 @@
     <ClInclude Include="Seat.h" />
     <ClInclude Include="smartpointers.h" />
     <ClInclude Include="Square.h" />
+    <ClInclude Include="TestingHeader.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Wheel.h" />
   </ItemGroup>

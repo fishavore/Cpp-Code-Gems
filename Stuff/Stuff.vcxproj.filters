@@ -122,6 +122,9 @@
     <ClInclude Include="Timer.h">
       <Filter>HelpFiles</Filter>
     </ClInclude>
+    <ClInclude Include="TestingHeader.h">
+      <Filter>Other</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="inline.txt">
