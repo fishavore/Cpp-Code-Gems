@@ -127,8 +127,6 @@ int main()
 		multiThreading();
 	}
 
-
-
 	//Tests
 	{
 		TestStart();
