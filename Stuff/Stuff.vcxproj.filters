@@ -133,5 +133,8 @@
     <Text Include="ShortAdvice.txt">
       <Filter>Other</Filter>
     </Text>
+    <Text Include="links.txt">
+      <Filter>Other</Filter>
+    </Text>
   </ItemGroup>
 </Project>

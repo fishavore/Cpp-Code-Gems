@@ -22,37 +22,3 @@ inline void constexpression()
 	}
 	std::cout << "\n";
 }
-
-inline void constexpressionIf()
-{
-	struct A
-	{
-		int aVal;
-		A() {};
-		A(int input) : aVal(input) {};
-		int getVal()const { return aVal; }
-	};
-
-	struct B : A
-	{
-		int bVal;
-		B(int input) : bVal(input) {};
-		int getVal()const { return bVal; }
-	};
-
-	struct C : A
-	{
-		int cVal;
-		C(int input) : cVal(input) {};
-		int getVal()const { return cVal; }
-	};
-
-
-	A* base[2];
-	base[0] = new B(2);
-	base[1] = new C(3);
-
-
-	delete base[0];
-	delete base[1];
-}
