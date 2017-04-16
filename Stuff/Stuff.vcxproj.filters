@@ -52,9 +52,6 @@
     <Filter Include="Pathfinding">
       <UniqueIdentifier>{4059a345-8b27-446d-8047-7132fd0d90e3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pathfinding\Other Peoples Source Code">
-      <UniqueIdentifier>{3a398406-375b-4254-b2e5-1490ea85f98e}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -77,9 +74,6 @@
     </ClCompile>
     <ClCompile Include="Timer.cpp">
       <Filter>HelpFiles</Filter>
-    </ClCompile>
-    <ClCompile Include="Pathing.cpp">
-      <Filter>Pathfinding\Other Peoples Source Code</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -136,9 +130,6 @@
     </ClInclude>
     <ClInclude Include="paradoxPathfinding.h">
       <Filter>Pathfinding</Filter>
-    </ClInclude>
-    <ClInclude Include="Pathing.h">
-      <Filter>Pathfinding\Other Peoples Source Code</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

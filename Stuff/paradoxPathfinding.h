@@ -12,6 +12,8 @@ namespace Paradox
 		const unsigned char* pMap, const int nMapWidth, const int nMapHeight,
 		int* pOutBuffer, const int nOutBufferSize)
 	{
+		
+
 		return -1;
 	}
 
@@ -46,6 +48,7 @@ namespace Paradox
 		int pOutBuffer[MAPSIZE];
 
 		print(pMap, mapSizeX, MAPSIZE);
+		
 
 
 		const int startPosX = 0;
