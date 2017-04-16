@@ -34,6 +34,7 @@ using namespace std;
 #include "friends.h"
 #include "argumentOrder.h"
 #include "Multithreading.h"
+#include "paradoxPathfinding.h"
 
 #include "TestingHeader.h"
 
@@ -127,13 +128,14 @@ int main()
 		multiThreading();
 	}
 
+	//Paradox Interactive Path finding
+	{
+		Paradox::main();
+	}
+
 	//Tests
 	{
-		TestStart();
-
-		double val = 5.0001;
-		float lol = (float)val;
-		cout << lol << endl;
+		//TestStart();
 	}
 
 	system("pause");

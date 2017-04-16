@@ -49,6 +49,9 @@
     <Filter Include="Multithreading">
       <UniqueIdentifier>{6c332370-6d5d-430d-a81f-c1640c656176}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pathfinding">
+      <UniqueIdentifier>{4059a345-8b27-446d-8047-7132fd0d90e3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -125,6 +128,12 @@
     <ClInclude Include="TestingHeader.h">
       <Filter>Other</Filter>
     </ClInclude>
+    <ClInclude Include="AStar.h">
+      <Filter>Pathfinding</Filter>
+    </ClInclude>
+    <ClInclude Include="paradoxPathfinding.h">
+      <Filter>Pathfinding</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="inline.txt">
@@ -135,6 +144,9 @@
     </Text>
     <Text Include="links.txt">
       <Filter>Other</Filter>
+    </Text>
+    <Text Include="ParadoxInteractivePathfindingProblem.txt">
+      <Filter>Pathfinding</Filter>
     </Text>
   </ItemGroup>
 </Project>
