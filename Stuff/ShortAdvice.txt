@@ -6,3 +6,8 @@ You should:		a = b * (1. / 1.2345);
 The compiler will calculate (1./1.2345) at compile time and insert the reciprocal in the
 code, so you will never spend time doing the division. Some compilers will make this for
 you but only if certain options are set to relax floating point precision.
+
+2. For-loop tip:
+std::priority_queue<int> pQueue;
+for (int n : {1, 8, 5, 6, 3, 4, 0, 9, 7, 2})
+	pQueue.push(n);

@@ -52,6 +52,9 @@
     <Filter Include="Pathfinding">
       <UniqueIdentifier>{4059a345-8b27-446d-8047-7132fd0d90e3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pathfinding\Game Programming Complete">
+      <UniqueIdentifier>{0f281608-5f34-49b6-aa33-c8c927a9dc5b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -74,6 +77,12 @@
     </ClCompile>
     <ClCompile Include="Timer.cpp">
       <Filter>HelpFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Pathing.cpp">
+      <Filter>Pathfinding\Game Programming Complete</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryPool.cpp">
+      <Filter>Pathfinding\Game Programming Complete</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +139,15 @@
     </ClInclude>
     <ClInclude Include="paradoxPathfinding.h">
       <Filter>Pathfinding</Filter>
+    </ClInclude>
+    <ClInclude Include="Pathing.h">
+      <Filter>Pathfinding\Game Programming Complete</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryPool.h">
+      <Filter>Pathfinding\Game Programming Complete</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryMacros.h">
+      <Filter>Pathfinding\Game Programming Complete</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

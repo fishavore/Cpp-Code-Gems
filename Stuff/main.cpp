@@ -34,6 +34,7 @@ using namespace std;
 #include "friends.h"
 #include "argumentOrder.h"
 #include "Multithreading.h"
+#include "PriorityQueue.h"
 #include "paradoxPathfinding.h"
 
 #include "TestingHeader.h"
@@ -126,6 +127,11 @@ int main()
 	//Multithreading
 	{
 		multiThreading();
+	}
+
+	//PriorityQueue
+	{
+		PriorityQueue::main();
 	}
 
 	//Paradox Interactive Path finding

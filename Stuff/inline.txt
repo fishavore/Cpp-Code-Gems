@@ -21,3 +21,5 @@ write non-inline implementations of the copy constructor and assignment operator
 Remember that the inline keyword is a hint to the compiler: the compiler may decide not to inline a function and it can decide to inline functions that were not marked inline in the first place. I generally avoid marking function inline (apart maybe when writing very very small functions).
 
 About performance, the wise approach is (as always) to profile the application, then eventually inline a set of functions representing a bottleneck.
+
+My personal opinion is that all inline headers should be wrapped in a namespace. Things can get fairly out of hand rather quickly otherwise.
