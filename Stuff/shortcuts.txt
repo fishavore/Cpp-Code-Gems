@@ -1,0 +1,4 @@
+//Shortcuts
+
+
+1. cltr+g : go to line
