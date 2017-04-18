@@ -2,3 +2,9 @@
 
 
 1. cltr+g : go to line
+
+2. shift+alt+enter : fullscreen current code window.
+
+3. F12 : Go to definition.
+
+4. ctrl + å (] if english keyboard) : go to other side of parantheses.
