@@ -144,8 +144,6 @@
   <ItemGroup>
     <ClCompile Include="Car.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MemoryPool.cpp" />
-    <ClCompile Include="Pathing.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Seat.cpp" />
     <ClCompile Include="Square.cpp" />
@@ -161,11 +159,8 @@
     <ClInclude Include="argumentOrder.h" />
     <ClInclude Include="lambdaFuncs.h" />
     <ClInclude Include="lookupTable.h" />
-    <ClInclude Include="MemoryMacros.h" />
-    <ClInclude Include="MemoryPool.h" />
     <ClInclude Include="Multithreading.h" />
     <ClInclude Include="paradoxPathfinding.h" />
-    <ClInclude Include="Pathing.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="rvaluereference.h" />
     <ClInclude Include="Seat.h" />
@@ -180,6 +175,7 @@
     <Text Include="links.txt" />
     <Text Include="ParadoxInteractivePathfindingProblem.txt" />
     <Text Include="ShortAdvice.txt" />
+    <Text Include="shortcuts.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

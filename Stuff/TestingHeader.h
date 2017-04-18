@@ -141,35 +141,5 @@ inline bool TestFunction3(int messageTag)
 
 inline void TestStart()
 {
-	Timer timer;
-	timer.Reset();
-
-	int startVal = 23;
-
-	timer.StartClock();
-	for (int i = 0; i < 100000000; i++)
-	{
-		TestFunction1(startVal);
-	}
-	timer.StopClock();
-	cout << "Test 1: " << timer.GetCurrentClockTime() << "\n";
-
-	timer.Reset();
-	timer.StartClock();
-	for (int i = 0; i < 100000000; i++)
-	{
-		TestFunction2(startVal);
-	}
-	timer.StopClock();
-	cout << "Test 2: " << timer.GetCurrentClockTime() << "\n";
-
-	timer.Reset();
-	timer.StartClock();
-	for (int i = 0; i < 100000000; i++)
-	{
-		TestFunction3(startVal);
-	}
-	timer.StopClock();
-	cout << "Test 3: " << timer.GetCurrentClockTime() << "\n";
 
 }
