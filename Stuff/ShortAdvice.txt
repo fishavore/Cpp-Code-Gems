@@ -11,3 +11,10 @@ you but only if certain options are set to relax floating point precision.
 std::priority_queue<int> pQueue;
 for (int n : {1, 8, 5, 6, 3, 4, 0, 9, 7, 2})
 	pQueue.push(n);
+
+3. Delete has automatic check for nullptr.
+int* val;
+delete val; //Will crash
+
+int* val = nullptr;
+	delete val; //will not crash.

@@ -141,7 +141,7 @@ int main()
 
 	//Tests
 	{
-		//TestStart();
+		TestStart();
 
 	}
 

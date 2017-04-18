@@ -141,5 +141,11 @@ inline bool TestFunction3(int messageTag)
 
 inline void TestStart()
 {
+	int* val = nullptr;
+
+	delete val;
+
+	val = new int(5);
+	delete val;
 
 }
