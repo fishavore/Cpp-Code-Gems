@@ -12,3 +12,5 @@
 5. ctrl + K, ctrl+D : auto format dokument.
 
 6. ctrl + K, ctrl + F : auto format selection.
+
+7. ctrl+shift+I : go backwards in the search rather than forward.
