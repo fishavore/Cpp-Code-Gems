@@ -141,11 +141,14 @@ inline bool TestFunction3(int messageTag)
 
 inline void TestStart()
 {
-	int* val = nullptr;
+	std::cout << "TestStart: \n";
+	
+	int lol = 5;
+	unsigned short lul = 5;
+	if (lol == lul)
+	{
+		cout << "success";
+	}
 
-	delete val;
-
-	val = new int(5);
-	delete val;
 
 }

@@ -18,3 +18,11 @@ delete val; //Will crash
 
 int* val = nullptr;
 	delete val; //will not crash.
+
+4. break; is used in switch cases or for-loops.
+if used it will break it then and there and jump out.
+
+5. Storing values as short rather than int could be less optimal than just normal ints unless 
+you have plenty of shorts. This is because the CPU has to adjust the short value to make the
+comparison which will be more costly than normal comparisons. Basically, just use ints and
+don't try so hard.
