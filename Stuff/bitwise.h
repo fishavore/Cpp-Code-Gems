@@ -38,10 +38,6 @@ inline void bitwiseBasic()
 	//10
 	//AND => 00
 
-	//00
-	//01
-	//AND => 00
-
 	//10
 	//10
 	//AND => 10

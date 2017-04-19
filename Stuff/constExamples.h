@@ -23,7 +23,7 @@ inline void constExamples()
 
 	// This is a constant pointer to a constant area.
 	const float area = 35.78f;
-	const float *const pointer_area = &area;
+	const float* const pointer_area = &area;
 	
 	//You cannot create a static const int array[] with constant content. 
 	// There are several methods as work arounds but they had problems. 
