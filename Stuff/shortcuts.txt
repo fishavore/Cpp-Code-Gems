@@ -14,3 +14,7 @@
 6. ctrl + K, ctrl + F : auto format selection.
 
 7. ctrl+shift+I : go backwards in the search rather than forward.
+
+8. ctrl+m+o : collapse all sections.
+
+9. ctrl+m+l : expand all sections.
