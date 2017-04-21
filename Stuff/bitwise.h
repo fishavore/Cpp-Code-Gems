@@ -5,91 +5,100 @@
 //OR |
 //XOR ^
 
-inline void bitwiseBasic()
+namespace Bitwise
 {
-	const int CAP = 10;
-	int bitArr[CAP] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
-	for (int i = 0; i < CAP; i++)
+	inline void bitwiseBasic()
 	{
-		std::cout << (bitArr[i] & 1) << " ";
-	}
-	std::cout << "\n";
-	//outputs 0,1,0,1,0,1,0,1,0,1
-	//00
-	//01
-	//AND => 00
+		const int CAP = 10;
+		int bitArr[CAP] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
-	//01
-	//01
-	//AND => 01
+		for (int i = 0; i < CAP; i++)
+		{
+			std::cout << (bitArr[i] & 1) << " ";
+		}
+		std::cout << "\n";
+		//outputs 0,1,0,1,0,1,0,1,0,1
+		//00
+		//01
+		//AND => 00
 
-	for (int i = 0; i < CAP; i++)
-	{
-		std::cout << (bitArr[i] & 2) << " ";
-	}
-	std::cout << "\n";
-	//outputs 0, 0, 2, 2, 0, 0, 2, 2, 0, 0
-	//00
-	//10
-	//AND => 00
+		//01
+		//01
+		//AND => 01
 
-	//01
-	//10
-	//AND => 00
+		for (int i = 0; i < CAP; i++)
+		{
+			std::cout << (bitArr[i] & 2) << " ";
+		}
+		std::cout << "\n";
+		//outputs 0, 0, 2, 2, 0, 0, 2, 2, 0, 0
+		//00
+		//10
+		//AND => 00
 
-	//10
-	//10
-	//AND => 10
+		//01
+		//10
+		//AND => 00
 
-	//11
-	//10
-	//AND => 10
+		//10
+		//10
+		//AND => 10
 
-	for (int i = 0; i < CAP; i++)
-	{
-		std::cout << (bitArr[i] & 3) << " ";
-	}
-	//outputs 0, 1, 2, 3, 0, 1, 2, 3, 0, 1
-	//00
-	//11
-	//AND => 00
+		//11
+		//10
+		//AND => 10
 
-	//01
-	//11
-	//AND => 01
+		for (int i = 0; i < CAP; i++)
+		{
+			std::cout << (bitArr[i] & 3) << " ";
+		}
+		//outputs 0, 1, 2, 3, 0, 1, 2, 3, 0, 1
+		//00
+		//11
+		//AND => 00
 
-	//osv...
+		//01
+		//11
+		//AND => 01
 
-	std::cout << "\n";
-}
+		//osv...
 
-inline void bitwiseOneBranch()
-{
-	enum WeekDays
-	{
-		Monday			= 1,
-		Tuesday			= 2,
-		Wednesday		= 4,
-		Thursday		= 8,
-		Friday			= 16,
-		Saturday		= 32,
-		Sunday			= 64
-	}Day;
-
-	
-	
-	//This way we can have one single branch where each
-	//enum value represent 1 bit. Wednesday is: 0....0100
-	if (Day & (Tuesday | Wednesday | Friday)) 
-	{
-		//a 32bit interger can hold 32 values and
-		//in a 64bit system, we can hold 64bit.
+		std::cout << "\n";
 	}
 
-	//Compare this to using something as this:
-	if (Day == Tuesday || Day == Wednesday || Day == Friday) 
+	inline void bitwiseOneBranch()
 	{
-		//this uses 3 branches rather than 1.
+		enum WeekDays
+		{
+			Monday = 1,
+			Tuesday = 2,
+			Wednesday = 4,
+			Thursday = 8,
+			Friday = 16,
+			Saturday = 32,
+			Sunday = 64
+		}Day;
+
+
+
+		//This way we can have one single branch where each
+		//enum value represent 1 bit. Wednesday is: 0....0100
+		if (Day & (Tuesday | Wednesday | Friday))
+		{
+			//a 32bit interger can hold 32 values and
+			//in a 64bit system, we can hold 64bit.
+		}
+
+		//Compare this to using something as this:
+		if (Day == Tuesday || Day == Wednesday || Day == Friday)
+		{
+			//this uses 3 branches rather than 1.
+		}
+	}
+
+	inline void main()
+	{
+		bitwiseBasic();
 	}
 }

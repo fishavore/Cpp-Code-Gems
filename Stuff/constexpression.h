@@ -7,18 +7,21 @@
 //you can still perform task optimally.
 // https://arne-mertz.de/2017/03/constexpr-additions-c17/
 
-inline constexpr int square(int x) //returns const expression
+namespace ConstExpression
 {
-	return x*x;
-}
-
-inline void constexpression()
-{
-	int array[square(2)];
-	for (int i = 0; i < 4; i++)
+	inline constexpr int square(int x) //returns const expression
 	{
-		array[i] = i;
-		std::cout << array[i] << " ";
+		return x*x;
 	}
-	std::cout << "\n";
+
+	inline void main()
+	{
+		int array[square(2)];
+		for (int i = 0; i < 4; i++)
+		{
+			array[i] = i;
+			std::cout << array[i] << " ";
+		}
+		std::cout << "\n";
+	}
 }

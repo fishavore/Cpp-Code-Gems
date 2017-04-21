@@ -73,40 +73,37 @@ int main()
 
 	//rvalue reference
 	{
-		rvaluereference();
+		RValueReference::main();
 	}
 
 	//constexpr
 	{
-		constexpression();
+		ConstExpression::main();
 	}
 
 	//Lambda
 	{
-		lambdaHelloWord();
-		lambdaBasicExample();
-		lambdaPassParameter();
+		Lambda::main();
 	}
 
 	//bitoperators
 	{
-		bitwiseBasic();
+		Bitwise::main();
 	}
 
 	//look up table
 	{
-		lookupTable();
+		LookupTable::main();
 	}
 
 	//Other - Argument order.
 	{
-		argumentOrder();
-		assignmentOrder();
+		Other::ArgumentOrder::main();
 	}
 
 	//Multithreading
 	{
-		multiThreading();
+		Multithreading::main();
 	}
 
 	//PriorityQueue
@@ -122,7 +119,6 @@ int main()
 	//Tests
 	{
 		TestStart();
-
 	}
 
 	system("pause");
