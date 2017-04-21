@@ -4,12 +4,16 @@
 #include "Square.h"
 #include <iostream>
 
-inline void friends()
+
+namespace Friends
 {
-	Rectangle rect;
-	rect.Print();
-	Square square = Square(5, 99);
-	std::cout << "Friends: " << square.ReturnX() << endl;
-	rect.SetSide(square);
-	rect.Print();
+	inline void main()
+	{
+		Rectangle rect;
+		rect.Print();
+		Square square = Square(5, 99);
+		std::cout << "Friends: " << square.ReturnX() << endl;
+		rect.SetSide(square);
+		rect.Print();
+	}
 }

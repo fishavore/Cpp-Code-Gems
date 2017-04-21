@@ -55,40 +55,25 @@
     <Filter Include="Visual Studio">
       <UniqueIdentifier>{7560179e-e7ca-4831-911c-43c735062fec}</UniqueIdentifier>
     </Filter>
+    <Filter Include="StdArray">
+      <UniqueIdentifier>{a03f7a5d-3d06-44a4-ad13-fb5ab71d64fc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Car.cpp">
-      <Filter>Polymorphism</Filter>
-    </ClCompile>
-    <ClCompile Include="Seat.cpp">
-      <Filter>Polymorphism</Filter>
-    </ClCompile>
-    <ClCompile Include="Wheel.cpp">
-      <Filter>Polymorphism</Filter>
-    </ClCompile>
-    <ClCompile Include="Rectangle.cpp">
-      <Filter>Header Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Square.cpp">
-      <Filter>Header Files</Filter>
-    </ClCompile>
     <ClCompile Include="Timer.cpp">
       <Filter>HelpFiles</Filter>
     </ClCompile>
+    <ClCompile Include="Rectangle.cpp">
+      <Filter>Friends</Filter>
+    </ClCompile>
+    <ClCompile Include="Square.cpp">
+      <Filter>Friends</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Car.h">
-      <Filter>Polymorphism</Filter>
-    </ClInclude>
-    <ClInclude Include="Wheel.h">
-      <Filter>Polymorphism</Filter>
-    </ClInclude>
-    <ClInclude Include="Seat.h">
-      <Filter>Polymorphism</Filter>
-    </ClInclude>
     <ClInclude Include="lambdaFuncs.h">
       <Filter>LambdaFuncs</Filter>
     </ClInclude>
@@ -110,12 +95,6 @@
     <ClInclude Include="smartpointers.h">
       <Filter>Smartpointers</Filter>
     </ClInclude>
-    <ClInclude Include="Rectangle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Square.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="friends.h">
       <Filter>Friends</Filter>
     </ClInclude>
@@ -133,6 +112,18 @@
     </ClInclude>
     <ClInclude Include="paradoxPathfinding.h">
       <Filter>Pathfinding</Filter>
+    </ClInclude>
+    <ClInclude Include="Polymorphism.h">
+      <Filter>Polymorphism</Filter>
+    </ClInclude>
+    <ClInclude Include="Rectangle.h">
+      <Filter>Friends</Filter>
+    </ClInclude>
+    <ClInclude Include="Square.h">
+      <Filter>Friends</Filter>
+    </ClInclude>
+    <ClInclude Include="STDArray.h">
+      <Filter>StdArray</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

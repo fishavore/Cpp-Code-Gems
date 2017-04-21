@@ -18,12 +18,12 @@ coolest syntax on the block but the one that is exactly what you were looking fo
 #include <string>
 using namespace std;
 
-#include "Wheel.h"
-#include "Seat.h"
 
 #include "Rectangle.h"
 #include "Square.h"
-
+#include "Polymorphism.h"
+#include "STDArray.h"
+#include "constExamples.h"
 #include "rvaluereference.h"
 #include "lambdaFuncs.h"
 #include "bitwise.h"
@@ -41,7 +41,6 @@ using namespace std;
 
 #include "Timer.h"
 #include <memory>
-#include <array>
 
 
 
@@ -49,46 +48,27 @@ int main()
 {
 	//Polymorphism
 	{
-		Car* s = nullptr;
-		Car* w = nullptr;
-
-		s = new Seat();
-		w = new Wheel();
-
-		((Seat*)s)->Print();
-		((Wheel*)w)->Print();
-
-		delete s;
-		delete w;
+		Polymorphism::main();
 	}
 
 	//Friend class
 	{
-		friends();
+		Friends::main();
 	}
 
 	//Smart pointers
 	{
-		smartpointers();
+		SmartPointers::main();
 	}
 
 	//std array
 	{
-		const int CAP = 5;
-		std::array<int, CAP> nummer;
-		for (int i = 0; i < CAP; i++)
-		{
-			nummer[i] = i + 1;
-		}
-		for (auto i : nummer)
-		{
-			cout << i << endl;
-		}
+		StdArray::main();
 	}
 
 	//const check
 	{
-		constExamples();
+		ConstExamples::main();
 	}
 
 	//rvalue reference
