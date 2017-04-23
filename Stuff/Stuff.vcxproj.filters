@@ -5,10 +5,6 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
@@ -58,6 +54,9 @@
     <Filter Include="StdArray">
       <UniqueIdentifier>{a03f7a5d-3d06-44a4-ad13-fb5ab71d64fc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Overloading Operator">
+      <UniqueIdentifier>{2dc2d19b-a2ee-4efd-8fc3-38a7269dec43}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -71,6 +70,9 @@
     </ClCompile>
     <ClCompile Include="Square.cpp">
       <Filter>Friends</Filter>
+    </ClCompile>
+    <ClCompile Include="AStar.cpp">
+      <Filter>Pathfinding</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -124,6 +126,12 @@
     </ClInclude>
     <ClInclude Include="STDArray.h">
       <Filter>StdArray</Filter>
+    </ClInclude>
+    <ClInclude Include="AStar.h">
+      <Filter>Pathfinding</Filter>
+    </ClInclude>
+    <ClInclude Include="OverloadingOperator.h">
+      <Filter>Overloading Operator</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

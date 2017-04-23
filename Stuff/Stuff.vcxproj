@@ -142,12 +142,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AStar.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Square.cpp" />
     <ClCompile Include="Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AStar.h" />
     <ClInclude Include="bitwise.h" />
     <ClInclude Include="constExamples.h" />
     <ClInclude Include="constexpression.h" />
@@ -156,6 +158,7 @@
     <ClInclude Include="lambdaFuncs.h" />
     <ClInclude Include="lookupTable.h" />
     <ClInclude Include="Multithreading.h" />
+    <ClInclude Include="OverloadingOperator.h" />
     <ClInclude Include="paradoxPathfinding.h" />
     <ClInclude Include="Polymorphism.h" />
     <ClInclude Include="Rectangle.h" />
