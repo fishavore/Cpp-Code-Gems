@@ -1,4 +1,4 @@
-//Shortcuts
+//Visual studio Shortcuts
 
 
 1. cltr+g : go to line
@@ -18,3 +18,7 @@
 8. ctrl+m+a : collapse all sections.
 
 9. ctrl+m+l : expand all sections.
+
+10. alt+shift+arrowkeys : traverse and select multiple characters on multiple rows.
+
+11. ctrl+, : A different kind of search feature.

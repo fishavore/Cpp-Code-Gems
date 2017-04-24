@@ -175,6 +175,7 @@
     <Text Include="ParadoxInteractivePathfindingProblem.txt" />
     <Text Include="ShortAdvice.txt" />
     <Text Include="shortcuts.txt" />
+    <Text Include="WindowsShortcuts.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

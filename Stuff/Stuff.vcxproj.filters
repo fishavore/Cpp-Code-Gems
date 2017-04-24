@@ -150,5 +150,8 @@
     <Text Include="shortcuts.txt">
       <Filter>Visual Studio</Filter>
     </Text>
+    <Text Include="WindowsShortcuts.txt">
+      <Filter>Other</Filter>
+    </Text>
   </ItemGroup>
 </Project>

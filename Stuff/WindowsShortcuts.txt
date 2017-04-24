@@ -1,0 +1,7 @@
+//Windows shortcut
+
+1. ctrl+windowskey+D : Create a new desktop.
+
+2. ctrl+windowskey+F4 : Delete desktop.
+
+3. ctrl+windowskey+arrowkeys : change between them

@@ -143,12 +143,12 @@ inline void TestStart()
 {
 	std::cout << "TestStart: \n";
 	
-	int lol = 5;
-	unsigned short lul = 5;
-	if (lol == lul)
+	int lul = 0;
+
 	{
-		cout << "success";
+		lul = 1;
 	}
+	cout << lul;
 
 
 }
