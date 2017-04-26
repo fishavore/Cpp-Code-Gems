@@ -57,6 +57,9 @@
     <Filter Include="Overloading Operator">
       <UniqueIdentifier>{2dc2d19b-a2ee-4efd-8fc3-38a7269dec43}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Union">
+      <UniqueIdentifier>{b803a261-7ed5-4e2b-af76-70b06d345977}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -132,6 +135,9 @@
     </ClInclude>
     <ClInclude Include="OverloadingOperator.h">
       <Filter>Overloading Operator</Filter>
+    </ClInclude>
+    <ClInclude Include="Union.h">
+      <Filter>Union</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

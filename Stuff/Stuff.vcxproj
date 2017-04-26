@@ -168,6 +168,7 @@
     <ClInclude Include="STDArray.h" />
     <ClInclude Include="TestingHeader.h" />
     <ClInclude Include="Timer.h" />
+    <ClInclude Include="Union.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="inline.txt" />
