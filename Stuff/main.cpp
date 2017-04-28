@@ -36,6 +36,7 @@ using namespace std;
 #include "Multithreading.h"
 #include "PriorityQueue.h"
 #include "paradoxPathfinding.h"
+#include "Union.h"
 
 #include "TestingHeader.h"
 
@@ -114,6 +115,11 @@ int main()
 	//Paradox Interactive Path finding
 	{
 		Paradox::main();
+	}
+
+	//Union keyword
+	{
+		Union::main();
 	}
 
 	//Tests

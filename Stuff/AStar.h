@@ -9,7 +9,7 @@ namespace Pathfinding
 		float x, y, z;
 
 		Float3() {};
-		Float3(const float x, const float y, const float y)
+		Float3(const float x, const float y, const float z)
 		{
 			this->x = x;
 			this->y = y;

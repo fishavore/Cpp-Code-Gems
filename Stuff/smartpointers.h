@@ -6,6 +6,8 @@
 //other
 #include "Square.h"
 
+//TODO: Make function look better for easier "go back".
+
 namespace SmartPointers
 {
 	inline void main()
