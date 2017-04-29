@@ -61,14 +61,14 @@ namespace Other
 		{
 			int a, b, c;
 			a = b = c = 5;
-			cout << a << " " << b << " " << c << "\n";
+			cout << a << " " << b << " " << c << '\n';
 
 			a = 1;
 			b = 2;
 			c = 3;
 
 			a = b = c;
-			cout << "Assignment operators works from right to left. " << a << "\n";
+			cout << "Assignment operators works from right to left. " << a << '\n';
 		}
 
 		inline void main()

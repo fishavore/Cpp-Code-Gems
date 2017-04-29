@@ -3,11 +3,11 @@
 #include <thread>
 #include <iostream>
 #include <string>
+#include <mutex>
 
 namespace Multithreading
 {
-
-	inline void main()
+	inline void basicExample()
 	{
 		struct inputArgs
 		{
@@ -19,7 +19,7 @@ namespace Multithreading
 		auto function = [](void* vals)
 		{
 			inputArgs* input = static_cast<inputArgs*>(vals);
-			std::cout << input->threadId << "\n";
+			std::cout << input->threadId << '\n';
 		};
 
 		static const int numThreads = 3;
@@ -40,5 +40,47 @@ namespace Multithreading
 		{
 			threads[i].join();
 		}
+	}
+
+	inline void mutexLock()
+	{
+		//Input value
+		struct threadInfo
+		{
+			std::mutex* mutex;
+			int id;
+		};
+
+		//Thread
+		auto threadFunction = [](void* vals)
+		{
+			threadInfo* input = static_cast<threadInfo*>(vals);
+			input->mutex->lock();
+			std::cout << "Thread ID: " << input->id << '\n';
+			input->mutex->unlock();
+		};
+		
+
+		std::mutex mtx;		
+		const int CAP = 10;
+		std::thread threads[CAP];
+		threadInfo tInfo[CAP];
+		for (int i = 0; i < CAP; i++)
+		{
+			tInfo[i].id = i + 1;
+			tInfo[i].mutex = &mtx;
+			threads[i] = std::thread(threadFunction, &tInfo[i]);
+		}
+
+		for (auto& thread : threads)
+		{
+			thread.join();
+		}
+	}
+
+	inline void main()
+	{
+		basicExample();
+		mutexLock();
 	}
 }

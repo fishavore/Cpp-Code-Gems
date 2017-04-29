@@ -22,7 +22,7 @@ namespace ConstExamples
 		}A;
 
 		A.setValue(5);
-		std::cout << "5: " << A.getValue() << "\n";
+		std::cout << "5: " << A.getValue() << '\n';
 
 		// This is a constant pointer to a constant area.
 		const float area = 35.78f;

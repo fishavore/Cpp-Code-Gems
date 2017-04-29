@@ -15,7 +15,7 @@ namespace StdArray
 		}
 		for (auto i : nummer)
 		{
-			std::cout << i << "\n";
+			std::cout << i << '\n';
 		}
 	}
 }

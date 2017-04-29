@@ -22,6 +22,6 @@ namespace ConstExpression
 			array[i] = i;
 			std::cout << array[i] << " ";
 		}
-		std::cout << "\n";
+		std::cout << '\n';
 	}
 }

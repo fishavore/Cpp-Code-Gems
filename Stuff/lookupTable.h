@@ -70,14 +70,14 @@ namespace LookupTable
 			val = "error";
 			break;
 		}
-		std::cout << val << "\n";
+		std::cout << val << '\n';
 
 
 		//The lookup table. Just a simple const array bruh.
 		static const std::string stringArray[7] = { "Look", "up", "table", "LUL", "OMFG", "So nice", "Not switchstatements tho" };
 		if (n < 6)
 		{
-			std::cout << stringArray[n] << "\n";
+			std::cout << stringArray[n] << '\n';
 		}
 
 		//The advantage of using static here is that the list(stringArray) does not need to be initialized when the

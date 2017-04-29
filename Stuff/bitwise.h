@@ -17,7 +17,7 @@ namespace Bitwise
 		{
 			std::cout << (bitArr[i] & 1) << " ";
 		}
-		std::cout << "\n";
+		std::cout << '\n';
 		//outputs 0,1,0,1,0,1,0,1,0,1
 		//00
 		//01
@@ -31,7 +31,7 @@ namespace Bitwise
 		{
 			std::cout << (bitArr[i] & 2) << " ";
 		}
-		std::cout << "\n";
+		std::cout << '\n';
 		//outputs 0, 0, 2, 2, 0, 0, 2, 2, 0, 0
 		//00
 		//10
@@ -64,7 +64,7 @@ namespace Bitwise
 
 		//osv...
 
-		std::cout << "\n";
+		std::cout << '\n';
 	}
 
 	inline void bitwiseOneBranch()

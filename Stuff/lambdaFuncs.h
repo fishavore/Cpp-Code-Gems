@@ -29,7 +29,7 @@ namespace Lambda
 			{
 				cout << i + 1 << " ";
 			}
-			cout << "\n";
+			cout << '\n';
 		};
 		cout << "lets say 123: \n";
 		func();
@@ -39,14 +39,14 @@ namespace Lambda
 	{
 		//return value
 		auto timesTwo = [](int value) -> int { return value * 2; };
-		cout << "4 : " << timesTwo(2) << "\n";
+		cout << "4 : " << timesTwo(2) << '\n';
 		//pass value and function
 		int five = 5;
 
 		//auto timesTwo would actually be: void (*timesTwo)(int) as a function parameter.
 		auto func = [](int five, auto timesTwo)
 		{
-			cout << timesTwo(five) << "\n";
+			cout << timesTwo(five) << '\n';
 		};
 
 		func(five, timesTwo);
@@ -60,7 +60,7 @@ namespace Lambda
 		vec.push_back(2);
 
 		for_each(vec.begin(), vec.end(), [](int val) { cout << val; });
-		cout << "\n";
+		cout << '\n';
 
 		//instead of this
 		//vector<int> v;
