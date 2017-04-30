@@ -60,6 +60,9 @@
     <Filter Include="Union">
       <UniqueIdentifier>{b803a261-7ed5-4e2b-af76-70b06d345977}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Datastructures">
+      <UniqueIdentifier>{81c2d75d-c427-431f-977c-e8eeb79a3269}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -138,6 +141,12 @@
     </ClInclude>
     <ClInclude Include="Union.h">
       <Filter>Union</Filter>
+    </ClInclude>
+    <ClInclude Include="RedBlackTree.h">
+      <Filter>Datastructures</Filter>
+    </ClInclude>
+    <ClInclude Include="Datastructures.h">
+      <Filter>Datastructures</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -61,7 +61,7 @@ namespace Multithreading
 		};
 		
 
-		std::mutex mtx;		
+		std::mutex mtx;			
 		const int CAP = 10;
 		std::thread threads[CAP];
 		threadInfo tInfo[CAP];

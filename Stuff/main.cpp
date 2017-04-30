@@ -37,6 +37,7 @@ using namespace std;
 #include "PriorityQueue.h"
 #include "paradoxPathfinding.h"
 #include "Union.h"
+#include "Datastructures.h"
 
 #include "TestingHeader.h"
 
@@ -120,6 +121,11 @@ int main()
 	//Union keyword
 	{
 		Union::main();
+	}
+
+	//DataStructures
+	{
+		Datastructures::main();
 	}
 
 	//Tests

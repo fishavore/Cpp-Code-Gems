@@ -153,6 +153,7 @@
     <ClInclude Include="bitwise.h" />
     <ClInclude Include="constExamples.h" />
     <ClInclude Include="constexpression.h" />
+    <ClInclude Include="Datastructures.h" />
     <ClInclude Include="friends.h" />
     <ClInclude Include="argumentOrder.h" />
     <ClInclude Include="lambdaFuncs.h" />
@@ -162,6 +163,7 @@
     <ClInclude Include="paradoxPathfinding.h" />
     <ClInclude Include="Polymorphism.h" />
     <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="RedBlackTree.h" />
     <ClInclude Include="rvaluereference.h" />
     <ClInclude Include="smartpointers.h" />
     <ClInclude Include="Square.h" />
