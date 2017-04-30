@@ -2,6 +2,9 @@
 
 #include<cstdlib>
 
+//TODO:
+//		Add delete.
+//		Add key.
 
 template<class T>
 class RedBlackTree
@@ -36,6 +39,7 @@ public:
 public:
 	void Insert(T item);
 	void PrintInOrder();
+	void Delete();
 	void DeleteNodes();
 
 private:
@@ -251,6 +255,11 @@ void RedBlackTree<T>::RightRotate(Node<T>* _input)
 	leftInput->right = _input;
 	_input->parent = leftInput;
 }
+
+template <class T>
+void RedBlackTree<T>::Delete()
+{}
+
 
 template <class T>
 void RedBlackTree<T>::DeleteNodes()
