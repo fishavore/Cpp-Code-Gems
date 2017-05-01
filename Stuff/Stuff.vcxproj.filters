@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
@@ -63,11 +59,14 @@
     <Filter Include="Datastructures">
       <UniqueIdentifier>{81c2d75d-c427-431f-977c-e8eeb79a3269}</UniqueIdentifier>
     </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{a80c7294-09dd-4811-b79f-38eb1773d249}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Random">
+      <UniqueIdentifier>{d6aa5c4f-ea82-404a-98af-ce80edaf8ce2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Timer.cpp">
       <Filter>HelpFiles</Filter>
     </ClCompile>
@@ -79,6 +78,9 @@
     </ClCompile>
     <ClCompile Include="AStar.cpp">
       <Filter>Pathfinding</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>main</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -147,6 +149,9 @@
     </ClInclude>
     <ClInclude Include="Datastructures.h">
       <Filter>Datastructures</Filter>
+    </ClInclude>
+    <ClInclude Include="Random.h">
+      <Filter>Random</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

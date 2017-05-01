@@ -143,12 +143,16 @@ inline void TestStart()
 {
 	std::cout << "TestStart: \n";
 	
-	int lul = 0;
+	bool found = false;
+	int incr = 0;
 
+	while (!found)
 	{
-		lul = 1;
+		incr++;
+		if (incr == 5)
+			break;
+		if (incr == 8)
+			found = true;
 	}
-	cout << lul;
-
 
 }

@@ -162,6 +162,7 @@
     <ClInclude Include="OverloadingOperator.h" />
     <ClInclude Include="paradoxPathfinding.h" />
     <ClInclude Include="Polymorphism.h" />
+    <ClInclude Include="Random.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="RedBlackTree.h" />
     <ClInclude Include="rvaluereference.h" />

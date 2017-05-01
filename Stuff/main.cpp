@@ -38,6 +38,7 @@ using namespace std;
 #include "paradoxPathfinding.h"
 #include "Union.h"
 #include "Datastructures.h"
+#include "Random.h"
 
 #include "TestingHeader.h"
 
@@ -48,6 +49,8 @@ using namespace std;
 
 int main()
 {
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+
 	//Polymorphism
 	{
 		Polymorphism::main();
@@ -126,6 +129,11 @@ int main()
 	//DataStructures
 	{
 		Datastructures::main();
+	}
+
+	//Random
+	{
+		Random::main();
 	}
 
 	//Tests

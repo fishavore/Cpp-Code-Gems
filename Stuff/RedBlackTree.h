@@ -1,14 +1,11 @@
 #pragma once
 
-#include<cstdlib>
-
-//TODO:
-//		Add delete.
-
 template<class T>
 class RedBlackTree
 {
 private:
+	typedef enum { RED, BLACK } COLOR;
+
 	template<class T> class Node
 	{
 	public:
@@ -17,7 +14,7 @@ private:
 		Node* left;
 		Node* right;
 		Node* parent;
-		bool isRed;
+		COLOR color;
 
 		Node(T item, int key)
 		{
@@ -26,7 +23,7 @@ private:
 			this->left = nullptr;
 			this->right = nullptr;
 			this->parent = nullptr;
-			this->isRed = false;
+			this->color = BLACK;
 		};
 		~Node() {};
 	};
@@ -38,17 +35,43 @@ public:
 	RedBlackTree() { this->mRoot = nullptr; };
 	~RedBlackTree() { Free(this->mRoot); };
 public:
-	void Insert(T item, int key);
-	void PrintInOrder();
-	void Delete();
-	void DeleteNodes();
+	void insert(T item, int key);
+	void printInOrder();
+	bool remove(int key);
+	void deleteNodes();
 
 private:
-	void InsertFixup(Node<T>* input);
-	void LeftRotate(Node<T>* x);
-	void RightRotate(Node<T>* x);
-	void Transplant(Node<T>* left, Node<T>* right);
-	void InOrderCout(Node<T>* x);
+	void insertFixup(Node<T>* input);
+	void leftRotate(Node<T>* x);
+	void rightRotate(Node<T>* x);
+	void transplant(Node<T>* left, Node<T>* right);
+	void inOrderCout(Node<T>* x);
+	//returns node ptr which match key.
+	Node<T>* treeSearch(int key)
+	{
+		Node<T>* node = mRoot;
+		while ((node != nullptr) && key != node->key)
+		{
+			if (key < node->key)
+				node = node->left;
+			else
+				node = node->right;
+		}
+		return node;
+	};
+	Node<T>* treeMinimum(Node<T>* node)
+	{
+		while (node->left != nullptr)
+			node = node->left;
+		return node;
+	};
+	Node<T>* treeMaximum(Node<T>* node)
+	{
+		while (node->right != nullptr)
+			node = node->right;
+		return node;
+	};
+	void deleteFixup(Node<T>* input);
 };
 
 
@@ -72,238 +95,285 @@ void RedBlackTree<T>::Free(Node<T>* x)
 }
 
 template <class T>
-void RedBlackTree<T>::Insert(T item, int key)
+void RedBlackTree<T>::insert(T item, int key)
 {
-	Node<T>* input = new Node<T>(item, key);
+	Node<T>* node_z = new Node<T>(item, key);
+	Node<T>* node_y = nullptr;
+	Node<T>* node_x = this->mRoot;
 
-	if (this->mRoot == nullptr)
+	if (!this->mRoot)
 	{
-		this->mRoot = input;
-		input->isRed = false; //root is black.
+		this->mRoot = node_z;
+		return;
 	}
-	else
-	{
-		Node<T>* y = nullptr;
-		Node<T>* x = this->mRoot;
 
-		//Sätt in noden som ett vanligt BST.
-		//Traversera
-		while (x != nullptr)
-		{
-			y = x;
-			if (input->key < x->key)
-				x = x->left;
-			else
-				x = x->right;
-		}
-		//Ställ in parent.
-		input->parent = y;
-		if (input->key > y->key)
-			y->right = input;
+	while (node_x) {
+		node_y = node_x;
+		if (node_z->key < node_x->key)
+			node_x = node_x->left;
 		else
-			y->left = input;
-		input->isRed = true;
-
-		//Fixa till den så noden hamnar rätt.
-		InsertFixup(input);
+			node_x = node_x->right;
 	}
+	node_z->parent = node_y;
+
+	if (!node_y)
+		this->mRoot = node_z;
+	else if (node_z->key < node_y->key)
+		node_y->left = node_z;
+	else
+		node_y->right = node_z;
+
+	node_z->left = nullptr;
+	node_z->right = nullptr;
+	node_z->color = RED;
+
+	insertFixup(node_z);
 }
 
 template <class T>
-void RedBlackTree<T>::InsertFixup(Node<T>* _input)
+void RedBlackTree<T>::insertFixup(Node<T>* node_z)
 {
-	bool colorTemp;
-
-	Node<T>* parentInput;
-	Node<T>* grandParentInput;
-
-	//Iterera tills att _input noden inte är root och vars förälder är röd.
-	while (
-		(_input != this->mRoot) &&
-		(_input->isRed != false) &&
-		(_input->parent->isRed == true))
-	{
-
-		parentInput = _input->parent;
-		grandParentInput = _input->parent->parent;
-
-		
-		//Steg A.
-		//Parent of input is left child of grandparent of input.
-		
-		if (_input->parent == grandParentInput->left)
-		{
-			Node<T>* uncleInput = grandParentInput->right;
-
-			//Steg 1.
-			//Uncle of Input is also red.
-			//Recoloring:
-			
-			if (uncleInput != nullptr && uncleInput->isRed == true)
-			{
-				grandParentInput->isRed = true;
-				parentInput->isRed = false;
-				uncleInput->isRed = false;
-				_input = grandParentInput;
+	while ((node_z->parent) && (RED == node_z->parent->color)) {
+		if (node_z->parent == node_z->parent->parent->left) {
+			Node<T>* node_y = node_z->parent->parent->right;
+			if (node_y && (RED == node_y->color)) {
+				node_z->parent->color = BLACK;
+				node_y->color = BLACK;
+				node_z->parent->parent->color = RED;
+				node_z = node_z->parent->parent;
 			}
-			else
-			{
-				
-				//Steg 2.
-				//input is right child of its parent
-				//Left Rotation:
-				
-				if (_input == parentInput->right)
-				{
-					LeftRotate(parentInput);
-					_input = parentInput;
-					parentInput = _input->parent;
-				}
-				
-				//Steg 3.
-				//input is left child of parent
-				//Right Rotation
-				
-				RightRotate(grandParentInput);
-				colorTemp = parentInput->isRed;
-				parentInput->isRed = grandParentInput->isRed;
-				grandParentInput->isRed = colorTemp;
-				_input = parentInput;
+			else if (node_z == node_z->parent->right) {
+				node_z = node_z->parent;
+				leftRotate(node_z);
+			}
+			else {
+				node_z->parent->color = BLACK;
+				node_z->parent->parent->color = RED;
+				rightRotate(node_z->parent->parent);
 			}
 		}
-		
-		//Steg B.
-		//Parent of input is right child of grand parent of input
+		else if (node_z->parent == node_z->parent->parent->right) {
+			Node<T>* node_y = node_z->parent->parent->left;
+			if (node_y && (RED == node_y->color)) {
+				node_z->parent->color = BLACK;
+				node_y->color = BLACK;
+				node_z->parent->parent->color = RED;
+				node_z = node_z->parent->parent;
+			}
+			else if (node_z == node_z->parent->right) {
+				node_z = node_z->parent;
+				leftRotate(node_z);
+			}
+			else {
+				node_z->parent->color = BLACK;
+				node_z->parent->parent->color = RED;
+				rightRotate(node_z->parent->parent);
+			}
+		}
+	}
+	this->mRoot->color = BLACK;
+}
+
+template <class T>
+void RedBlackTree<T>::leftRotate(Node<T>* node_x)
+{
+	Node<T>* node_y = node_x->right;
+
+	if (node_y)
+	{
+		node_x->right = node_y->left;
+		if (node_y->left != nullptr)
+			node_y->left->parent = node_x;
+		node_y->parent = node_x->parent;
+
+		if (node_x->parent == nullptr)
+			this->mRoot = node_y;
+		else if (node_x == node_x->parent->left)
+			node_x->parent->left = node_y;
 		else
-		{
-			//Steg 1.
-			//Uncle of input is also red.
-			//Recoloring:
-			
-			Node<T>* uncleInput = grandParentInput->left;
-			if (uncleInput != nullptr && uncleInput->isRed == true)
-			{
-				grandParentInput->isRed = true;
-				parentInput->isRed = false;
-				uncleInput->isRed = false;
-				_input = grandParentInput;
+			node_x->parent->right = node_y;
+
+		node_y->left = node_x;
+		node_x->parent = node_y;
+	}
+}
+
+template <class T>
+void RedBlackTree<T>::rightRotate(Node<T>* node_y)
+{
+	Node<T>* node_x = node_y->left;
+
+	if (node_x)
+	{
+		node_y->left = node_x->right;
+		if (node_x->right != nullptr)
+			node_x->right->parent = node_y;
+		node_x->parent = node_y->parent;
+		if (node_y->parent == nullptr)
+			this->mRoot = node_x;
+		else if (node_y == node_y->parent->right)
+			node_y->parent->right = node_x;
+		else
+			node_y->parent->left = node_x;
+
+		node_x->right = node_y;
+		node_y->parent = node_x;
+	}
+}
+
+template <class T>
+void RedBlackTree<T>::transplant(Node<T>* node_u, Node<T>* node_v)
+{
+	if (!node_u->parent)
+		this->mRoot = node_v;
+	else if (node_u == node_u->parent->left)
+		node_u->parent->left = node_v;
+	else
+		node_u->parent->right = node_v;
+
+	if(node_v)
+		node_v->parent = node_u->parent;
+}
+
+template <class T>
+bool RedBlackTree<T>::remove(int key)
+{
+	//page: 324.
+	Node<T>* node_z = treeSearch(key);
+	if (!node_z)
+	{
+		return false; //failed to find key to remove.
+	}
+
+	// Delete operation
+	Node<T>* node_y = node_z;
+	COLOR y_original_color = node_y->color;
+
+	Node<T>* node_x = nullptr;
+	if (node_z->left == nullptr) {
+		node_x = node_z->right;
+		transplant(node_z, node_z->right);
+	}
+	else if (node_z->right == nullptr) {
+		node_x = node_z->left;
+		transplant(node_z, node_z->left);
+	}
+	else {
+		node_y = treeMinimum(node_z->right);
+		y_original_color = node_y->color;
+		node_x = node_y->right;
+		if ((node_x) && (node_x->parent) && (node_y->parent == node_z))
+			node_x->parent = node_y;
+		else {
+			transplant(node_y, node_y->right);
+			node_y->right = node_z->right;
+			if(node_y->right)
+				node_y->right->parent = node_y;
+		}
+
+		transplant(node_z, node_y);
+		node_y->left = node_z->left;
+		node_y->left->parent = node_y;
+		node_y->color = node_z->color;
+	}
+
+	if (y_original_color == BLACK)
+		deleteFixup(node_x);
+
+
+	delete node_z;
+
+	return true;
+}
+
+template<class T>
+void RedBlackTree<T>::deleteFixup(Node<T>* node_x)
+{
+	while ((node_x) && (node_x != this->mRoot) && (BLACK == node_x->color)) {
+		if (node_x == node_x->parent->left) {
+			Node<T>* node_w = node_x->parent->right;
+			if ((node_w) && (RED == node_w->color)) {
+				node_w->color = BLACK;
+				node_x->parent->color = RED;
+				leftRotate(node_x->parent);
+				node_w = node_x->parent->right;
 			}
-			else
-			{
-				//Steg 2.
-				//input is right child of its parent
-				//Right Rotation:
-				if (_input == parentInput->left)
-				{
-					RightRotate(parentInput);
-					_input = parentInput;
-					parentInput = _input->parent;
-				}
-				
-				//Steg 3.
-				//input is left child of parent
-				//Left Rotation
-				LeftRotate(grandParentInput);
-				colorTemp = parentInput->isRed;
-				parentInput->isRed = grandParentInput->isRed;
-				grandParentInput->isRed = colorTemp;
-				_input = parentInput;
+			else if ((node_w) && (node_w->right) && (node_w->left) && (BLACK == node_w->left->color) && (BLACK == node_w->right->color)) {
+				node_w->color = RED;
+				node_x = node_x->parent;
+			}
+			else if ((node_w) && (node_w->right) && (BLACK == node_w->right->color)) {
+				if(node_w->left)
+					node_w->left->color = BLACK;
+				node_w->color = RED;
+				rightRotate(node_w);
+				node_w = node_x->parent->right;
+			}
+			else {
+				if(node_w)
+					node_w->color = node_x->parent->color;
+				node_x->parent->color = BLACK;
+				if((node_w) && node_w->right)
+					node_w->right->color = BLACK;
+				leftRotate(node_x->parent);
+				node_x = this->mRoot;
+			}
+		}
+		else if (node_x == node_x->parent->right) {
+			Node<T>* node_w = node_x->parent->left;
+			if ((node_w) && RED == node_w->color) {
+				node_w->color = BLACK;
+				node_x->parent->color = RED;
+				leftRotate(node_x->parent);
+				node_w = node_x->parent->right;
+			}
+			else if ((node_w) && (node_w->left) && (node_w->right) && (BLACK == node_w->left->color) && BLACK == node_w->right->color) {
+				node_w->color = RED;
+				node_x = node_x->parent;
+			}
+			else if ((node_w) &&  (node_w->right) && (BLACK == node_w->right->color)) {
+				if(node_w->left)
+					node_w->left->color = BLACK;
+				node_w->color = RED;
+				rightRotate(node_w);
+				node_w = node_x->parent->right;
+			}
+			else {
+				if(node_w)
+					node_w->color = node_x->parent->color;
+				node_x->parent->color = BLACK;
+				if((node_w) && node_w->right)
+					node_w->right->color = BLACK;
+				leftRotate(node_x->parent);
+				node_x = this->mRoot;
 			}
 		}
 	}
-	this->mRoot->isRed = false;
+	if(node_x)
+		node_x->color = BLACK;
 }
 
 template <class T>
-void RedBlackTree<T>::LeftRotate(Node<T>* _input)
-{
-	Node<T>* inputRight = _input->right;
-	_input->right = inputRight->left;
-
-	if (_input->right != nullptr)
-		_input->right->parent = _input;
-
-	inputRight->parent = _input->parent;
-
-	if (_input->parent == nullptr)
-		this->mRoot = inputRight;
-	else if (_input == _input->parent->left)
-		_input->parent->left = inputRight;
-	else
-		_input->parent->right = inputRight;
-
-	inputRight->left = _input;
-	_input->parent = inputRight;
-}
-
-template <class T>
-void RedBlackTree<T>::RightRotate(Node<T>* _input)
-{
-	Node<T>* leftInput = _input->left;
-	_input->left = leftInput->right;
-
-	if (_input->left != nullptr)
-		_input->left->parent = _input;
-
-	leftInput->parent = _input->parent;
-
-	if (_input->parent == nullptr)
-		this->mRoot = leftInput;
-	else if (_input == _input->parent->left)
-		_input->parent->left = leftInput;
-	else
-		_input->parent->right = leftInput;
-	leftInput->right = _input;
-	_input->parent = leftInput;
-}
-
-template <class T>
-void RedBlackTree<T>::Transplant(Node<T>* _left, Node<T>* _right)
-{
-	if (_left->parent == nullptr)
-	{
-		this->mRoot = _right;
-	}
-	else if (_left == _left->parent->left)
-	{
-		_left->parent->left = _right;
-	}
-	else
-	{
-		_left->parent->right = _right;
-	}
-	_right->parent = _left->parent;
-}
-
-template <class T>
-void RedBlackTree<T>::Delete()
-{
-
-
-}
-
-
-template <class T>
-void RedBlackTree<T>::DeleteNodes()
+void RedBlackTree<T>::deleteNodes()
 {
 	free(this->mRoot);
 }
 
 template <class T>
-void RedBlackTree<T>::InOrderCout(Node<T>* x)
+void RedBlackTree<T>::inOrderCout(Node<T>* x)
 {
 	if (x != nullptr)
 	{
-		InOrderCout(x->left);
+		inOrderCout(x->left);
 		std::cout << x->key << ", ";
-		InOrderCout(x->right);
+		inOrderCout(x->right);
 	}
 }
 
 template <class T>
-void RedBlackTree<T>::PrintInOrder()
+void RedBlackTree<T>::printInOrder()
 {
 	std::cout << "Printing list in order:" << std::endl;
-	InOrderCout(this->mRoot);
+	inOrderCout(this->mRoot);
 	std::cout << std::endl;
 }
