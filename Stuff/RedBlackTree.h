@@ -47,6 +47,7 @@ private:
 	void InsertFixup(Node<T>* input);
 	void LeftRotate(Node<T>* x);
 	void RightRotate(Node<T>* x);
+	void Transplant(Node<T>* left, Node<T>* right);
 	void InOrderCout(Node<T>* x);
 };
 
@@ -257,8 +258,29 @@ void RedBlackTree<T>::RightRotate(Node<T>* _input)
 }
 
 template <class T>
+void RedBlackTree<T>::Transplant(Node<T>* _left, Node<T>* _right)
+{
+	if (_left->parent == nullptr)
+	{
+		this->mRoot = _right;
+	}
+	else if (_left == _left->parent->left)
+	{
+		_left->parent->left = _right;
+	}
+	else
+	{
+		_left->parent->right = _right;
+	}
+	_right->parent = _left->parent;
+}
+
+template <class T>
 void RedBlackTree<T>::Delete()
-{}
+{
+
+
+}
 
 
 template <class T>
