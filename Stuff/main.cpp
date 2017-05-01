@@ -19,8 +19,6 @@ coolest syntax on the block but the one that is exactly what you were looking fo
 using namespace std;
 
 
-#include "Rectangle.h"
-#include "Square.h"
 #include "Polymorphism.h"
 #include "STDArray.h"
 #include "constExamples.h"
