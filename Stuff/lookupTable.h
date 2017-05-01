@@ -74,20 +74,33 @@ namespace LookupTable
 
 
 		//The lookup table. Just a simple const array bruh.
-		static const std::string stringArray[7] = { "Look", "up", "table", "LUL", "OMFG", "So nice", "Not switchstatements tho" };
+		const std::string stringArray[7] = { "Look", "up", "table", "LUL", "OMFG", "So nice", "Not switchstatements tho" };
 		if (n < 6)
 		{
 			std::cout << stringArray[n] << '\n';
 		}
-
-		//The advantage of using static here is that the list(stringArray) does not need to be initialized when the
-		//function is called.The values are simply put there when the program is loaded into memory.
-		//If the word static is removed from the above example, then all five values have to be put
-		//into the list every time the function is called.
-		//This is done by copying the entire list from
-		//static memory to stack memory.Copying constant data from static memory to the stack is a
-		//waste of time in most cases, but it may be optimal in special cases where the data are used
-		//many times in a loop where almost the entire level - 1 cache is used in a number of arrays
-		//that you want to keep together on the stack.
 	}
 }
+
+/*
+THIS STATIC CAUSED MEMORY LEAKS.
+
+//The lookup table. Just a simple const array bruh.
+static const std::string stringArray[7] = { "Look", "up", "table", "LUL", "OMFG", "So nice", "Not switchstatements tho" };
+if (n < 6)
+{
+std::cout << stringArray[n] << '\n';
+}
+
+//The advantage of using static here is that the list(stringArray) does not need to be initialized when the
+//function is called.The values are simply put there when the program is loaded into memory.
+//If the word static is removed from the above example, then all five values have to be put
+//into the list every time the function is called.
+//This is done by copying the entire list from
+//static memory to stack memory.Copying constant data from static memory to the stack is a
+//waste of time in most cases, but it may be optimal in special cases where the data are used
+//many times in a loop where almost the entire level - 1 cache is used in a number of arrays
+//that you want to keep together on the stack.
+
+
+*/
