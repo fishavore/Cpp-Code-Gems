@@ -6,10 +6,16 @@ namespace Datastructures
 {
 	inline void RedBlackTreeFunc()
 	{
-		RedBlackTree<int> rbt;
+		struct A
+		{
+			char c = 'A';
+			int val = 5;
+		}exampleStruct;
 
-		for (int n : {5, 4, 7, 1, 9, 2, 6, 10})
-			rbt.Insert(n);
+		RedBlackTree<A> rbt;
+
+		for (int key : {8, 5, 4, 7, 1, 9, 2, 6, 10, 3})
+			rbt.Insert(exampleStruct, key);
 
 		rbt.PrintInOrder();
 	}

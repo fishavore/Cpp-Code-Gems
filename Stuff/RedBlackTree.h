@@ -4,7 +4,6 @@
 
 //TODO:
 //		Add delete.
-//		Add key.
 
 template<class T>
 class RedBlackTree
@@ -13,14 +12,16 @@ private:
 	template<class T> class Node
 	{
 	public:
+		int key;
 		T value;
 		Node* left;
 		Node* right;
 		Node* parent;
 		bool isRed;
 
-		Node(T item)
+		Node(T item, int key)
 		{
+			this->key = key;
 			this->value = item;
 			this->left = nullptr;
 			this->right = nullptr;
@@ -37,7 +38,7 @@ public:
 	RedBlackTree() { this->mRoot = nullptr; };
 	~RedBlackTree() { Free(this->mRoot); };
 public:
-	void Insert(T item);
+	void Insert(T item, int key);
 	void PrintInOrder();
 	void Delete();
 	void DeleteNodes();
@@ -70,9 +71,9 @@ void RedBlackTree<T>::Free(Node<T>* x)
 }
 
 template <class T>
-void RedBlackTree<T>::Insert(T item)
+void RedBlackTree<T>::Insert(T item, int key)
 {
-	Node<T>* input = new Node<T>(item);
+	Node<T>* input = new Node<T>(item, key);
 
 	if (this->mRoot == nullptr)
 	{
@@ -89,14 +90,14 @@ void RedBlackTree<T>::Insert(T item)
 		while (x != nullptr)
 		{
 			y = x;
-			if (input->value < x->value)
+			if (input->key < x->key)
 				x = x->left;
 			else
 				x = x->right;
 		}
 		//Ställ in parent.
 		input->parent = y;
-		if (input->value > y->value)
+		if (input->key > y->key)
 			y->right = input;
 		else
 			y->left = input;
@@ -133,7 +134,6 @@ void RedBlackTree<T>::InsertFixup(Node<T>* _input)
 		{
 			Node<T>* uncleInput = grandParentInput->right;
 
-			
 			//Steg 1.
 			//Uncle of Input is also red.
 			//Recoloring:
@@ -273,7 +273,7 @@ void RedBlackTree<T>::InOrderCout(Node<T>* x)
 	if (x != nullptr)
 	{
 		InOrderCout(x->left);
-		std::cout << x->value << ", ";
+		std::cout << x->key << ", ";
 		InOrderCout(x->right);
 	}
 }
