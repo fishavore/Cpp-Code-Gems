@@ -303,17 +303,17 @@ void RedBlackTree<T>::deleteFixup(Node<T>* node_x)
 				node_x = node_x->parent;
 			}
 			else if ((node_w) && (node_w->right) && (BLACK == node_w->right->color)) {
-				if(node_w->left)
+				if (node_w->left)
 					node_w->left->color = BLACK;
 				node_w->color = RED;
 				rightRotate(node_w);
 				node_w = node_x->parent->right;
 			}
 			else {
-				if(node_w)
+				if (node_w)
 					node_w->color = node_x->parent->color;
 				node_x->parent->color = BLACK;
-				if((node_w) && node_w->right)
+				if ((node_w) && node_w->right)
 					node_w->right->color = BLACK;
 				leftRotate(node_x->parent);
 				node_x = this->mRoot;
@@ -325,31 +325,33 @@ void RedBlackTree<T>::deleteFixup(Node<T>* node_x)
 				node_w->color = BLACK;
 				node_x->parent->color = RED;
 				leftRotate(node_x->parent);
-				node_w = node_x->parent->right;
+				if (node_x->parent)
+					node_w = node_x->parent->right;
 			}
 			else if ((node_w) && (node_w->left) && (node_w->right) && (BLACK == node_w->left->color) && BLACK == node_w->right->color) {
 				node_w->color = RED;
 				node_x = node_x->parent;
 			}
-			else if ((node_w) &&  (node_w->right) && (BLACK == node_w->right->color)) {
-				if(node_w->left)
+			else if ((node_w) && (node_w->right) && (BLACK == node_w->right->color)) {
+				if (node_w->left)
 					node_w->left->color = BLACK;
 				node_w->color = RED;
 				rightRotate(node_w);
-				node_w = node_x->parent->right;
+				if (node_x->parent)
+					node_w = node_x->parent->right;
 			}
 			else {
-				if(node_w)
+				if (node_w)
 					node_w->color = node_x->parent->color;
 				node_x->parent->color = BLACK;
-				if((node_w) && node_w->right)
+				if ((node_w) && node_w->right)
 					node_w->right->color = BLACK;
 				leftRotate(node_x->parent);
 				node_x = this->mRoot;
 			}
 		}
 	}
-	if(node_x)
+	if (node_x)
 		node_x->color = BLACK;
 }
 
