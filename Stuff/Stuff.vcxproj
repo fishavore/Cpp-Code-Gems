@@ -169,6 +169,7 @@
     <ClInclude Include="smartpointers.h" />
     <ClInclude Include="Square.h" />
     <ClInclude Include="STDArray.h" />
+    <ClInclude Include="StringManipulation.h" />
     <ClInclude Include="TestingHeader.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Union.h" />

@@ -26,3 +26,6 @@ if used it will break it then and there and jump out.
 you have plenty of shorts. This is because the CPU has to adjust the short value to make the
 comparison which will be more costly than normal comparisons. Basically, just use ints and
 don't try so hard.
+
+6. You can do local: using namespace std; rather than doing it outside of standard code:
+main(){using namespace std; cout<<123;} etc.  

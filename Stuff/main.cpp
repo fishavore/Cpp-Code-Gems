@@ -37,6 +37,7 @@ using namespace std;
 #include "Union.h"
 #include "Datastructures.h"
 #include "Random.h"
+#include "StringManipulation.h"
 
 #include "TestingHeader.h"
 
@@ -132,6 +133,11 @@ int main()
 	//Random
 	{
 		Random::main();
+	}
+	
+	//String manipulation
+	{
+		StringManipulation::main();
 	}
 
 	//Tests
