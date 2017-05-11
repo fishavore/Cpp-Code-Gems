@@ -10,7 +10,7 @@
 
 namespace SmartPointers
 {
-	inline void main()
+	inline void start()
 	{
 		//auto myobj = std::make_unique<MyClass>(constructor_param1, constructor_param2); // C++14
 		//auto myobj = std::unique_ptr<MyClass>(new MyClass(constructor_param1, constructor_param2)); // C++11

@@ -53,97 +53,97 @@ int main()
 
 	//Polymorphism
 	{
-		Polymorphism::main();
+		Polymorphism::start();
 	}
 
 	//Friend class
 	{
-		Friends::main();
+		Friends::start();
 	}
 
 	//Smart pointers
 	{
-		SmartPointers::main();
+		SmartPointers::start();
 	}
 
 	//std array
 	{
-		StdArray::main();
+		StdArray::start();
 	}
 
 	//const check
 	{
-		ConstExamples::main();
+		ConstExamples::start();
 	}
 
 	//rvalue reference
 	{
-		RValueReference::main();
+		RValueReference::start();
 	}
 
 	//constexpr
 	{
-		ConstExpression::main();
+		ConstExpression::start();
 	}
 
 	//Lambda
 	{
-		Lambda::main();
+		Lambda::start();
 	}
 
 	//bitoperators
 	{
-		Bitwise::main();
+		Bitwise::start();
 	}
 
 	//look up table
 	{
-		LookupTable::main();
+		LookupTable::start();
 	}
 
 	//Other - Argument order.
 	{
-		Other::ArgumentOrder::main();
+		Other::ArgumentOrder::start();
 	}
 
 	//Multithreading
 	{
-		Multithreading::main();
+		Multithreading::start();
 	}
 
 	//PriorityQueue
 	{
-		PriorityQueue::main();
+		PriorityQueue::start();
 	}
 
 	//Paradox Interactive Path finding
 	{
-		Paradox::main();
+		Paradox::start();
 	}
 
 	//Union keyword
 	{
-		Union::main();
+		Union::start();
 	}
 
 	//DataStructures
 	{
-		Datastructures::main();
+		Datastructures::start();
 	}
 
 	//Random
 	{
-		Random::main();
+		Random::start();
 	}
 	
 	//String manipulation
 	{
-		StringManipulation::main();
+		StringManipulation::start();
 	}
 
 	//enum / enumclass
 	{
-		EnumEnumclass::main();
+		EnumEnumclass::start();
 	}
 
 	//Tests

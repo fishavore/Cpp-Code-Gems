@@ -4,7 +4,7 @@
 namespace ConstExamples
 {
 
-	inline void main()
+	inline void start()
 	{
 		struct A
 		{

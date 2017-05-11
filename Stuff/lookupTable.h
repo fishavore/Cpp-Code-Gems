@@ -37,7 +37,7 @@ genious idea of using it.
 namespace LookupTable
 {
 
-	inline void main()
+	inline void start()
 	{
 		int n = 5;
 		std::string val;

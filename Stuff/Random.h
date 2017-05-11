@@ -45,7 +45,7 @@ namespace Random
 		std::cout << '\n';
 	}
 
-	inline void main()
+	inline void start()
 	{
 		random();
 		vectorShuffle();

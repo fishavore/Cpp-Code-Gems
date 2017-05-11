@@ -7,7 +7,7 @@
 
 namespace Friends
 {
-	inline void main()
+	inline void start()
 	{
 		Rectangle rect;
 		rect.Print();

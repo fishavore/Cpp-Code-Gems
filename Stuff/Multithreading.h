@@ -78,7 +78,7 @@ namespace Multithreading
 		}
 	}
 
-	inline void main()
+	inline void start()
 	{
 		basicExample();
 		mutexLock();

@@ -44,7 +44,7 @@ namespace Datastructures
 
 	}
 
-	inline void main()
+	inline void start()
 	{
 		RedBlackTreeWorkTest();
 	}

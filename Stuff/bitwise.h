@@ -97,7 +97,7 @@ namespace Bitwise
 		}
 	}
 
-	inline void main()
+	inline void start()
 	{
 		bitwiseBasic();
 	}

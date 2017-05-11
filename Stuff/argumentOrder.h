@@ -71,7 +71,7 @@ namespace Other
 			cout << "Assignment operators works from right to left. " << a << '\n';
 		}
 
-		inline void main()
+		inline void start()
 		{
 			argumentOrder();
 			assignmentOrder();

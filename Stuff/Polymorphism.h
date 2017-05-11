@@ -36,7 +36,7 @@ namespace Polymorphism
 		int getOtherValue() const {return otherValue;};
 	};
 
-	inline void main()
+	inline void start()
 	{
 		Car* seat = nullptr;
 		Car* wheel = nullptr;

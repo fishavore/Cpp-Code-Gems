@@ -47,7 +47,7 @@ namespace Paradox
 		}
 	}
 
-	inline void main()
+	inline void start()
 	{
 		const int mapSizeX = 4;
 		const int mapSizeY = 3;

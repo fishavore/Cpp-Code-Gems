@@ -17,7 +17,7 @@ namespace RValueReference
 		vec.push_back(456);
 	}
 
-	inline void main()
+	inline void start()
 	{
 		int&& i = 42;
 		int j = 42;

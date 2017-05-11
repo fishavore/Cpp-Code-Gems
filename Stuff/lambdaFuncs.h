@@ -73,7 +73,7 @@ namespace Lambda
 		//}
 	}
 
-	inline void main()
+	inline void start()
 	{
 		lambdaHelloWord();
 		lambdaBasicExample();

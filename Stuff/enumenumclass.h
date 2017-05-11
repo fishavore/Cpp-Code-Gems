@@ -2,7 +2,7 @@
 
 namespace EnumEnumclass
 {
-	inline void main()
+	inline void start()
 	{
 
 	}

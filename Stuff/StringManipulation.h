@@ -35,7 +35,7 @@ namespace StringManipulation
 		}
 	}
 
-	inline void main()
+	inline void start()
 	{
 		using namespace std;
 

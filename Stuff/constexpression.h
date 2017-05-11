@@ -14,7 +14,7 @@ namespace ConstExpression
 		return x*x;
 	}
 
-	inline void main()
+	inline void start()
 	{
 		int array[square(2)];
 		for (int i = 0; i < 4; i++)

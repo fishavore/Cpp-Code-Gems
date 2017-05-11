@@ -5,7 +5,7 @@
 
 namespace StdArray
 {
-	inline void main()
+	inline void start()
 	{
 		const int CAP = 5;
 		std::array<int, CAP> nummer;

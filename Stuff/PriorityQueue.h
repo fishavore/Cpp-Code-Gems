@@ -35,7 +35,7 @@ namespace PriorityQueue
 		std::cout << '\n';
 	}
 
-	inline void main()
+	inline void start()
 	{
 		std::priority_queue<int> pQueue;
 		for (int n : {1, 8, 5, 6, 3, 4, 0, 9, 7, 2})

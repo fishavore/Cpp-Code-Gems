@@ -82,7 +82,7 @@ namespace Union
 	}
 
 
-	inline void main()
+	inline void start()
 	{
 		my_variant_t val;
 		init_float(&val, 5);
