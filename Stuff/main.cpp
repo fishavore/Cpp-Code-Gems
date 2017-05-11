@@ -38,6 +38,7 @@ using namespace std;
 #include "Datastructures.h"
 #include "Random.h"
 #include "StringManipulation.h"
+#include "enumenumclass.h"
 
 #include "TestingHeader.h"
 
@@ -138,6 +139,11 @@ int main()
 	//String manipulation
 	{
 		StringManipulation::main();
+	}
+
+	//enum / enumclass
+	{
+		EnumEnumclass::main();
 	}
 
 	//Tests

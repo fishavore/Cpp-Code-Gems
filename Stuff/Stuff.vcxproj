@@ -154,6 +154,7 @@
     <ClInclude Include="constExamples.h" />
     <ClInclude Include="constexpression.h" />
     <ClInclude Include="Datastructures.h" />
+    <ClInclude Include="enumenumclass.h" />
     <ClInclude Include="friends.h" />
     <ClInclude Include="argumentOrder.h" />
     <ClInclude Include="lambdaFuncs.h" />

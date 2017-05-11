@@ -68,6 +68,9 @@
     <Filter Include="String Manipulation">
       <UniqueIdentifier>{162fe95a-22e5-457a-898a-af7b75d69e6b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="enum enumclass">
+      <UniqueIdentifier>{ab90f729-c287-403b-b1f4-b633353256cb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Timer.cpp">
@@ -158,6 +161,9 @@
     </ClInclude>
     <ClInclude Include="StringManipulation.h">
       <Filter>String Manipulation</Filter>
+    </ClInclude>
+    <ClInclude Include="enumenumclass.h">
+      <Filter>enum enumclass</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
