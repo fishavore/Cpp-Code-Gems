@@ -45,7 +45,7 @@ namespace OverloadingOperator
 	};
 
 
-	inline void main()
+	inline void start()
 	{
 
 	}
