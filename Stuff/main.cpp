@@ -39,6 +39,7 @@ using namespace std;
 #include "Random.h"
 #include "StringManipulation.h"
 #include "enumenumclass.h"
+#include "DebugRelease.h"
 
 #include "TestingHeader.h"
 
@@ -144,6 +145,11 @@ int main()
 	//enum / enumclass
 	{
 		EnumEnumclass::start();
+	}
+
+	//Debug / Release
+	{
+		DebugRelease::start();
 	}
 
 	//Tests

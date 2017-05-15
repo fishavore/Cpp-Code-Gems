@@ -71,6 +71,9 @@
     <Filter Include="enum enumclass">
       <UniqueIdentifier>{ab90f729-c287-403b-b1f4-b633353256cb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DebugRelease">
+      <UniqueIdentifier>{db486808-ef3c-4b37-89ce-c7a333d6743d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Timer.cpp">
@@ -164,6 +167,9 @@
     </ClInclude>
     <ClInclude Include="enumenumclass.h">
       <Filter>enum enumclass</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugRelease.h">
+      <Filter>DebugRelease</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
