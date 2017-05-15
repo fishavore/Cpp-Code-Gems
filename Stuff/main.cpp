@@ -40,6 +40,7 @@ using namespace std;
 #include "StringManipulation.h"
 #include "enumenumclass.h"
 #include "DebugRelease.h"
+#include "TryCatch.h"
 
 #include "TestingHeader.h"
 
@@ -150,6 +151,11 @@ int main()
 	//Debug / Release
 	{
 		DebugRelease::start();
+	}
+
+	//Try Catch
+	{
+		TryCatch::start();
 	}
 
 	//Tests

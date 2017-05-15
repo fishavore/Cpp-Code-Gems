@@ -74,6 +74,9 @@
     <Filter Include="DebugRelease">
       <UniqueIdentifier>{db486808-ef3c-4b37-89ce-c7a333d6743d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="TryCatch">
+      <UniqueIdentifier>{0d25f4ec-8e69-4a16-b7d0-e60c390f116d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Timer.cpp">
@@ -170,6 +173,9 @@
     </ClInclude>
     <ClInclude Include="DebugRelease.h">
       <Filter>DebugRelease</Filter>
+    </ClInclude>
+    <ClInclude Include="TryCatch.h">
+      <Filter>TryCatch</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
