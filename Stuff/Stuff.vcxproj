@@ -161,6 +161,7 @@
     <ClInclude Include="lambdaFuncs.h" />
     <ClInclude Include="lookupTable.h" />
     <ClInclude Include="Multithreading.h" />
+    <ClInclude Include="NewDeleteNullptr.h" />
     <ClInclude Include="OverloadingOperator.h" />
     <ClInclude Include="paradoxPathfinding.h" />
     <ClInclude Include="Polymorphism.h" />

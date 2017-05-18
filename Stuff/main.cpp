@@ -41,6 +41,7 @@ using namespace std;
 #include "enumenumclass.h"
 #include "DebugRelease.h"
 #include "TryCatch.h"
+#include "NewDeleteNullptr.h"
 
 #include "TestingHeader.h"
 
@@ -156,6 +157,11 @@ int main()
 	//Try Catch
 	{
 		TryCatch::start();
+	}
+
+	//New / Delete / Nullptr
+	{
+		NewDeleteNullptr::start();
 	}
 
 	//Tests

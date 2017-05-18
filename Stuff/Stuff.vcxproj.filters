@@ -77,6 +77,9 @@
     <Filter Include="TryCatch">
       <UniqueIdentifier>{0d25f4ec-8e69-4a16-b7d0-e60c390f116d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="new / delete / null">
+      <UniqueIdentifier>{b8e13698-9037-4f57-b3e6-292d2d8c2b75}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Timer.cpp">
@@ -176,6 +179,9 @@
     </ClInclude>
     <ClInclude Include="TryCatch.h">
       <Filter>TryCatch</Filter>
+    </ClInclude>
+    <ClInclude Include="NewDeleteNullptr.h">
+      <Filter>new / delete / null</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
