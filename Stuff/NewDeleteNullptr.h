@@ -32,8 +32,10 @@ namespace NewDeleteNullptr
 		If you only declare, same code will crash.
 		string* c;
 		delete c; //crash because c is 0xcccccccccccccc rather than nullptr.
-		*/
-
-
+		
+		Even if we check if(c), delete will also result in crash.
+		if(c)
+			delete c; //crash
+			*/
 	}
 }
