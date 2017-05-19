@@ -2,6 +2,7 @@
 
 #include "Timer.h"
 #include <iostream>
+#include <vector>
 
 enum TestCommMsg
 {
