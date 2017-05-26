@@ -1,3 +1,6 @@
-Compilers - Verify that code works in a specific compiler. It
+1. Compilers - Verify that code works in a specific compiler. It
 includes assembly code of your functions as well for easy use.
 https://godbolt.org/
+
+2. Creating installation files: Advanced Installer.
+http://www.advancedinstaller.com/
