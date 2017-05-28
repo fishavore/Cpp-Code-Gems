@@ -37,6 +37,26 @@ namespace NewOperator
 		*/
 	}
 
+	/*
+	
+	Malloc:
+	TLDR: Do not use.
+	https://stackoverflow.com/a/184540
+	
+	
+	The new keyword is the C++ way of doing it, and it will ensure that your type will have 
+	their constructor called. The new keyword is also more type safe whereas malloc is not 
+	typesafe at all.
+
+	The only way I could think that would be beneficial to use malloc would be if you needed 
+	to change the size of your buffer of data. The new keyword does not have an analogous 
+	way like realloc. The realloc function might be able to extend the size of a chunk of 
+	memory for you more efficiently.
+
+	It is worth mentioning that you cannot mix new/free and malloc/delete.
+
+	*/
+
 	inline void start()
 	{
 		using namespace std;
