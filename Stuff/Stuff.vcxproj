@@ -177,6 +177,7 @@
     <ClInclude Include="TestingHeader.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="TryCatch.h" />
+    <ClInclude Include="TypenameOperator.h" />
     <ClInclude Include="Union.h" />
   </ItemGroup>
   <ItemGroup>

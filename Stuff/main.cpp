@@ -43,6 +43,7 @@ using namespace std;
 #include "TryCatch.h"
 #include "DeleteNullptr.h"
 #include "NewOperator.h"
+#include "TypenameOperator.h"
 
 #include "TestingHeader.h"
 
@@ -168,6 +169,11 @@ int main()
 	//New
 	{
 		NewOperator::start();
+	}
+
+	//template typename
+	{
+		TypenameOperator::start();
 	}
 
 	//Tests

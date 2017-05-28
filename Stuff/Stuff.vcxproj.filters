@@ -83,6 +83,9 @@
     <Filter Include="LambdaFuncs\Look up tables">
       <UniqueIdentifier>{4bb536a6-743f-485c-a1cf-928ff9e13ab3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Typename">
+      <UniqueIdentifier>{e419756c-18c4-49be-8b6e-ba897e26d498}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Timer.cpp">
@@ -188,6 +191,9 @@
     </ClInclude>
     <ClInclude Include="DeleteNullptr.h">
       <Filter>Delete / NULL / Nullptr</Filter>
+    </ClInclude>
+    <ClInclude Include="TypenameOperator.h">
+      <Filter>Typename</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
