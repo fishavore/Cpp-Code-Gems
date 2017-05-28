@@ -3,10 +3,7 @@
 #include <string>
 #include <iostream>
 
-//more info on: http://en.cppreference.com/w/cpp/memory/new/operator_new
-//TODO: New operator, overloading new etc.
-
-namespace NewDeleteNullptr
+namespace DeleteNullptr
 {
 	void func(int value){ std::cout << value << '\n'; }
 	void func(const char* value) { std::cout << value << '\n'; }
