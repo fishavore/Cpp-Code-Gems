@@ -17,9 +17,6 @@
     <Filter Include="bitwise operator">
       <UniqueIdentifier>{90d8f1a8-269d-47cb-a0b9-a3583a7e0f44}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Look up tables">
-      <UniqueIdentifier>{4bb536a6-743f-485c-a1cf-928ff9e13ab3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="constexpr">
       <UniqueIdentifier>{7ad78b65-8b21-490c-8ada-3fef6e050288}</UniqueIdentifier>
     </Filter>
@@ -77,8 +74,14 @@
     <Filter Include="TryCatch">
       <UniqueIdentifier>{0d25f4ec-8e69-4a16-b7d0-e60c390f116d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="new / delete / null">
+    <Filter Include="New">
+      <UniqueIdentifier>{0851195d-d793-4865-9b27-3a09fd7c45f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Delete / NULL / Nullptr">
       <UniqueIdentifier>{b8e13698-9037-4f57-b3e6-292d2d8c2b75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LambdaFuncs\Look up tables">
+      <UniqueIdentifier>{4bb536a6-743f-485c-a1cf-928ff9e13ab3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -106,7 +109,7 @@
       <Filter>bitwise operator</Filter>
     </ClInclude>
     <ClInclude Include="lookupTable.h">
-      <Filter>Look up tables</Filter>
+      <Filter>LambdaFuncs\Look up tables</Filter>
     </ClInclude>
     <ClInclude Include="constexpression.h">
       <Filter>constexpr</Filter>
@@ -180,8 +183,11 @@
     <ClInclude Include="TryCatch.h">
       <Filter>TryCatch</Filter>
     </ClInclude>
-    <ClInclude Include="NewDeleteNullptr.h">
-      <Filter>new / delete / null</Filter>
+    <ClInclude Include="NewOperator.h">
+      <Filter>New</Filter>
+    </ClInclude>
+    <ClInclude Include="DeleteNullptr.h">
+      <Filter>Delete / NULL / Nullptr</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
