@@ -86,6 +86,12 @@
     <Filter Include="Typename">
       <UniqueIdentifier>{e419756c-18c4-49be-8b6e-ba897e26d498}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Casting">
+      <UniqueIdentifier>{cf53b0f3-c9ea-4f07-8784-53d33f9b2684}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Preprocessor definition">
+      <UniqueIdentifier>{4fd46a7d-58a9-4963-95f1-d4ace6b20c9b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Timer.cpp">
@@ -194,6 +200,12 @@
     </ClInclude>
     <ClInclude Include="TypenameOperator.h">
       <Filter>Typename</Filter>
+    </ClInclude>
+    <ClInclude Include="Casting.h">
+      <Filter>Casting</Filter>
+    </ClInclude>
+    <ClInclude Include="PreprocessorDefinition.h">
+      <Filter>Preprocessor definition</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

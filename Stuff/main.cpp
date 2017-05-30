@@ -44,6 +44,8 @@ using namespace std;
 #include "DeleteNullptr.h"
 #include "NewOperator.h"
 #include "TypenameOperator.h"
+#include "Casting.h"
+#include "PreprocessorDefinition.h"
 
 #include "TestingHeader.h"
 
@@ -174,6 +176,16 @@ int main()
 	//template typename
 	{
 		TypenameOperator::start();
+	}
+
+	//Casting
+	{
+		Casting::start();
+	}
+
+	//Preprocessor
+	{
+		PreprocessorDefinition::start();
 	}
 
 	//Tests
