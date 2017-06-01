@@ -151,7 +151,7 @@
   <ItemGroup>
     <ClInclude Include="AStar.h" />
     <ClInclude Include="bitwise.h" />
-    <ClInclude Include="Casting.h" />
+    <ClInclude Include="Typecasting.h" />
     <ClInclude Include="constExamples.h" />
     <ClInclude Include="constexpression.h" />
     <ClInclude Include="Datastructures.h" />
@@ -186,6 +186,7 @@
     <Text Include="inline.txt" />
     <Text Include="links.txt" />
     <Text Include="ParadoxInteractivePathfindingProblem.txt" />
+    <Text Include="ProjectStructure.txt" />
     <Text Include="ShortAdvice.txt" />
     <Text Include="shortcuts.txt" />
     <Text Include="WindowsShortcuts.txt" />

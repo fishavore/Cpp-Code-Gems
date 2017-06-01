@@ -1,0 +1,22 @@
+I am going to state this completely from my own opinion and with no basis in anything.
+
+Whenever you have a program, there is plenty of dlls, library links, assets, whatever it may be.
+That is why it is extremely important to be consistent through out the entire workspace. If you
+aren't there is will be doom and destruction to the point of disasterous consequences. You think
+I might be exaggerating but after spending 4x8 hours on solution with these issues, I want to
+tell you no.
+
+A project should always write to his or hers own projects Release folder. That way, it is always
+consistent. If you have dependencies, each project will always look at the folders of its
+dependencies. It should not have outputs of ..\..\..\Release. It is not its job to take car of
+its parent. A solution is built just like a program. There is always a head somewhere. That head
+takes cares of its children, which might view its own children.
+
+The final step then is for the head to package all the files into a package which is ready for
+release/running. NOT everyone one elses.
+
+If you are thinking: What about where there are several heads in a project. Well, you can create
+multiple configurations, that is, more than just "Release/Debug". Go to the configuration manager
+and create the head for project and have the specifics inside that head but NEVER adjust Release
+/ Debug in such a way that they are the head. Actually, that is a great rule. Only let custom
+configurations be the heads.

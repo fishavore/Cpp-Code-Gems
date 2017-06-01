@@ -44,7 +44,7 @@ using namespace std;
 #include "DeleteNullptr.h"
 #include "NewOperator.h"
 #include "TypenameOperator.h"
-#include "Casting.h"
+#include "TypeCasting.h"
 #include "PreprocessorDefinition.h"
 
 #include "TestingHeader.h"
@@ -178,9 +178,9 @@ int main()
 		TypenameOperator::start();
 	}
 
-	//Casting
+	//TypeCasting
 	{
-		Casting::start();
+		TypeCasting::start();
 	}
 
 	//Preprocessor

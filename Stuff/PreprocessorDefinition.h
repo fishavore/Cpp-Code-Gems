@@ -8,13 +8,13 @@ namespace PreprocessorDefinition
 	inline void start()
 	{
 		std::cout << "Function written WITH preprocessor definition.\n";
-		std::cout << "Properties -> c/c++ -> Preprocessor -> Preprocessor Definitions. \n";
+		// Properties -> c/c++ -> Preprocessor -> Preprocessor Definitions.
 	}
 #else
 	inline void start()
 	{
 		std::cout << "This function is written WITHOUT the preprocessor definition project settings.\n";
-		std::cout << "Properties -> c/c++ -> Preprocessor -> Preprocessor Definitions. \n";
+		// Properties -> c/c++ -> Preprocessor -> Preprocessor Definitions.
 	}
 #endif
 }
