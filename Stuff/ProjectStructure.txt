@@ -8,12 +8,12 @@ tell you no.
 
 A project should always write to his or hers own projects Release folder. That way, it is always
 consistent. If you have dependencies, each project will always look at the folders of its
-dependencies. It should not have outputs of ..\..\..\Release. It is not its job to take car of
+dependencies. It should not have outputs of ..\..\..\Release. It is not its job to take care of
 its parent. A solution is built just like a program. There is always a head somewhere. That head
 takes cares of its children, which might view its own children.
 
-The final step then is for the head to package all the files into a package which is ready for
-release/running. NOT everyone one elses.
+The final step then is for the head to package all the files into a package to be ready for
+release/run.
 
 If you are thinking: What about where there are several heads in a project. Well, you can create
 multiple configurations, that is, more than just "Release/Debug". Go to the configuration manager
