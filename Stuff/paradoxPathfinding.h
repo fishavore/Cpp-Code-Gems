@@ -1,10 +1,13 @@
 #pragma once
 
+//TODO: This entire section is incomplete.
+
 //The description of this problem is explained inside:
 //ParadoxInteractivePathfindingProblem.txt
 
 
 /*
+
 TODO notes:
 http://theory.stanford.edu/~amitp/GameProgramming/ImplementationNotes.html#source-code-and-demos
 http://www.redblobgames.com/pathfinding/a-star/implementation.html

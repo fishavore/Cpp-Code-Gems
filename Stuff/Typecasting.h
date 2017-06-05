@@ -3,6 +3,8 @@
 #include <iostream>
 #include <string>
 
+//TODO: const_cast, dynamic_cast, reinterpret_cast
+
 /*
 
 The main reason is that classic C casts make no distinction between what we call static_cast<>(), 
