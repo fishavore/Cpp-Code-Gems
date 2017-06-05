@@ -20,3 +20,9 @@ multiple configurations, that is, more than just "Release/Debug". Go to the conf
 and create the head for project and have the specifics inside that head but NEVER adjust Release
 / Debug in such a way that they are the head. Actually, that is a great rule. Only let custom
 configurations be the heads.
+
+---
+
+If you decide to "clean build", you will only clean the correct folders. Clean doesn't take into
+account the correct files but just cleans it all. If each project is separated from another, you
+can clean the correct ones when you work.
