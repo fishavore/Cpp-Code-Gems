@@ -56,7 +56,14 @@ using namespace std;
 
 int main()
 {
+	//Memory Leak Detection
+	//This line will output memory leak information to output window.
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+	
+	//Take the value in the paranthesis and insert into this line below.
+	//The application will then break at the allocation of the memory 
+	//leak which you can trace back through the call stack.
+	//_CrtSetBreakAlloc(1072);
 
 	//Polymorphism
 	{

@@ -35,6 +35,8 @@ namespace NewOperator
 		is like malloc(sizeof(Thing)); whereas new Thing(); is like calloc(sizeof(Thing)); 
 		- it gets zero initialized.		
 		*/
+		delete paranthesis;
+		delete noParanthesis;
 	}
 
 	/*

@@ -143,17 +143,32 @@ inline bool TestFunction3(int messageTag)
 inline void TestStart()
 {
 	std::cout << "TestStart: \n";
-	
+
 	bool found = false;
 	int incr = 0;
 
-	while (!found)
-	{
-		incr++;
-		if (incr == 5)
-			break;
-		if (incr == 8)
-			found = true;
-	}
+	{//Mikroseconds
+		Timer timer(Timer::TimeFrequency::Microseconds);
+		timer.StartClock();
 
+		Sleep(1000);
+		timer.StopClock();
+		std::cout << "Testing time: " << timer.GetStopClock() << '\n';
+	}
+	{//Mikroseconds
+		Timer timer(Timer::TimeFrequency::Milliseconds);
+		timer.StartClock();
+
+		Sleep(1000);
+		timer.StopClock();
+		std::cout << "Testing time: " << timer.GetStopClock() << '\n';
+	}
+	{//Seconds
+		Timer timer(Timer::TimeFrequency::Seconds);
+		timer.StartClock();
+
+		Sleep(1000);
+		timer.StopClock();
+		std::cout << "Testing time: " << timer.GetStopClock() << '\n';
+	}
 }

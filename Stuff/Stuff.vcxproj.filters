@@ -32,9 +32,6 @@
     <Filter Include="Smartpointers">
       <UniqueIdentifier>{53d080fd-c192-4802-80a7-f9cc980bd7e0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="HelpFiles">
-      <UniqueIdentifier>{3e5a1439-085e-4633-9a77-02afc3edbb75}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Multithreading">
       <UniqueIdentifier>{6c332370-6d5d-430d-a81f-c1640c656176}</UniqueIdentifier>
     </Filter>
@@ -92,11 +89,11 @@
     <Filter Include="Type casting">
       <UniqueIdentifier>{cf53b0f3-c9ea-4f07-8784-53d33f9b2684}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Timer">
+      <UniqueIdentifier>{b8191f74-eab9-4c16-a690-0c1bc4dbec0f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Timer.cpp">
-      <Filter>HelpFiles</Filter>
-    </ClCompile>
     <ClCompile Include="Rectangle.cpp">
       <Filter>Friends</Filter>
     </ClCompile>
@@ -140,9 +137,6 @@
     </ClInclude>
     <ClInclude Include="Multithreading.h">
       <Filter>Multithreading</Filter>
-    </ClInclude>
-    <ClInclude Include="Timer.h">
-      <Filter>HelpFiles</Filter>
     </ClInclude>
     <ClInclude Include="TestingHeader.h">
       <Filter>Other</Filter>
@@ -206,6 +200,9 @@
     </ClInclude>
     <ClInclude Include="Typecasting.h">
       <Filter>Type casting</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Timer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

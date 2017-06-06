@@ -146,11 +146,11 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Square.cpp" />
-    <ClCompile Include="Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AStar.h" />
     <ClInclude Include="bitwise.h" />
+    <ClInclude Include="Timer.h" />
     <ClInclude Include="Typecasting.h" />
     <ClInclude Include="constExamples.h" />
     <ClInclude Include="constexpression.h" />
@@ -177,7 +177,6 @@
     <ClInclude Include="STDArray.h" />
     <ClInclude Include="StringManipulation.h" />
     <ClInclude Include="TestingHeader.h" />
-    <ClInclude Include="Timer.h" />
     <ClInclude Include="TryCatch.h" />
     <ClInclude Include="TypenameOperator.h" />
     <ClInclude Include="Union.h" />
