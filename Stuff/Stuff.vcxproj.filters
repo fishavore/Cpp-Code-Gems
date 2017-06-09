@@ -92,6 +92,9 @@
     <Filter Include="Timer">
       <UniqueIdentifier>{b8191f74-eab9-4c16-a690-0c1bc4dbec0f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Copy-Elision">
+      <UniqueIdentifier>{780279fd-e92f-4536-91a8-7526d6388c1e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Rectangle.cpp">
@@ -203,6 +206,9 @@
     </ClInclude>
     <ClInclude Include="Timer.h">
       <Filter>Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="CopyElision.h">
+      <Filter>Copy-Elision</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

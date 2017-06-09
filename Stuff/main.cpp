@@ -46,6 +46,7 @@ using namespace std;
 #include "TypenameOperator.h"
 #include "TypeCasting.h"
 #include "PreprocessorDefinition.h"
+#include "CopyElision.h"
 
 #include "TestingHeader.h"
 
@@ -195,9 +196,14 @@ int main()
 		PreprocessorDefinition::start();
 	}
 
+	//Copy-Elision
+	{
+		CopyElision::start();
+	}
+
 	//Tests
 	{
-		TestStart();
+		//TestStart();
 	}
 
 	system("pause");
