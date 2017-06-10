@@ -59,7 +59,7 @@ namespace TypeCasting
 	}
 
 	////////////////////////////////////////////////////////////////////////////////////
-	//Setup
+	//Setup - static_cast
 
 	struct A
 	{
@@ -75,9 +75,7 @@ namespace TypeCasting
 		}
 	};
 
-	////////////////////////////////////////////////////////////////////////////////////
 	// static_cast
-
 	inline void staticCast()
 	{
 		B b;
@@ -89,11 +87,69 @@ namespace TypeCasting
 	}
 
 	////////////////////////////////////////////////////////////////////////////////////
-	// reinterpret_cast
-	
-	////////////////////////////////////////////////////////////////////////////////////
-	// dynamic_cast
+	// Setup - dynamic_cast
 
+	class Base
+	{
+		int aStuff = 1;
+	public:
+		Base() {}
+		virtual ~Base() = 0 {}
+		virtual void hello() const {
+			std::cout << "Hello world, this is Base!\n";
+		}
+	};
+	class ChildA : public Base
+	{
+		int bStuff = 2;
+	public:
+		ChildA() {}
+		~ChildA() {}
+		void hello() const {
+			std::cout << "Hello, this is ChildA!\n";
+		}
+	};
+	class ChildB : public Base
+	{
+		int cStuff = 3;
+	public:
+		ChildB() {}
+		~ChildB() {}
+		void hello() const {
+			std::cout << "Hello, this is ChildB!\n";
+		}
+	};
+
+	//dynamic_cast
+	inline void dynamicCast()
+	{
+		Base* base[2];
+		base[0] = new ChildA();
+		base[1] = new ChildB();
+
+
+		ChildA* childAPointer;
+		ChildB* childBPointer;
+		for (int i = 0; i < 2; i++)
+		{
+			childAPointer = dynamic_cast<ChildA*>(base[i]);
+			childBPointer = dynamic_cast<ChildB*>(base[i]);
+
+			if (childAPointer)
+				childAPointer->hello();
+			if (childBPointer)
+				childBPointer->hello();
+			
+			childAPointer = nullptr;
+			childBPointer = nullptr;
+		}
+
+		//cleanup
+		for(int i=0; i<2; i++) { delete base[i]; }
+	}
+
+	////////////////////////////////////////////////////////////////////////////////////
+	// reinterpret_cast
 
 	////////////////////////////////////////////////////////////////////////////////////
 	// const_cast
@@ -105,5 +161,6 @@ namespace TypeCasting
 		basics();
 		explicitConversion();
 		staticCast();
+		dynamicCast();
 	}
 }
