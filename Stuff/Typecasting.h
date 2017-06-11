@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-//TODO: const_cast, dynamic_cast, reinterpret_cast
+//TODO: reinterpret_cast
 
 /*
 
@@ -151,8 +151,54 @@ namespace TypeCasting
 	////////////////////////////////////////////////////////////////////////////////////
 	// reinterpret_cast
 
+	inline void reinterpretCast()
+	{
+		//The reinterpret_cast operator changes one data type into another. It should be used to cast between incompatible pointer types. 
+		//Source: http://advancedcppwithexamples.blogspot.se/2010/02/reinterpretcast-in-c.html
+
+		int intVal = 22;
+		float floatVal = 55.5555f;
+		
+		//
+		//Wont work in this case because floating point format is different
+		intVal = reinterpret_cast<int&>(floatVal);
+		std::cout << "floatVal reinterpret_cast to intVal = " << intVal << '\n';
+
+		intVal = static_cast<int>(floatVal); //Correct approach
+		std::cout << "floatVal static_cast to intVal (correct) = " << intVal <<'\n';
+
+		//Convert int to char
+		char c;
+		c = reinterpret_cast<char&>(intVal);
+		std::cout << "intVal reinterpret_cast to char = " << intVal << '\n';
+
+		//Dangerous to convert from char to int
+		char intChar = '5';
+		intVal = reinterpret_cast<int&>(intChar);
+		std::cout << "Char reinterpret_cast to int" << intVal << '\n'; //outputs: -858993611
+	}
+
 	////////////////////////////////////////////////////////////////////////////////////
 	// const_cast
+
+	inline void constCast()
+	{
+		/*
+		You are not allowed to const_cast variables that are actually const. 
+		This results in undefined behavior. const_cast is used to remove the
+		const-ness from references and pointers that ultimately refer to 
+		something that is not const.
+
+		Source: https://stackoverflow.com/a/19554871/2359879
+		*/
+		int i = 0;
+		//const int i = 0; //not allowed.
+		const int& ref = i;
+		const int* ptr = &i;
+
+		const_cast<int&>(ref) = 3;
+		*const_cast<int*>(ptr) = 3;
+	}
 
 	////////////////////////////////////////////////////////////////////////////////////
 
@@ -162,5 +208,7 @@ namespace TypeCasting
 		explicitConversion();
 		staticCast();
 		dynamicCast();
+		reinterpretCast();
+		constCast();
 	}
 }
