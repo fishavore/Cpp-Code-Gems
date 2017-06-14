@@ -49,6 +49,11 @@ namespace StringManipulation
 		cout << a + b << '\n'; //Hello World!
 		size_t pos = c.find('c');
 
+		//not found
+		size_t notFound = c.find('K'); //Generates a huge value.
+		if (std::string::npos == notFound)
+			std::cout << "Not found is not found. OK.\n";
+
 		//Subtract
 		string str = c.substr(pos);//come.
 		//string str = c.substr(pos, 4); //come
