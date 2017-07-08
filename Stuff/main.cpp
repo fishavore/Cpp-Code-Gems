@@ -47,6 +47,7 @@ using namespace std;
 #include "TypeCasting.h"
 #include "PreprocessorDefinition.h"
 #include "CopyElision.h"
+#include "NumericalLimits.h"
 
 #include "TestingHeader.h"
 
@@ -199,6 +200,11 @@ int main()
 	//Copy-Elision
 	{
 		CopyElision::start();
+	}
+
+	//Numerical Limits
+	{
+		NumericalLimits::start();
 	}
 
 	//Tests

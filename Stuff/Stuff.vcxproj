@@ -151,6 +151,7 @@
     <ClInclude Include="AStar.h" />
     <ClInclude Include="bitwise.h" />
     <ClInclude Include="CopyElision.h" />
+    <ClInclude Include="NumericalLimits.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Typecasting.h" />
     <ClInclude Include="constExamples.h" />

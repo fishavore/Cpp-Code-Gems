@@ -95,6 +95,9 @@
     <Filter Include="Copy-Elision">
       <UniqueIdentifier>{780279fd-e92f-4536-91a8-7526d6388c1e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Numerical limits">
+      <UniqueIdentifier>{7c3cf2df-8cc3-408a-a83d-3a5b1a1ff61b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Rectangle.cpp">
@@ -209,6 +212,9 @@
     </ClInclude>
     <ClInclude Include="CopyElision.h">
       <Filter>Copy-Elision</Filter>
+    </ClInclude>
+    <ClInclude Include="NumericalLimits.h">
+      <Filter>Numerical limits</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
