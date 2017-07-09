@@ -54,7 +54,7 @@ namespace NumericalLimits
 
 	///////////////////////////////////////////////////////
 
-	void start()
+	inline void start()
 	{
 		print_type_properties<unsigned short>();
 		//print_type_properties<double>();

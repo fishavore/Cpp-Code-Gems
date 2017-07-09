@@ -30,7 +30,7 @@ namespace NotCopyable
 	void run(long var) { std::cout << var << '\n'; }
 	void run(unsigned int var) { std::cout << var << '\n'; }
 
-	void start()
+	inline void start()
 	{
 		{
 			//foo_not_copiable var1, var2;

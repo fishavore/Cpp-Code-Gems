@@ -49,6 +49,7 @@ using namespace std;
 #include "CopyElision.h"
 #include "NumericalLimits.h"
 #include "NotCopyable.h"
+#include "CompilerVersion.h"
 
 #include "TestingHeader.h"
 
@@ -213,9 +214,14 @@ int main()
 		NotCopyable::start();
 	}
 
+	//Compiler Version
+	{
+		CompilerVersion::start();
+	}
+
 	//Tests
 	{
-		//TestStart();
+		TestStart();
 	}
 
 	system("pause");

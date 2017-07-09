@@ -150,6 +150,7 @@
   <ItemGroup>
     <ClInclude Include="AStar.h" />
     <ClInclude Include="bitwise.h" />
+    <ClInclude Include="CompilerVersion.h" />
     <ClInclude Include="CopyElision.h" />
     <ClInclude Include="NotCopyable.h" />
     <ClInclude Include="NumericalLimits.h" />
