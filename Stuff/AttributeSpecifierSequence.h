@@ -1,5 +1,5 @@
 #pragma once
-
+#include <iostream>
 
 //TODO: Much of this stuff is not actually working yet in VS2017.
 
@@ -20,6 +20,12 @@ C++17:
 
 namespace AttributeSpecifierSequence
 {
+	//deprecated
+	[[deprecated("lulwtf? Why u heff to be mad?")]] void deprecated()
+	{
+		std::cout << "deprecated function.\n";
+	}
+
 	//Soon implemented in Visual studio 2017.
 	//[[nodiscard]] int get_value1()
 	//{
@@ -28,6 +34,9 @@ namespace AttributeSpecifierSequence
 
 	inline void start()
 	{
+		//deprecated
+		//deprecated(); //Warning
+
 		// warning: ignoring return value of function declared with 'nodiscard' attribute
 		//get_value1();
 	}
