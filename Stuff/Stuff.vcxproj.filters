@@ -98,6 +98,9 @@
     <Filter Include="Numerical limits">
       <UniqueIdentifier>{7c3cf2df-8cc3-408a-a83d-3a5b1a1ff61b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="= Delete %28Not copyable%29">
+      <UniqueIdentifier>{9d4862dd-dc40-4d31-a420-c590470acec3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Rectangle.cpp">
@@ -215,6 +218,9 @@
     </ClInclude>
     <ClInclude Include="NumericalLimits.h">
       <Filter>Numerical limits</Filter>
+    </ClInclude>
+    <ClInclude Include="NotCopyable.h">
+      <Filter>= Delete %28Not copyable%29</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

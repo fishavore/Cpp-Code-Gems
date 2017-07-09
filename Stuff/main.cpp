@@ -48,6 +48,7 @@ using namespace std;
 #include "PreprocessorDefinition.h"
 #include "CopyElision.h"
 #include "NumericalLimits.h"
+#include "NotCopyable.h"
 
 #include "TestingHeader.h"
 
@@ -205,6 +206,11 @@ int main()
 	//Numerical Limits
 	{
 		NumericalLimits::start();
+	}
+
+	//= Delete, Not copyable
+	{
+		NotCopyable::start();
 	}
 
 	//Tests
