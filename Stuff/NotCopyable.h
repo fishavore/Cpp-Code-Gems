@@ -1,5 +1,6 @@
 #pragma once
 
+#include <iostream>
 
 namespace NotCopyable
 {
@@ -23,6 +24,11 @@ namespace NotCopyable
 		bar_not_copiable& operator=(bar_not_copiable const&) = delete;
 	};
 	
+	//Exclude certain types
+	template <typename T>
+	void run(T) = delete;
+	void run(long var) { std::cout << var << '\n'; }
+	void run(unsigned int var) { std::cout << var << '\n'; }
 
 	void start()
 	{
@@ -36,6 +42,12 @@ namespace NotCopyable
 			//bar_not_copiable var1, var2;
 			//foo_not_copiable var = var1; // error on var1
 			//var1 = var2; // error on =     
+		}
+
+		{
+			//run(42); // error on run
+			run(5L);  // OK
+			run(55U);  // OK
 		}
 	}
 }
