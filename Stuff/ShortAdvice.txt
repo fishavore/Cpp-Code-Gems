@@ -28,4 +28,6 @@ comparison which will be more costly than normal comparisons. Basically, just us
 don't try so hard.
 
 6. You can do local: using namespace std; rather than doing it outside of standard code:
-main(){using namespace std; cout<<123;} etc.  
+main(){using namespace std; cout<<123;} etc. 
+
+7. Property pages->Configuration properties-> C/C++ -> All options -> C++ Language Standard -> ISO C++ Latest Draft Standard (/std:c++latest) for the latest version of C++.

@@ -4,6 +4,9 @@
 
 //Determining information of the compiler and its version and configuration.
 
+//Sidenote: Property pages->Configuration properties-> C/C++ -> All options -> C++ Language Standard -> ISO C++ Latest Draft Standard (/std:c++latest) for the latest version of C++.
+//The version below is directed towards the compiler software, not the actual language.
+
 namespace CompilerVersion
 {
 

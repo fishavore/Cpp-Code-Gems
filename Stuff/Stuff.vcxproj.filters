@@ -104,6 +104,9 @@
     <Filter Include="Compiler version">
       <UniqueIdentifier>{628b2f49-ac39-4fdc-851a-864986d17f3f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Attribute specifier sequence">
+      <UniqueIdentifier>{a700eab4-755a-4cc1-bd3e-867c23025460}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Rectangle.cpp">
@@ -227,6 +230,9 @@
     </ClInclude>
     <ClInclude Include="CompilerVersion.h">
       <Filter>Compiler version</Filter>
+    </ClInclude>
+    <ClInclude Include="AttributeSpecifierSequence.h">
+      <Filter>Attribute specifier sequence</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

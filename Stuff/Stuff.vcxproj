@@ -149,6 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AStar.h" />
+    <ClInclude Include="AttributeSpecifierSequence.h" />
     <ClInclude Include="bitwise.h" />
     <ClInclude Include="CompilerVersion.h" />
     <ClInclude Include="CopyElision.h" />

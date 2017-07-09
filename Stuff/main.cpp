@@ -50,6 +50,7 @@ using namespace std;
 #include "NumericalLimits.h"
 #include "NotCopyable.h"
 #include "CompilerVersion.h"
+#include "AttributeSpecifierSequence.h"
 
 #include "TestingHeader.h"
 
@@ -217,6 +218,11 @@ int main()
 	//Compiler Version
 	{
 		CompilerVersion::start();
+	}
+
+	//Attribute Specifier Sequence
+	{
+		AttributeSpecifierSequence::start();
 	}
 
 	//Tests

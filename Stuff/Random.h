@@ -39,7 +39,10 @@ namespace Random
 	{
 		std::vector<int> myvector;
 		for (int i = 1; i<10; ++i) myvector.push_back(i); // 1 2 3 4 5 6 7 8 9
-		std::random_shuffle(myvector.begin(), myvector.end());
+
+		std::random_device rng;
+		std::mt19937 urng(rng());
+		std::shuffle(myvector.begin(), myvector.end(), urng);
 		for (auto i : myvector)
 			std::cout << i << ' ';
 		std::cout << '\n';

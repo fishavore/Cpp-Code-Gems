@@ -23,7 +23,9 @@ namespace Datastructures
 		
 		std::vector<int> myvector;
 		for (int i = 1; i<CAP; ++i) myvector.push_back(i);
-		std::random_shuffle(myvector.begin(), myvector.end());
+		std::random_device rng;
+		std::mt19937 urng(rng());
+		std::shuffle(myvector.begin(), myvector.end(), urng);
 
 		for(auto i : myvector)
 			rbt.insert(exampleStruct, i);
