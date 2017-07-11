@@ -70,5 +70,14 @@ namespace StringManipulation
 		pos = e.find(toRemove);
 		e.erase(pos, toRemove.size());
 		cout << e;
+
+		//insert with iteration
+		string f = "1234567890";
+		
+		for (auto it = f.begin(); it < f.end(); it += 2)
+			it = (it == f.begin() ? it : f.insert(it, ' ') + 1);
+		//outputs 12 34 56 78 90
+
+		cout << f << '\n';
 	}
 }
