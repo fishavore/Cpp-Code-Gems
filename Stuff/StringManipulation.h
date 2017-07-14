@@ -79,5 +79,37 @@ namespace StringManipulation
 		//outputs 12 34 56 78 90
 
 		cout << f << '\n';
+
+		//Substring - Get a portion of the string.
+		//Note: We can't use g[0] for example because that would either return an int or a char depending on compiler/version.
+		//Same as g.at() which returns char. We have to use substr.
+
+		string g = "1234567890";
+		string outputG = g.substr(0, 2);
+		cout << outputG << '\n';
+
+		//isdigit
+		string h = "1ab2c34d567890c";
+		string outputH = "";
+		for (int i = 0; i < h.size(); i++)
+		{
+			if (isdigit(h[i]))
+			{
+				outputH.push_back(h[i]);
+			}
+		}
+		cout << outputH << '\n';
+
+		//You can do the same with all nums and chars. A-Z, a-z, 0-9
+		string o = "!1/23A&BC@";
+		string outputO = "";
+		for (int i = 0; i < o.size(); i++)
+		{
+			if (isalnum(o[i]))
+			{
+				outputO.push_back(o[i]);
+			}
+		}
+		cout << outputO << '\n';
 	}
 }
