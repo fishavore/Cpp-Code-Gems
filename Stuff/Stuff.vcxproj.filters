@@ -107,6 +107,9 @@
     <Filter Include="Attribute specifier sequence">
       <UniqueIdentifier>{a700eab4-755a-4cc1-bd3e-867c23025460}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tuples">
+      <UniqueIdentifier>{ba5400ef-f254-4e2b-ac99-76fc8dacb3fb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Rectangle.cpp">
@@ -233,6 +236,9 @@
     </ClInclude>
     <ClInclude Include="AttributeSpecifierSequence.h">
       <Filter>Attribute specifier sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="Tuples.h">
+      <Filter>Tuples</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

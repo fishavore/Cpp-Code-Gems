@@ -156,6 +156,7 @@
     <ClInclude Include="NotCopyable.h" />
     <ClInclude Include="NumericalLimits.h" />
     <ClInclude Include="Timer.h" />
+    <ClInclude Include="Tuples.h" />
     <ClInclude Include="Typecasting.h" />
     <ClInclude Include="constExamples.h" />
     <ClInclude Include="constexpression.h" />

@@ -51,6 +51,7 @@ using namespace std;
 #include "NotCopyable.h"
 #include "CompilerVersion.h"
 #include "AttributeSpecifierSequence.h"
+#include "Tuples.h"
 
 #include "TestingHeader.h"
 
@@ -223,6 +224,11 @@ int main()
 	//Attribute Specifier Sequence
 	{
 		AttributeSpecifierSequence::start();
+	}
+
+	//Tuples
+	{
+		Tuples::start();
 	}
 
 	//Tests
