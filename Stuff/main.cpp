@@ -33,7 +33,6 @@ using namespace std;
 #include "argumentOrder.h"
 #include "Multithreading.h"
 #include "PriorityQueue.h"
-#include "paradoxPathfinding.h"
 #include "Union.h"
 #include "Datastructures.h"
 #include "Random.h"
@@ -134,11 +133,6 @@ int main()
 	//PriorityQueue
 	{
 		PriorityQueue::start();
-	}
-
-	//Paradox Interactive Path finding
-	{
-		Paradox::start();
 	}
 
 	//Union keyword
