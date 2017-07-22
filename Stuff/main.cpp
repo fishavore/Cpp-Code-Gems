@@ -33,7 +33,6 @@ using namespace std;
 #include "argumentOrder.h"
 #include "Multithreading.h"
 #include "PriorityQueue.h"
-#include "paradoxPathfinding.h"
 #include "Union.h"
 #include "Datastructures.h"
 #include "Random.h"
@@ -51,6 +50,7 @@ using namespace std;
 #include "NotCopyable.h"
 #include "CompilerVersion.h"
 #include "AttributeSpecifierSequence.h"
+#include "Tuples.h"
 
 #include "TestingHeader.h"
 
@@ -133,11 +133,6 @@ int main()
 	//PriorityQueue
 	{
 		PriorityQueue::start();
-	}
-
-	//Paradox Interactive Path finding
-	{
-		Paradox::start();
 	}
 
 	//Union keyword
@@ -223,6 +218,11 @@ int main()
 	//Attribute Specifier Sequence
 	{
 		AttributeSpecifierSequence::start();
+	}
+
+	//Tuples
+	{
+		Tuples::start();
 	}
 
 	//Tests

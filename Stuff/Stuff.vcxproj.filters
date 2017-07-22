@@ -35,9 +35,6 @@
     <Filter Include="Multithreading">
       <UniqueIdentifier>{6c332370-6d5d-430d-a81f-c1640c656176}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pathfinding">
-      <UniqueIdentifier>{4059a345-8b27-446d-8047-7132fd0d90e3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Visual Studio">
       <UniqueIdentifier>{7560179e-e7ca-4831-911c-43c735062fec}</UniqueIdentifier>
     </Filter>
@@ -107,6 +104,9 @@
     <Filter Include="Attribute specifier sequence">
       <UniqueIdentifier>{a700eab4-755a-4cc1-bd3e-867c23025460}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tuples">
+      <UniqueIdentifier>{ba5400ef-f254-4e2b-ac99-76fc8dacb3fb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Rectangle.cpp">
@@ -114,9 +114,6 @@
     </ClCompile>
     <ClCompile Include="Square.cpp">
       <Filter>Friends</Filter>
-    </ClCompile>
-    <ClCompile Include="AStar.cpp">
-      <Filter>Pathfinding</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>main</Filter>
@@ -156,9 +153,6 @@
     <ClInclude Include="TestingHeader.h">
       <Filter>Other</Filter>
     </ClInclude>
-    <ClInclude Include="paradoxPathfinding.h">
-      <Filter>Pathfinding</Filter>
-    </ClInclude>
     <ClInclude Include="Polymorphism.h">
       <Filter>Polymorphism</Filter>
     </ClInclude>
@@ -170,9 +164,6 @@
     </ClInclude>
     <ClInclude Include="STDArray.h">
       <Filter>StdArray</Filter>
-    </ClInclude>
-    <ClInclude Include="AStar.h">
-      <Filter>Pathfinding</Filter>
     </ClInclude>
     <ClInclude Include="OverloadingOperator.h">
       <Filter>Overloading Operator</Filter>
@@ -234,6 +225,9 @@
     <ClInclude Include="AttributeSpecifierSequence.h">
       <Filter>Attribute specifier sequence</Filter>
     </ClInclude>
+    <ClInclude Include="Tuples.h">
+      <Filter>Tuples</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="inline.txt">
@@ -244,9 +238,6 @@
     </Text>
     <Text Include="links.txt">
       <Filter>Other</Filter>
-    </Text>
-    <Text Include="ParadoxInteractivePathfindingProblem.txt">
-      <Filter>Pathfinding</Filter>
     </Text>
     <Text Include="shortcuts.txt">
       <Filter>Visual Studio</Filter>

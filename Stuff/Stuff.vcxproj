@@ -142,13 +142,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AStar.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Square.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AStar.h" />
     <ClInclude Include="AttributeSpecifierSequence.h" />
     <ClInclude Include="bitwise.h" />
     <ClInclude Include="CompilerVersion.h" />
@@ -156,6 +154,7 @@
     <ClInclude Include="NotCopyable.h" />
     <ClInclude Include="NumericalLimits.h" />
     <ClInclude Include="Timer.h" />
+    <ClInclude Include="Tuples.h" />
     <ClInclude Include="Typecasting.h" />
     <ClInclude Include="constExamples.h" />
     <ClInclude Include="constexpression.h" />
@@ -170,7 +169,6 @@
     <ClInclude Include="DeleteNullptr.h" />
     <ClInclude Include="NewOperator.h" />
     <ClInclude Include="OverloadingOperator.h" />
-    <ClInclude Include="paradoxPathfinding.h" />
     <ClInclude Include="Polymorphism.h" />
     <ClInclude Include="PreprocessorDefinition.h" />
     <ClInclude Include="Random.h" />
@@ -189,7 +187,6 @@
   <ItemGroup>
     <Text Include="inline.txt" />
     <Text Include="links.txt" />
-    <Text Include="ParadoxInteractivePathfindingProblem.txt" />
     <Text Include="ProjectStructure.txt" />
     <Text Include="ShortAdvice.txt" />
     <Text Include="shortcuts.txt" />
