@@ -111,5 +111,13 @@ namespace StringManipulation
 			}
 		}
 		cout << outputO << '\n';
+
+		//empty
+		string p = "";
+		string q = "Alex";
+		if (p.empty())
+			cout << "p is empty.\n";
+		if (q.empty())
+			cout << "q is not empty.\n";
 	}
 }

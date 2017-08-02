@@ -14,6 +14,8 @@ namespace DeleteNullptr
 
 		string* a = NULL;
 		string* b = nullptr;
+		
+		delete[] b;
 
 		/*NULL was removed for nullptr for several reasons. Mainly:
 		func(NULL);
@@ -23,6 +25,9 @@ namespace DeleteNullptr
 		//delete have an internal check for null/nullptr.
 		delete a;
 		delete b;
+
+		delete[] a;
+		delete[] b;
 
 		/*
 		These functions will therefore not crash when initialized properly.
