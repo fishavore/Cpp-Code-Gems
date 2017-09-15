@@ -18,6 +18,8 @@ as an unordered array.
 
 #include <iostream>
 #include <queue>
+//
+#include <vector>
 
 namespace PriorityQueue
 {
@@ -35,10 +37,60 @@ namespace PriorityQueue
 		std::cout << '\n';
 	}
 
+	
+
+	class A
+	{
+		int val;
+	public:
+		A()
+		{
+			std::cout << "Inside A. Constructor with val =" << val << ".\n";
+		}
+		A(const A& msg)
+		{
+			std::cout << "Inside const A. Never want to come here. val =" << msg.val << ".\n";
+		}
+		bool operator()(const A* m1, const A* m2)
+		{
+			std::cout << "Inside () function.\n";
+			std::cout << "m1: " << m1->GetVal() << " m2: " << m2->GetVal()<<"\n";
+			return (m1->GetVal() < m2->GetVal());
+		}
+		void setVal(int input) { std::cout << "inside setVal.\n"; val = input; }
+		int GetVal()const { return val; }
+		
+	};
+
+	struct Compare
+	{
+		bool operator()(const A* m1, const A* m2) const {
+			return m1->GetVal() < m2->GetVal();
+		}
+	};
+
+	void comparatorPriorityQueue()
+	{
+		//init
+		A* val = new A();
+		val->setVal(5);
+		std::priority_queue<A*, std::vector<A*>, Compare> pq;
+		pq.push(val);
+
+		A* val2 = new A();
+		val2->setVal(3);
+		pq.push(val2);
+
+		delete val;
+		delete val2;
+	}
+
 	inline void start()
 	{
 		std::priority_queue<int> pQueue;
 		for (int n : {1, 8, 5, 6, 3, 4, 0, 9, 7, 2})
 			pQueue.push(n);
+
+		comparatorPriorityQueue();
 	}
 }
