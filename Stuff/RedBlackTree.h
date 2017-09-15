@@ -84,11 +84,11 @@ void RedBlackTree<T>::Free(Node<T>* x)
 	}
 	if (x->left != nullptr)
 	{
-		free(x->left);
+		Free(x->left);
 	}
 	if (x->right != nullptr)
 	{
-		free(x->right);
+		Free(x->right);
 	}
 
 	delete x;
@@ -358,7 +358,7 @@ void RedBlackTree<T>::deleteFixup(Node<T>* node_x)
 template <class T>
 void RedBlackTree<T>::deleteNodes()
 {
-	free(this->mRoot);
+	Free(this->mRoot);
 }
 
 template <class T>
