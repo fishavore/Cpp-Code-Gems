@@ -5,8 +5,8 @@
 
 namespace DeleteNullptr
 {
-	void func(int value){ std::cout << value << '\n'; }
-	void func(const char* value) { std::cout << value << '\n'; }
+	void func(int value){ std::cout << "int" << '\n'; }
+	void func(const char* value) { std::cout << "pointer" << '\n'; }
 
 	inline void start()
 	{
@@ -16,6 +16,8 @@ namespace DeleteNullptr
 		string* b = nullptr;
 		
 		delete[] b;
+
+		func(NULL);
 
 		/*NULL was removed for nullptr for several reasons. Mainly:
 		func(NULL);
