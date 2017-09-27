@@ -5,49 +5,79 @@
 
 namespace Polymorphism
 {
-	class Car
+	class Base
 	{
 	public:
-		Car() {};
-		~Car() {};
-		void Print() { std::cout << "Inside Car" << endl; Brand(); };
-		virtual void Brand() = 0;
+		Base() {};
+		~Base() { std::cout << "Inside destructor Base.\n"; };
+		void Print() { std::cout << "Inside print Base" << endl; AwesomeFunc(); };
+		virtual void AwesomeFunc() = 0;
 	};
 
-	class Seat : public Car
+	class A : public Base
 	{
 	public:
-		Seat() {};
-		~Seat() {};
-		void Brand() { cout << "Need for seat." << endl; };
+		A() {};
+		~A() { std::cout << "Inside destructor A.\n"; };
+		void AwesomeFunc() { cout << "AwesomeFunc: A. \n"; };
 	};
 
-	class Wheel : public Car
+	class B : public Base
 	{
 	private:
 		int value;
 		int otherValue;
 	public:
-		Wheel() {};
-		~Wheel() {};
-		void Brand() { cout << "Hjul." << endl; };
+		B() {};
+		~B() { std::cout << "Inside destructor B.\n"; };
+		void AwesomeFunc() { cout << "AwesomeFunc: B. \n"; };
 
 		void setValue(const int val) { otherValue = val;};
 		int getOtherValue() const {return otherValue;};
 	};
 
+	class C : public B
+	{
+	private:
+		int value;
+		int otherValue;
+	public:
+		C() {};
+		virtual ~C() { std::cout << "Inside destructor C.\n"; };
+		void AwesomeFunc() { cout << "AwesomeFunc: C. \n"; };
+
+		void setValue(const int val) { otherValue = val; };
+		int getOtherValue() const { return otherValue; };
+	};
+
 	inline void start()
 	{
-		Car* seat = nullptr;
-		Car* wheel = nullptr;
+		//setup
+		Base* base = nullptr;
+		Base* b = nullptr;
+		B* c = nullptr;
 
-		seat = new Seat();
-		wheel = new Wheel();
+		base = new A();
+		b = new B();
+		c = new C();
 
-		((Seat*)seat)->Print();
-		((Wheel*)wheel)->Print();
+		//Basic usage
+		((A*)base)->Print();
+		((B*)b)->Print();
 
-		delete seat;
-		delete wheel;
+		////////////////////////////////////////////////////////////////////
+		////////////////////////////////////////////////////////////////////
+		//Question!
+		//Which virtual destructors are used if you place them a little randomly?
+		
+		//If only virtual function of all deconstructors is: virtual ~Base()
+		delete base; // A + Base.
+		delete b; // B + Base.
+		delete c; // C + B + Base.
+
+		//if only: virtual ~C()
+		// Base.
+		// Base.
+		// B + Base.
 	}
 }
