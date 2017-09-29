@@ -73,8 +73,8 @@ namespace LookupTable
 		std::cout << val << '\n';
 
 
-		//The lookup table. Just a simple const array bruh.
-		const std::string stringArray[7] = { "Look", "up", "table", "LUL", "OMFG", "So nice", "Not switchstatements tho" };
+		//The lookup table.
+		const static std::string stringArray[7] = { "Look", "up", "table", "LUL", "OMFG", "So nice", "Not switchstatements tho" };
 		if (n < 6)
 		{
 			std::cout << stringArray[n] << '\n';
@@ -83,8 +83,6 @@ namespace LookupTable
 }
 
 /*
-THIS STATIC CAUSED MEMORY LEAKS.
-
 //The lookup table. Just a simple const array bruh.
 static const std::string stringArray[7] = { "Look", "up", "table", "LUL", "OMFG", "So nice", "Not switchstatements tho" };
 if (n < 6)

@@ -74,9 +74,6 @@
     <Filter Include="Delete / NULL / Nullptr">
       <UniqueIdentifier>{b8e13698-9037-4f57-b3e6-292d2d8c2b75}</UniqueIdentifier>
     </Filter>
-    <Filter Include="LambdaFuncs\Look up tables">
-      <UniqueIdentifier>{4bb536a6-743f-485c-a1cf-928ff9e13ab3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Typename">
       <UniqueIdentifier>{e419756c-18c4-49be-8b6e-ba897e26d498}</UniqueIdentifier>
     </Filter>
@@ -107,6 +104,12 @@
     <Filter Include="Tuples">
       <UniqueIdentifier>{ba5400ef-f254-4e2b-ac99-76fc8dacb3fb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Map">
+      <UniqueIdentifier>{c330bf7a-7392-471e-8500-1adc76c17c63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Look up tables">
+      <UniqueIdentifier>{4bb536a6-743f-485c-a1cf-928ff9e13ab3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Rectangle.cpp">
@@ -127,7 +130,7 @@
       <Filter>bitwise operator</Filter>
     </ClInclude>
     <ClInclude Include="lookupTable.h">
-      <Filter>LambdaFuncs\Look up tables</Filter>
+      <Filter>Look up tables</Filter>
     </ClInclude>
     <ClInclude Include="constexpression.h">
       <Filter>constexpr</Filter>
@@ -227,6 +230,9 @@
     </ClInclude>
     <ClInclude Include="Tuples.h">
       <Filter>Tuples</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Map</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

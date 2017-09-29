@@ -51,6 +51,7 @@ using namespace std;
 #include "CompilerVersion.h"
 #include "AttributeSpecifierSequence.h"
 #include "Tuples.h"
+#include "Map.h"
 
 #include "TestingHeader.h"
 
@@ -223,6 +224,11 @@ int main()
 	//Tuples
 	{
 		Tuples::start();
+	}
+
+	//Map
+	{
+		Map::start();
 	}
 
 	//Tests
