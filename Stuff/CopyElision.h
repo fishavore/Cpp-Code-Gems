@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 
+
 //Source: https://stackoverflow.com/a/12953129/2359879
 
 /*
@@ -12,6 +13,17 @@ Copy elision is an optimization implemented by most compilers to prevent extra
 (potentially expensive) copies in certain situations. It makes returning by value 
 or pass-by-value feasible in practice (restrictions apply).
 
+*/
+
+/*
+	Author note: I encountered this issue in a rather unexpectedly once. I was tasked to fix a bug which previously had
+	a strange implementation of the copy constructor. I started investigating and found that if implementated correctly
+	the copy constructor got called	without being directly called by me. It got called by a priorityqueue comparison method. 
+	This had major issues as this additional call was uninitialized.
+	Think about that for a seconds. This means that pointers are not "nullptr" that can be checked or be checked against
+	objects. You can easily crash and as it is compiler based error, you might not be aware of the issue. If you or your
+	company use a build computer with different compilers, that build might be the only one with the error.
+	TLDR: Be careful of copy constructors.
 */
 
 namespace CopyElision
@@ -34,12 +46,12 @@ namespace CopyElision
 		
 		Depending on the compiler and settings the following outputs are all valid:
 		//
-		Hello World!
-		A copy was made.
-		A copy was made.
+		Inside CopyElision.
+		Copy constructor.
+		Copy constructor.
 		//
-		Hello World!
-		A copy was made.
+		Inside CopyElision.
+		Copy constructor.
 		//
 		Inside CopyElision.\n
 		\\

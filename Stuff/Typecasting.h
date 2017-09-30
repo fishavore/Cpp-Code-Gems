@@ -3,8 +3,6 @@
 #include <iostream>
 #include <string>
 
-//TODO: reinterpret_cast
-
 /*
 
 The main reason is that classic C casts make no distinction between what we call static_cast<>(), 

@@ -26,8 +26,8 @@ namespace NewOperator
 		A* paranthesis = new A();
 		A* noParanthesis = new A;
 
-		cout << "Paranthesis: " << paranthesis->getVar() << '\n';
-		cout << "No Paranthesis: " << noParanthesis->getVar() << '\n';
+		std::cout << "Paranthesis: " << paranthesis->getVar() << '\n';
+		std::cout << "No Paranthesis: " << noParanthesis->getVar() << '\n';
 
 		/*
 		If used on a struct/class with a user-defined constructor, there is no difference. 
@@ -61,7 +61,6 @@ namespace NewOperator
 
 	inline void start()
 	{
-		using namespace std;
 		withOrWithoutParanthesis();
 	}
 }
