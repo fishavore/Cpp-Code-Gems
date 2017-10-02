@@ -74,7 +74,7 @@ namespace LookupTable
 
 
 		//The lookup table.
-		const static std::string stringArray[7] = { "Look", "up", "table", "LUL", "OMFG", "So nice", "Not switchstatements tho" };
+		static const std::string stringArray[7] = { "Look", "up", "table", "LUL", "OMFG", "So nice", "Not switchstatements tho" };
 		if (n < 6)
 		{
 			std::cout << stringArray[n] << '\n';
