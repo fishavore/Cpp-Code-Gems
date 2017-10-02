@@ -3,6 +3,8 @@
 #include <iostream>
 #include <limits>
 
+//This file broke a little due to a macro.
+
 /*
 
 Numerical limits in STD allows you to check boundaries and other things of base types. 
@@ -16,8 +18,8 @@ namespace NumericalLimits
 	void print_type_properties()
 	{
 		std::cout
-			<< "min=" << std::numeric_limits<T>::min() << '\n'
-			<< "max=" << std::numeric_limits<T>::max() << '\n'
+			//<< "min=" << std::numeric_limits<T>::min() << '\n'
+			//<< "max=" << std::numeric_limits<T>::max() << '\n'
 			<< "bits=" << std::numeric_limits<T>::digits << '\n'
 			<< "decdigits=" << std::numeric_limits<T>::digits10 << '\n'
 			<< "integral=" << std::numeric_limits<T>::is_integer << '\n'
