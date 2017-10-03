@@ -9,3 +9,6 @@ take the best of gathered information immediately. All advice does not include l
 and/or sources, most of these are then written by myself or reworked someone elses code
 to such an extent that they are no longer affiliated with that code. This code is not 
 meant to be profited of or sold in any way. This is, again, just to keep notes.
+
+# Target Platform / Requirements
+This project is made in Windows 10 with the latest Visual studio 2017 version.
