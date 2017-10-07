@@ -52,6 +52,7 @@ using namespace std;
 #include "AttributeSpecifierSequence.h"
 #include "Tuples.h"
 #include "Map.h"
+#include "SystemArchitecture.h"
 
 #include "TestingHeader.h"
 
@@ -229,6 +230,11 @@ int main()
 	//Map
 	{
 		Map::start();
+	}
+
+	//System Architecture
+	{
+		SystemArchitecture::start();
 	}
 
 	//Tests

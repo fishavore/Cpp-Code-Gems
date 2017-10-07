@@ -110,6 +110,9 @@
     <Filter Include="Look up tables">
       <UniqueIdentifier>{4bb536a6-743f-485c-a1cf-928ff9e13ab3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="System architecture">
+      <UniqueIdentifier>{c5c7b361-e3b8-48dd-a108-f4000f443736}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Rectangle.cpp">
@@ -233,6 +236,9 @@
     </ClInclude>
     <ClInclude Include="Map.h">
       <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemArchitecture.h">
+      <Filter>System architecture</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
