@@ -193,6 +193,7 @@
   <ItemGroup>
     <Text Include="inline.txt" />
     <Text Include="links.txt" />
+    <Text Include="Memoryleaks.txt" />
     <Text Include="ProjectStructure.txt" />
     <Text Include="ShortAdvice.txt" />
     <Text Include="shortcuts.txt" />

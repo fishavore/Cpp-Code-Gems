@@ -1,6 +1,14 @@
 #pragma once
 
 #include <iostream>
+
+#ifdef min
+#undef min
+#endif
+#ifdef max
+#undef max
+#endif
+
 #include <limits>
 
 //This file broke a little due to a macro.
@@ -18,8 +26,8 @@ namespace NumericalLimits
 	void print_type_properties()
 	{
 		std::cout
-			//<< "min=" << std::numeric_limits<T>::min() << '\n'
-			//<< "max=" << std::numeric_limits<T>::max() << '\n'
+			<< "min=" << std::numeric_limits<T>::min() << '\n'
+			<< "max=" << std::numeric_limits<T>::max() << '\n'
 			<< "bits=" << std::numeric_limits<T>::digits << '\n'
 			<< "decdigits=" << std::numeric_limits<T>::digits10 << '\n'
 			<< "integral=" << std::numeric_limits<T>::is_integer << '\n'
@@ -59,8 +67,8 @@ namespace NumericalLimits
 	inline void start()
 	{
 		print_type_properties<unsigned short>();
-		//print_type_properties<double>();
-		//print_type_properties<int>();
+		print_type_properties<double>();
+		print_type_properties<int>();
 
 		//print_type_properties<A>(); //custom class do not work
 	}
