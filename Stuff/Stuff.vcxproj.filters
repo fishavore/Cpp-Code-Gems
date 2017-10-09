@@ -240,6 +240,9 @@
     <ClInclude Include="SystemArchitecture.h">
       <Filter>System architecture</Filter>
     </ClInclude>
+    <ClInclude Include="AVLTree.h">
+      <Filter>Datastructures</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="inline.txt">
