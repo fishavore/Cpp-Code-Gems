@@ -261,7 +261,7 @@
       <Filter>Other</Filter>
     </Text>
     <Text Include="ProjectStructure.txt">
-      <Filter>Visual Studio</Filter>
+      <Filter>System architecture</Filter>
     </Text>
   </ItemGroup>
 </Project>
