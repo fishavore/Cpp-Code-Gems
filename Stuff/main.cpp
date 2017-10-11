@@ -53,6 +53,7 @@ using namespace std;
 #include "Tuples.h"
 #include "Map.h"
 #include "SystemArchitecture.h"
+#include "Literals.h"
 
 #include "TestingHeader.h"
 
@@ -235,6 +236,11 @@ int main()
 	//System Architecture
 	{
 		SystemArchitecture::start();
+	}
+
+	//Literals
+	{
+		Literals::start();
 	}
 
 	//Tests

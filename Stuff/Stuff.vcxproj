@@ -155,6 +155,7 @@
     <ClInclude Include="bitwise.h" />
     <ClInclude Include="CompilerVersion.h" />
     <ClInclude Include="CopyElision.h" />
+    <ClInclude Include="Literals.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="NotCopyable.h" />
     <ClInclude Include="NumericalLimits.h" />

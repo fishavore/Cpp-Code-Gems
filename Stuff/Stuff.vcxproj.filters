@@ -116,6 +116,9 @@
     <Filter Include="Memory leaks">
       <UniqueIdentifier>{b2123553-2796-48e8-ab7d-adcbac14ce18}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Literals">
+      <UniqueIdentifier>{e7d2a44b-a724-4dc4-92ad-b110f64bcce5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Rectangle.cpp">
@@ -245,6 +248,9 @@
     </ClInclude>
     <ClInclude Include="AVLTree.h">
       <Filter>Datastructures</Filter>
+    </ClInclude>
+    <ClInclude Include="Literals.h">
+      <Filter>Literals</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
