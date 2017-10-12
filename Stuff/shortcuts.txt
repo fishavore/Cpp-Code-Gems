@@ -21,4 +21,4 @@
 
 10. alt+shift+arrowkeys : traverse and select multiple characters on multiple rows.
 
-11. ctrl+, : A different kind of search feature.
+11. ctrl+shift+f : A different kind of search feature.
