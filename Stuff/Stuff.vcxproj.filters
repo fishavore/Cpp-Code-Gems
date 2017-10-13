@@ -119,6 +119,9 @@
     <Filter Include="Literals">
       <UniqueIdentifier>{e7d2a44b-a724-4dc4-92ad-b110f64bcce5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Algorithms">
+      <UniqueIdentifier>{56a6c86e-a79e-4232-9748-f82242532173}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Rectangle.cpp">
@@ -251,6 +254,12 @@
     </ClInclude>
     <ClInclude Include="Literals.h">
       <Filter>Literals</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithms.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="hex.h">
+      <Filter>Algorithms</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -54,6 +54,7 @@ using namespace std;
 #include "Map.h"
 #include "SystemArchitecture.h"
 #include "Literals.h"
+#include "Algorithms.h"
 
 #include "TestingHeader.h"
 
@@ -241,6 +242,11 @@ int main()
 	//Literals
 	{
 		Literals::start();
+	}
+
+	//Algorithms
+	{
+		Algorithms::start();
 	}
 
 	//Tests
