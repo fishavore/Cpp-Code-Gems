@@ -55,12 +55,12 @@ using namespace std;
 #include "SystemArchitecture.h"
 #include "Literals.h"
 #include "Algorithms.h"
+#include "Functor.h"
 
 #include "TestingHeader.h"
 
 #include "Timer.h"
 #include <memory>
-
 
 
 int main()
@@ -248,6 +248,11 @@ int main()
 	{
 		Algorithms::start();
 	}
+    
+    //Functors
+    {
+        Functor::start();
+    }
 
 	//Tests
 	{
