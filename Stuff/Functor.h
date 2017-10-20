@@ -28,7 +28,7 @@ namespace Functor
         {
             sum += val;
         }
-    }
+    };
     
     void start()
     {
