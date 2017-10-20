@@ -249,10 +249,10 @@ int main()
 		Algorithms::start();
 	}
     
-    //Functors
-    {
-        Functor::start();
-    }
+	//Functors
+	{
+		Functor::start();
+	}
 
 	//Tests
 	{
