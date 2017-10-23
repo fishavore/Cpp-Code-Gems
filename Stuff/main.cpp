@@ -56,6 +56,7 @@ using namespace std;
 #include "Literals.h"
 #include "Algorithms.h"
 #include "Functor.h"
+#include "DelegatingConstructors.h"
 
 #include "TestingHeader.h"
 
@@ -252,6 +253,11 @@ int main()
 	//Functors
 	{
 		Functor::start();
+	}
+
+	//Delegating Constructors
+	{
+		DelegatingConstructors::start();
 	}
 
 	//Tests
