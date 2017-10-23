@@ -156,6 +156,7 @@
     <ClInclude Include="bitwise.h" />
     <ClInclude Include="CompilerVersion.h" />
     <ClInclude Include="CopyElision.h" />
+    <ClInclude Include="DelegatingConstructors.h" />
     <ClInclude Include="hex.h" />
     <ClInclude Include="Literals.h" />
     <ClInclude Include="Map.h" />

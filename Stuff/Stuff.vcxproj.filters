@@ -125,6 +125,9 @@
     <Filter Include="Priority Queue">
       <UniqueIdentifier>{3e5db326-2641-4d44-b50e-6b2b19b55d02}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Delegating Constructors">
+      <UniqueIdentifier>{4dfd22c1-7d39-4da4-a6fe-786aaa6d97ea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Rectangle.cpp">
@@ -266,6 +269,9 @@
     </ClInclude>
     <ClInclude Include="PriorityQueue.h">
       <Filter>Priority Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="DelegatingConstructors.h">
+      <Filter>Delegating Constructors</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
