@@ -122,6 +122,9 @@
     <Filter Include="Algorithms">
       <UniqueIdentifier>{56a6c86e-a79e-4232-9748-f82242532173}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Priority Queue">
+      <UniqueIdentifier>{3e5db326-2641-4d44-b50e-6b2b19b55d02}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Rectangle.cpp">
@@ -260,6 +263,9 @@
     </ClInclude>
     <ClInclude Include="hex.h">
       <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="PriorityQueue.h">
+      <Filter>Priority Queue</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

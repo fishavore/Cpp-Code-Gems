@@ -161,6 +161,7 @@
     <ClInclude Include="Map.h" />
     <ClInclude Include="NotCopyable.h" />
     <ClInclude Include="NumericalLimits.h" />
+    <ClInclude Include="PriorityQueue.h" />
     <ClInclude Include="SystemArchitecture.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Tuples.h" />
