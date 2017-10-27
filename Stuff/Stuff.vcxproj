@@ -159,6 +159,7 @@
     <ClInclude Include="DelegatingConstructors.h" />
     <ClInclude Include="hex.h" />
     <ClInclude Include="Literals.h" />
+    <ClInclude Include="Macro.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="NotCopyable.h" />
     <ClInclude Include="NumericalLimits.h" />

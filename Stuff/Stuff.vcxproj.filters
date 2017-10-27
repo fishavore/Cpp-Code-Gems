@@ -128,6 +128,9 @@
     <Filter Include="Delegating Constructors">
       <UniqueIdentifier>{4dfd22c1-7d39-4da4-a6fe-786aaa6d97ea}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Macro">
+      <UniqueIdentifier>{7c99da42-f448-457a-80e0-b887f22a27af}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Rectangle.cpp">
@@ -272,6 +275,9 @@
     </ClInclude>
     <ClInclude Include="DelegatingConstructors.h">
       <Filter>Delegating Constructors</Filter>
+    </ClInclude>
+    <ClInclude Include="Macro.h">
+      <Filter>Macro</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

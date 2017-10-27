@@ -57,6 +57,7 @@ using namespace std;
 #include "Algorithms.h"
 #include "Functor.h"
 #include "DelegatingConstructors.h"
+#include "Macro.h"
 
 #include "TestingHeader.h"
 
@@ -258,6 +259,11 @@ int main()
 	//Delegating Constructors
 	{
 		DelegatingConstructors::start();
+	}
+
+	//Macro
+	{
+		Macro::start();
 	}
 
 	//Tests
