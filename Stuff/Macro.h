@@ -2,93 +2,108 @@
 
 #include <iostream>
 
+
+
+
 namespace Macro
 {
+	void theBasics()
+	{
+		//A macro is not the same as a preprocessor definition.
+		//A macro pretty much try to switch out the content with the name
+		{
+			//Define a macro:
+#define VALUE 100
+			std::cout << "Using macro value: " << VALUE << '\n'; // Using macro value: 100
+			//Undefine a macro:
+#undef VALUE
+			//std::cout << "Using macro value: " << VALUE << '\n'; // Value will complain as it is undefined.
+		}
+		//
+
+		//Macros are not type safe.
+		{
+#define INCREMENT(x) ++x
+			char *ptr = "ASDF";
+			printf("%s \n", INCREMENT(ptr)); //outputs SDF
+			int x = 5;
+			printf("%d \n", INCREMENT(x)); //outputs 6
+#undef INCREMENT
+		}
+	}
+
+	void theAdvanced()
+	{
+		//The macro arguments are not evaluated before macro expansion.
+		{
+#define MULTIPLYBAD(a, b) a*b
+#define MULTIPLYGOOD(a, b)
+
+			// The macro is expanded as 2 + 3 * 3 + 5, not as 5*8
+			printf("Bad: %d \n", MULTIPLYBAD(2 + 3, 3 + 5)); //outputs 16 not 40.
+#undef MULTIPLYBAD
+		}
+
+		//The tokens passed to macros can be concatenated using operator ## called Token-Pasting operator.
+		//Concatenated means you join strings together. Snow and ball would become Snowball. :)
+		{
+#define merge(a, b) a##b
+			printf("%d \n", merge(12, 34)); //outputs 1234.
+#undef merge
+		}
+
+		//A token passed to macro can be converted to a string literal by using # before it.
+		{
+#define VARISNOWASTRING(a) #a
+			printf("%s \n", VARISNOWASTRING(ASDF)); //outputs: ASDF
+#undef VARISNOWASTRING
+		}
+
+		//Macro can be written in multiple lines using '\'
+		{
+#define	MULTIPLELINEMACRO(x)\
+{\
+	printf("%s You cant debug this.\n", x);\
+}
+			MULTIPLELINEMACRO("Hey! "); //outputs Hey! Remember, you cant debug this.
+#undef MULTIPLELINEMACRO
+		}
+	}
+
+	void theBad()
+	{
+		//1. You can not debug macros.
+
+		//2. Macro expansion can lead to strange side effects.
+		//Example:
+		{
+#define SQUARE(x) ((x) * (x))
+			int x1 = 5;
+			int x2 = 5;
+			int x3 = 5;
+			std::cout << "SQUARE(x1): " << SQUARE(x1) << '\n'; //5*5 ouputs: 25
+			std::cout << "SQUARE(++x2): " << SQUARE(++x2) << '\n'; //What actually happens: ++x2 -> 6. -> (++6)*(++6) -> 7*7 -> outputs: 49  /// What the fuck?
+			std::cout << "SQUARE(x3++): " << SQUARE(x3++) << '\n'; //(5++) * (5++) outputs: 25 /// What the fuck?
+#undef SQUARE
+		}
+
+		//3. Macros have no "namespace", so if you have a macro that clashes with a name used elsewhere, you get macro replacements where you didn't want it, 
+		//and this usually leads to strange error messages.
+		
+		//4. Macros may affect things you don't realize.
+		{
+#define someMacroFunc() x = 0
+
+			int x = 5;
+			someMacroFunc();
+			std::cout << x << '\n'; //ouputs 0
+		}
+	}
+
 	void start()
 	{
-		/*
-			The #define preprocessor directive creates symbolic constants.
-			The symbolic constant is called a macro.
-			When we use define for a constant, the preprocessor produces a C program where the defined constant is searched
-			and matching tokens are replaced with the given expression.
-		*/
-
-		//Define a macro:
-#define VALUE 100
-		std::cout << "Using macro value: " << VALUE << '\n'; // Using macro value: 100
-		//Undefine a macro:
-#undef VALUE
-		//std::cout << "Using macro value: " << VALUE << '\n'; // Value will complain as it is undefined.
-
+		theBasics();
+		theAdvanced();
+		theBad();
 	}
 }
-
-
-/*
-
-
-
-1) The macros can take function like arguments, the arguments are not checked for data type.
-For example, the following macro INCREMENT(x) can be used for x of any data type.
-
-#include <stdio.h>
-#define INCREMENT(x) ++x
-int main()
-{
-char *ptr = "AmritSrivastava";
-int x = 10;
-printf("%s  ", INCREMENT(ptr));
-printf("%d", INCREMENT(x));
-return 0;
-}
-
-2) The macro arguments are not evaluated before macro expansion. For example consider the following program
-
-#include <stdio.h>
-#define MULTIPLY(a, b) a*b
-int main()
-{
-// The macro is expended as 2 + 3 * 3 + 5, not as 5*8
-printf("%d", MULTIPLY(2+3, 3+5));
-return 0;
-}
-// Output: 16
-
-3) The tokens passed to macros can be concatenated using operator ## called Token-Pasting operator.
-
-#include <stdio.h>
-#define merge(a, b) a##b
-int main()
-{
-printf("%d ", merge(12, 34));
-}
-// Output: 1234
-
-4) A token passed to macro can be converted to a sting literal by using # before it.
-
-#include <stdio.h>
-#define get(a) #a
-int main()
-{
-// AmritSrivastava is changed to "AmritSrivastava"
-printf("%s", get(AmritSrivastava));
-}
-// Output: AmritSrivastava
-
-5) The macros can be written in multiple lines using ‘\’. The last line doesn’t need to have ‘\’.
-
-#include <stdio.h>
-#define PRINT(i, limit) while (i < limit) \
-{ \
-printf("AmritSrivastava "); \
-i++; \
-}
-int main()
-{
-int i = 0;
-PRINT(i, 3);
-return 0;
-}
-// Output: AmritSrivsatava  AmritSrivsatava  AmritSrivsatava
-
-*/
