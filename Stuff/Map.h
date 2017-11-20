@@ -20,6 +20,14 @@ namespace Map
 		{
 			std::cout << myMap.at(i) << ' ';
 		}
+
+		myMap[2] = 99;
+
+		for (int i = 1; i < 6; i++)
+		{
+			std::cout << myMap.at(i) << ' ';
+		}
+
 		std::cout << '\n';
 
 	}
