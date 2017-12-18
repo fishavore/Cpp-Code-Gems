@@ -154,6 +154,7 @@
     <ClInclude Include="AttributeSpecifierSequence.h" />
     <ClInclude Include="AVLTree.h" />
     <ClInclude Include="bitwise.h" />
+    <ClInclude Include="BreakAtAccess.h" />
     <ClInclude Include="CompilerVersion.h" />
     <ClInclude Include="CopyElision.h" />
     <ClInclude Include="DelegatingConstructors.h" />

@@ -279,6 +279,9 @@
     <ClInclude Include="Macro.h">
       <Filter>Macro</Filter>
     </ClInclude>
+    <ClInclude Include="BreakAtAccess.h">
+      <Filter>Other</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="inline.txt">

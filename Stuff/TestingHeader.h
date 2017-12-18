@@ -3,6 +3,8 @@
 #include "Timer.h"
 #include <iostream>
 #include <vector>
+#include <map>
+#include "BreakAtAccess.h"
 
 inline void TestStart()
 {
