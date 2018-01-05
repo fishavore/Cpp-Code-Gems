@@ -266,6 +266,13 @@ int main()
 		Macro::start();
 	}
 
+	//Pragma region
+#pragma region Name - Inside the box
+	{
+		//code
+	}
+#pragma endregion Description of region
+
 	//Tests
 	{
 		TestStart();
