@@ -11,8 +11,8 @@ Modular % gives incorrectly at the very end. As [0,99] gives -> 0, 99. But [3270
 
 */
 
-#include <random>
 #include <iostream>
+#include <random>
 #include <algorithm>    // std::random_shuffle
 
 namespace Random
