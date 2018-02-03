@@ -1,6 +1,20 @@
 #pragma once
 #include <iostream>
 
+/*
+
+Always use normal integers for values and unsigned integers for bit operations. Never mix the two.
+The reason is quite simply that the behavior wont be what you expect it to be. 
+
+unsinged int a = 0;
+unsinged int b = -a;
+
+what is b?
+It is 2^32. gg...
+
+*/
+
+
 //AND &
 //OR |
 //XOR ^
@@ -11,7 +25,7 @@ namespace Bitwise
 	inline void bitwiseBasic()
 	{
 		const int CAP = 10;
-		int bitArr[CAP] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+		unsigned int bitArr[CAP] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
 		for (int i = 0; i < CAP; i++)
 		{
