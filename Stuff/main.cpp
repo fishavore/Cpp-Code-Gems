@@ -58,6 +58,7 @@ using namespace std;
 #include "Functor.h"
 #include "DelegatingConstructors.h"
 #include "Macro.h"
+#include "DealingWithChars.h"
 
 #include "TestingHeader.h"
 
@@ -272,6 +273,11 @@ int main()
 		//code
 	}
 #pragma endregion Description of region
+
+	//Dealing with chars
+	{
+		DealingWithChars::start();
+	}
 
 	//Tests
 	{
