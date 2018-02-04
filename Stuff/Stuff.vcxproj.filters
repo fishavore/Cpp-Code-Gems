@@ -131,6 +131,9 @@
     <Filter Include="Macro">
       <UniqueIdentifier>{7c99da42-f448-457a-80e0-b887f22a27af}</UniqueIdentifier>
     </Filter>
+    <Filter Include="chars">
+      <UniqueIdentifier>{fcd0dd3b-4221-471e-aafe-82f841d176d3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Rectangle.cpp">
@@ -281,6 +284,9 @@
     </ClInclude>
     <ClInclude Include="BreakAtAccess.h">
       <Filter>Other</Filter>
+    </ClInclude>
+    <ClInclude Include="DealingWithChars.h">
+      <Filter>chars</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
