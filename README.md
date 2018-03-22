@@ -1,4 +1,6 @@
-# Stuff
+# Cpp Code Gems
+
+This solution began as a small project known as 'Stuff' which escalated into something quite big.
 
 This solution/repository is a collection of hints, tips, trick, remarks and anything that 
 could prove beneficial for coding c++. Whenever I encounter a topic or coding "thing" that
