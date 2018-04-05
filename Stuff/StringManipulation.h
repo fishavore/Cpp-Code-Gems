@@ -119,5 +119,19 @@ namespace StringManipulation
 			cout << "p is empty.\n";
 		if (q.empty())
 			cout << "q is not empty.\n";
+
+		//ints
+		//int to string
+		{
+			int val = 5;
+			string r = "five =";
+			r+=to_string(val);
+			std::cout << r << '\n';
+		}
+		//string to int
+		{
+			string s = "5";
+			int val = std::stoi(s);
+		}
 	}
 }
