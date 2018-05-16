@@ -1,0 +1,90 @@
+﻿List of primitive and derived data type in C
+Data type				Size			Range										Description
+-----------------------------------------------------------------------------------------------------------------
+char					1 byte			-128 to 127									A character
+signed char
+-----------------------------------------------------------------------------------------------------------------
+unsigned char			1 byte			0 to 255									A character
+-----------------------------------------------------------------------------------------------------------------
+short					2 bytes			−32,767 to 32,767							Short signed integer of minimum 2 bytes
+signed short
+signed short int
+-----------------------------------------------------------------------------------------------------------------
+unsigned short			2 bytes			0 to 65,535									Short unsigned integer of minimum 2 bytes
+unsigned short int
+-----------------------------------------------------------------------------------------------------------------
+int						2 or 4 bytes	-32,768 to 32,767 or 						An integer (Both positive as well as negative)
+signed int								-2,147,483,648 to 2,147,483,647
+-----------------------------------------------------------------------------------------------------------------
+unsigned int			2 or 4 bytes	0 to 65,535 or 								An unsigned integer (Positive integer)
+								0 to 4,294,967,295
+-----------------------------------------------------------------------------------------------------------------
+long					4 bytes			-2,147,483,648 to 2,147,483,647				Long signed integer of minimum 4 bytes
+signed long
+signed long int
+-----------------------------------------------------------------------------------------------------------------
+unsigned long			4 bytes			0 to 4,294,967,295							Long unsigned integer of minimum 4 bytes
+unsigned long int
+-----------------------------------------------------------------------------------------------------------------
+long long				8 bytes			-9,223,372,036,854,775,808 to 				Integer with doubled capacity as of long
+long long int							9,223,372,036,854,775,807
+signed long long
+signed long long int
+-----------------------------------------------------------------------------------------------------------------
+unsigned long long		8 bytes			0 to 18,446,744,073,709,551,615				Unsigned integer with doubled capacity as of long
+unsigned long long int
+-----------------------------------------------------------------------------------------------------------------
+float					4 bytes			1.2E-38 to 3.4E+38							Single precision floating point number
+-----------------------------------------------------------------------------------------------------------------
+double					8 bytes			2.3E-308 to 1.7E+308						Double precision floating point number
+-----------------------------------------------------------------------------------------------------------------
+long double				12 bytes		3.4E-4932 to 1.1E+4932						Double precision floating point number
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+Format specifier						Description							Supported data types
+-----------------------------------------------------------------------------------------------------------------
+%c										Character							char
+																			unsigned char
+%d										Signed Integer						short
+																			unsigned short
+																			int
+																			long
+%e or %E								Scientific notation of float values	float
+																			double
+%f										Floating point						float
+%g or %G								Similar as %e or %E					float
+																			double
+%hi										Signed Integer(Short)				short
+%hu										Unsigned Integer(Short)				unsigned short
+%i										Signed Integer						short
+																			unsigned short
+																			int
+																			long
+%l or %ld or %li						Signed Integer						long
+%lf										Floating point						double
+%Lf										Floating point						long double
+%lu										Unsigned integer					unsigned int
+																			unsigned long
+%lli, %lld								Signed Integer						long long
+%llu									Unsigned Integer					unsigned long long
+%o										Octal representation of Integer.	short
+																			unsigned short
+																			int
+																			unsigned int
+																			long
+%p										Address of pointer to void void *	void *
+%s										String								char *
+%u										Unsigned Integer					unsigned int
+																			unsigned long
+%x or %X								Hexadecimal representation of Unsigned Integer	short
+																			unsigned short
+																			int
+																			unsigned int
+																			long
+%n										Prints nothing	
+%%										Prints % character	

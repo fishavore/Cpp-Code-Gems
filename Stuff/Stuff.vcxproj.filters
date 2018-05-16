@@ -311,5 +311,8 @@
     <Text Include="Memoryleaks.txt">
       <Filter>Memory leaks</Filter>
     </Text>
+    <Text Include="TypeDetails.txt">
+      <Filter>Other</Filter>
+    </Text>
   </ItemGroup>
 </Project>
