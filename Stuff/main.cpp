@@ -59,6 +59,7 @@ using namespace std;
 #include "DelegatingConstructors.h"
 #include "Macro.h"
 #include "DealingWithChars.h"
+#include <DLLExampleCode.h>
 
 #include "TestingHeader.h"
 
@@ -277,6 +278,11 @@ int main()
 	//Dealing with chars
 	{
 		DealingWithChars::start();
+	}
+
+	//DLL Example
+	{
+		DLLExampleCode::Print();
 	}
 
 	//Tests
