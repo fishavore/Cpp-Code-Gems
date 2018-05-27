@@ -15,4 +15,5 @@
 namespace DLLExampleCode
 {
 	FORC DECLDIR void Print();
+	FORC DECLDIR void GetString(unsigned char* str, int size);
 }
