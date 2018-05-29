@@ -14,3 +14,9 @@ meant to be profited of or sold in any way. This is, again, just to keep notes.
 
 # Target Platform / Requirements
 This project is made in Windows 10 with the latest Visual studio 2017 version.
+
+# How to use
+This project is meant to be viewed in Visual studio(or other IDE), rather than viewing it in github.
+
+View the main.cpp to see each section easier or the solution folder. There is a testingheader.h that
+could also be used for quick tests.
