@@ -18,7 +18,12 @@ namespace CSharpExampleUsingCpp
 {
     public partial class MainWindow : Window
     {
-        [DllImport("DLLExampleCode.dll", CallingConvention = CallingConvention.StdCall)]
+        const string PATH = "DLLExample.dll";
+
+        [DllImport(PATH, CallingConvention = CallingConvention.StdCall)]
+        public static extern void Init();
+
+        [DllImport(PATH, CallingConvention = CallingConvention.StdCall)]
         public static extern void GetString(System.Byte[] str, int size);
 
         public MainWindow()
@@ -31,6 +36,8 @@ namespace CSharpExampleUsingCpp
         {
             int size = 256;
             System.Byte[] str = new byte[size];
+
+            Init();
 
             GetString(str, size);
             string result = System.Text.Encoding.Unicode.GetString(str);

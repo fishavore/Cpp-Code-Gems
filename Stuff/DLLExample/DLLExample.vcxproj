@@ -19,13 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="includes\DLLExampleCode.h" />
+    <ClInclude Include="includes\DLLExampleCode.c" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Instructions.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\DLLExampleCode.cpp" />
+    <ClCompile Include="source\DLLExampleCode.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

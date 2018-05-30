@@ -59,7 +59,7 @@ using namespace std;
 #include "DelegatingConstructors.h"
 #include "Macro.h"
 #include "DealingWithChars.h"
-#include <DLLExampleCode.h>
+//#include <DLLExampleCode.h>
 
 #include "TestingHeader.h"
 
@@ -282,7 +282,7 @@ int main()
 
 	//DLL Example
 	{
-		DLLExampleCode::Print();
+		//DLLExampleCode::Print();
 	}
 
 	//Tests
