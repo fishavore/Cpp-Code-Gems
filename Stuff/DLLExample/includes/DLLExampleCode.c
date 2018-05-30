@@ -13,22 +13,22 @@ extern "C" { // only need to export C interface if used by C++ source code
 
 	MainClass* m_instance;
 
-	DECLDIR void Init()
+	DECLDIR void __stdcall Init()
 	{
 		m_instance = new MainClass();
 	}
 
-	DECLDIR void Print()
+	DECLDIR void __stdcall Print()
 	{
 		m_instance->Print();
 	}
 
-	DECLDIR void GetString(unsigned char* str, int size)
+	DECLDIR void __stdcall GetString(unsigned char* str, int size)
 	{
 		m_instance->GetString(str, size);
 	}
 
-	DECLDIR void Dispose()
+	DECLDIR void __stdcall Dispose()
 	{
 		delete m_instance;
 	}
