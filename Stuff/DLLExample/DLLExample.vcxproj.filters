@@ -20,13 +20,13 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\DLLExampleCode.h">
+    <ClInclude Include="includes\DLLExampleCode.h">
       <Filter>Header Files</Filter>
-    </ClCompile>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="includes\DLLExampleCode.c">
+    <ClCompile Include="source\DLLExampleCode.cpp">
       <Filter>Source Files</Filter>
-    </ClInclude>
+    </ClCompile>
   </ItemGroup>
 </Project>

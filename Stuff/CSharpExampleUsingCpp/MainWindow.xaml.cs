@@ -20,11 +20,11 @@ namespace CSharpExampleUsingCpp
     {
         const string PATH = "DLLExample.dll";
 
-        [DllImport(PATH, CallingConvention = CallingConvention.StdCall)]
-        public static extern void Init();
+        [DllImport(PATH, CallingConvention = CallingConvention.Cdecl)]
+        public static extern int GetValue();
 
-        [DllImport(PATH, CallingConvention = CallingConvention.StdCall)]
-        public static extern void GetString(System.Byte[] str, int size);
+        [DllImport(PATH, CallingConvention = CallingConvention.Cdecl)]
+        public static unsafe extern int GetText(byte[] str, int strLength);
 
         public MainWindow()
         {
@@ -36,12 +36,15 @@ namespace CSharpExampleUsingCpp
         {
             int size = 256;
             System.Byte[] str = new byte[size];
-
-            Init();
-
-            GetString(str, size);
-            string result = System.Text.Encoding.Unicode.GetString(str);
+            GetText(str, size);
+            string result = System.Text.Encoding.UTF8.GetString(str);
             TextBox.Text = result;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            int value = GetValue();
+            TextBoxGetVal.Text = value.ToString();
         }
     }
 }

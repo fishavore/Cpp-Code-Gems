@@ -1,3 +1,12 @@
 Step 1: Project Properties -> Property Pages -> Configuration Type -> Set as: Dynamic Library (.dll)
 
-Step 2: 
+Step 2: Project Properties -> Property Pages -> C/C++ -> Advanced -> Calling Convention: __cdecl
+
+Step 3: Project Properties -> Property Pages -> Debugging -> Debugging Type: Native Only
+
+Step 4: Inside C# project -> Properties -> Debug -> Enable native code debugging: Active.
+
+When passing arguements you are required to add unsafe flag. 
+
+Inside C# project -> Properties -> Build -> Allow unsafe cod: Active.
+
