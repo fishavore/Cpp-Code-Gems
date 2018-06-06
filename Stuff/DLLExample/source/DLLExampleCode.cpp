@@ -1,6 +1,7 @@
 #include "../includes/DLLExampleCode.h"
 
 #include <string>
+#include <iostream>
 
 int __cdecl GetValue()
 {
@@ -16,4 +17,9 @@ void __cdecl GetText(char* str, int strLength)
 	}
 	
 	strcpy_s(str, strLength,text.c_str());
+}
+
+void __cdecl DLLPrint()
+{
+	std::cout << "This is printed from inside DLLExample.dll.\n";
 }
