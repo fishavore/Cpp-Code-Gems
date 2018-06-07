@@ -1,0 +1,4 @@
+12
+3
+4
+This is a sentence we can use to look at words or specific chars.

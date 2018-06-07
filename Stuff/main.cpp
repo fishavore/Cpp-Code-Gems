@@ -60,6 +60,7 @@ using namespace std;
 #include "Macro.h"
 #include "DealingWithChars.h"
 #include <DLLExampleCode.h>
+#include "ReadWriteToFile.h"
 
 #include "TestingHeader.h"
 
@@ -283,6 +284,11 @@ int main()
 	//DLL Example
 	{
 		DLLPrint();
+	}
+
+	//Read / Write to file
+	{
+		ReadWriteToFile::start();
 	}
 
 	//Tests

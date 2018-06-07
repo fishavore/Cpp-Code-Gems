@@ -134,6 +134,9 @@
     <Filter Include="chars">
       <UniqueIdentifier>{fcd0dd3b-4221-471e-aafe-82f841d176d3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Read / Write to file">
+      <UniqueIdentifier>{4befa767-d46d-496b-943a-9b98dc5d5e67}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Rectangle.cpp">
@@ -287,6 +290,9 @@
     </ClInclude>
     <ClInclude Include="DealingWithChars.h">
       <Filter>chars</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadWriteToFile.h">
+      <Filter>Read / Write to file</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
