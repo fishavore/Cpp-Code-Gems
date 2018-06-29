@@ -41,9 +41,16 @@ namespace ReadWriteToFile
 				std::string word;
 				char achar;
 				achar = in.get(); //Read char. This will even read things like \n.
-				while (in.good())
+				while (true)
 				{
-					in >> word; //Reads word by word seperated by blank space or \n.
+					if (in.good())
+					{
+						in >> word; //Reads word by word seperated by blank space or \n.
+					}
+					else
+					{
+						break;
+					}
 				}
 			}
 
