@@ -49,5 +49,22 @@ namespace SmartPointers
 		{
 			message[i] = 'B';
 		}
+
+		//Combined
+		{
+			struct MyStruct
+			{
+				int five;
+				int lol;
+				int heh;
+			};
+
+			MyStruct* variable = new MyStruct;
+			variable->five = 5;
+			variable->lol = 5;
+			variable->heh = 5;
+
+			std::unique_ptr<MyStruct> smartVariable(variable);
+		}
 	}
 }
