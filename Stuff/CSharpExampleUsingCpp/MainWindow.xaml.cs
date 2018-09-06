@@ -24,7 +24,7 @@ namespace CSharpExampleUsingCpp
         public static extern int GetValue();
 
         [DllImport(PATH, CallingConvention = CallingConvention.Cdecl)]
-        public static unsafe extern int GetText(byte[] str, int strLength);
+        public static unsafe extern int GetText(byte[] str, out System.Int32 strLength);
 
         public MainWindow()
         {
@@ -34,10 +34,10 @@ namespace CSharpExampleUsingCpp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            int size = 256;
+            System.Int32 size = 256;
             System.Byte[] str = new byte[size];
-            GetText(str, size);
-            string result = System.Text.Encoding.UTF8.GetString(str);
+            GetText(str, out size);
+            string result = System.Text.Encoding.UTF8.GetString(str, 0, size);
             TextBox.Text = result;
         }
 
