@@ -3,6 +3,8 @@
 #include <map>
 #include <iostream>
 
+//TODO https://www.fluentcpp.com/2018/12/11/overview-of-std-map-insertion-emplacement-methods-in-cpp17/
+
 namespace Map
 {
 	void start()
