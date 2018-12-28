@@ -54,7 +54,9 @@ public:
 			m_ticksPerMs = (float)(m_frequency / 1000);
 			break;	
 		}
-			
+		
+		m_timeDifference = 0;
+
 		QueryPerformanceCounter((LARGE_INTEGER*)&m_startTime);
 	};
 	~Timer(){};
@@ -81,7 +83,7 @@ public:
 		m_stopClock = 0;
 		QueryPerformanceCounter((LARGE_INTEGER*)&m_stopClock);
 		m_timeDifference = (m_stopClock - m_startClock);
-		return (double)m_timeDifference;
+		return ((double)m_timeDifference * (1.0 / m_frequency * m_timeFrequency));
 	};
 	double GetStopClock() { return ((double)m_timeDifference * ( 1.0/ m_frequency * m_timeFrequency)); };
 	double GetDeltaTime()const { return m_deltaTime; };
