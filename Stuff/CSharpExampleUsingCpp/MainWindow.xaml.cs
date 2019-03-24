@@ -22,10 +22,10 @@ namespace CSharpExampleUsingCpp
 
         //C# to Cpp
         [DllImport(PATH, CallingConvention = CallingConvention.Cdecl)]
-        public static extern int GetValue();
+        public static extern void GetCSharpText(byte[] str, out System.Int32 strLength);
 
         [DllImport(PATH, CallingConvention = CallingConvention.Cdecl)]
-        public static unsafe extern int GetText(byte[] str, out System.Int32 strLength);
+        public static unsafe extern void GetCppText(byte[] str, out System.Int32 strLength);
 
         //Cpp to C#
         //declare the callback prototype
@@ -43,7 +43,7 @@ namespace CSharpExampleUsingCpp
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void CppInteropButton_Click(object sender, RoutedEventArgs e)
         {
             System.Int32 size = 256;
             System.Byte[] str = new byte[size];
@@ -52,18 +52,27 @@ namespace CSharpExampleUsingCpp
                 str[i] = (byte)'1';
             }
 
-            GetText(str, out size);
+            GetCppText(str, out size);
             string result = System.Text.Encoding.UTF8.GetString(str, 0, size);
             TextBox.Text = result;
-
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void InteropCppToCSharpButton_Click(object sender, RoutedEventArgs e)
         {
+            //Set callback so C++ can call back to C#.
             _callback = Callback;
             SetCallback(_callback);
-            //int value = GetValue();
-            //TextBoxGetVal.Text = value.ToString();
+            //
+            System.Int32 size = 256;
+            System.Byte[] str = new byte[size];
+            for (int i = 0; i < size; i++)
+            {
+                str[i] = (byte)'1';
+            }
+
+            GetCSharpText(str, out size);
+            string result = System.Text.Encoding.UTF8.GetString(str, 0, size);
+            TextBoxGetVal.Text = result;
         }
 
         // C++ Calls C#.
@@ -71,22 +80,22 @@ namespace CSharpExampleUsingCpp
         /*static*/
         int Callback(IntPtr myString, int length)
         {
-            string user = "Hello";
+            string CSharpString = "This string has been called from C#->Cpp->C#";
 
-            if (user.Length == 0)
+            if (CSharpString.Length == 0)
             {
-                user = "GoodBye";
+                CSharpString = "GoodBye";
             }
 
             //make sure the buffer is big enough
-            if (user.Length + 1 > length)
+            if (CSharpString.Length + 1 > length)
                 return 1;
 
             //convert the managed string into a unmanaged ANSI string
-            IntPtr ptr = Marshal.StringToHGlobalAnsi(user);
+            IntPtr ptr = Marshal.StringToHGlobalAnsi(CSharpString);
             //get the bytes of the unmanaged string
-            byte[] bytes = new byte[user.Length + 1];
-            Marshal.Copy(ptr, bytes, 0, user.Length);
+            byte[] bytes = new byte[CSharpString.Length + 1];
+            Marshal.Copy(ptr, bytes, 0, CSharpString.Length);
             //copy these bytes into myString
             Marshal.Copy(bytes, 0, myString, bytes.Length);
             //free the unmanaged memory
@@ -99,6 +108,5 @@ namespace CSharpExampleUsingCpp
             //set the callback somewhere in your code
             SetCallback(Callback);
         }
-
     }
 }

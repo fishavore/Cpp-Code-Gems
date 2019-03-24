@@ -2,9 +2,9 @@
 
 #define DLLExport _declspec(dllexport)
 
-extern "C" DLLExport int __cdecl GetValue();
+extern "C" DLLExport void __cdecl GetCSharpText(char* str, int* strLength);
 
-extern "C" DLLExport void __cdecl GetText(char* str, int* strLength);
+extern "C" DLLExport void __cdecl GetCppText(char* str, int* strLength);
 
 extern "C" DLLExport void __cdecl DLLPrint();
 
