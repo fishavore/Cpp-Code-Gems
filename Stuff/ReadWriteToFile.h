@@ -130,8 +130,6 @@ namespace ReadWriteToFile
 
 	void start()
 	{
-		LLLOG("TEST!");
-
 		std::string path = "file.txt";
 		WriteToFile(path);
 		ReadFromFile(path);

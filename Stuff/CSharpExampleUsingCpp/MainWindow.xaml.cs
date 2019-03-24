@@ -54,7 +54,7 @@ namespace CSharpExampleUsingCpp
 
             GetCppText(str, out size);
             string result = System.Text.Encoding.UTF8.GetString(str, 0, size);
-            TextBox.Text = result;
+            CppInteropButtonTextBox.Text = result;
         }
 
         private void InteropCppToCSharpButton_Click(object sender, RoutedEventArgs e)
@@ -72,7 +72,7 @@ namespace CSharpExampleUsingCpp
 
             GetCSharpText(str, out size);
             string result = System.Text.Encoding.UTF8.GetString(str, 0, size);
-            TextBoxGetVal.Text = result;
+            InteropCppToCSharpButtonTextBox.Text = result;
         }
 
         // C++ Calls C#.
