@@ -4,10 +4,47 @@
 #include <fstream>
 
 /*
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-For read from file you should use: //Do not use while(!in.eof()){ because the end of file bit will not
-be set until *after* a failed read due to end of file.
+Copy and paste for debug
+
+#include <iostream>
+#include <fstream>
+
+void LLLOG(std::string text)
+{
+	std::string path = "C:\\temp";
+	std::string filename = "log.txt";
+	std::ofstream out;
+
+	//Create directory
+	if (CreateDirectory(path.c_str(), NULL) ||
+		ERROR_ALREADY_EXISTS == GetLastError())
+	{
+		//Create file
+		std::string fullpath = path + "\\" + filename;
+		out.open(fullpath, std::fstream::in | std::fstream::out | std::fstream::app);
+		if (!out)
+		{
+			out.open(filename, fstream::in | fstream::out | fstream::trunc);
+		}
+		//Log to the file
+		if (out.is_open())
+		{
+			out << text << std::endl;
+			out.close();
+		}
+	}	
+}
+
 */
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//For read from file you should use: //Do not use while(!in.eof()){ because the end of file bit will not
+//be set until *after* a failed read due to end of file.
+
 
 
 namespace ReadWriteToFile
@@ -93,6 +130,8 @@ namespace ReadWriteToFile
 
 	void start()
 	{
+		LLLOG("TEST!");
+
 		std::string path = "file.txt";
 		WriteToFile(path);
 		ReadFromFile(path);
