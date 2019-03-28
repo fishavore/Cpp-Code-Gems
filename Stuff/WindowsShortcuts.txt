@@ -5,3 +5,9 @@
 2. ctrl+windowskey+F4 : Delete desktop.
 
 3. ctrl+windowskey+arrowkeys : change between them
+
+4. If you enter, let's say, cmd in windows search function and then enter: ctrl+shift+enter
+	You will open that process as administrator. This is especially useful when opening multiple Visual studios with administrator rights.
+
+6. To always open a taskbar program as administrator:
+In task bar, right click on icon-> right click on icon in the appearing window -> properties -> Advanced -> Open as administrator.
