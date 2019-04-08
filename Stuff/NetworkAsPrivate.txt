@@ -1,0 +1,25 @@
+Unidentified networks in Windows 10 in the 1809 version is unable to set networks as private (in their gui) if they are unidentified.
+
+To do so:
+
+You can't change the unidentified network to private because that is prevented by a default security setting.
+
+    You can change the security setting so that the network is not made public in the first place.
+
+To do this on your local server , follow these steps:
+
+1. Start --> run --> MMC --> press enter
+
+2. In MMC console , from menu file select Add/Remove Snap-in
+
+3. Select Group Policy Object editor --> Press Add --> select Local computer --> press OK -->press OK
+
+4. Open Computer configration -->Windows Settings -->Security Settings -->select Network list manager policies
+on the right Side you will see options for :
+
+double click -->Unidentified networks
+
+  Then you can select the option to consider the Unidentified networks as private and if user can change the
+location.
+
+I hope that is will help you and is clear . 

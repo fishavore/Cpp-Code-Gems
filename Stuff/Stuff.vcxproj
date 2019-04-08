@@ -228,6 +228,7 @@ xcopy /Y "$(ProjectDir)\DLLExample\$(Platform)\$(Configuration)\*.dll" "$(OutDir
     <Text Include="inline.txt" />
     <Text Include="links.txt" />
     <Text Include="Memoryleaks.txt" />
+    <Text Include="NetworkAsPrivate.txt" />
     <Text Include="ProjectStructure.txt" />
     <Text Include="ShortAdvice.txt" />
     <Text Include="shortcuts.txt" />

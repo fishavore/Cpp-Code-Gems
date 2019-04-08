@@ -137,6 +137,9 @@
     <Filter Include="Read / Write to file">
       <UniqueIdentifier>{4befa767-d46d-496b-943a-9b98dc5d5e67}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Windows">
+      <UniqueIdentifier>{627c0f13-d110-4aac-8274-08e8f0e189e7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Rectangle.cpp">
@@ -319,6 +322,9 @@
     </Text>
     <Text Include="TypeDetails.txt">
       <Filter>Other</Filter>
+    </Text>
+    <Text Include="NetworkAsPrivate.txt">
+      <Filter>Windows</Filter>
     </Text>
   </ItemGroup>
 </Project>
