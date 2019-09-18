@@ -24,3 +24,9 @@
 11. ctrl+shift+f : A different kind of search feature.
 
 12. ctrl+, : go to all
+
+13. ctrl+shift+l : delete line
+
+14. ctrl+alt+p : attach to process
+
+15. shift+alt+p: reattach to process
