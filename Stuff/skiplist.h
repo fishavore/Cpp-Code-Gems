@@ -1,35 +1,28 @@
 #pragma once
 
 #include <iostream>
-using namespace std;
 
-// Class to implement Node 
 class Node 
 { 
     public:
-        //Key
         int key;
 
-        // Array to hold pointers to node of different level  
         Node **forward;
 
-        //Constructor
         Node(int, int); 
 };
 
-//Node constructor  
+
 Node::Node(int key, int level) 
 { 
     this->key = key; 
-  
-    // Allocate memory to forward  
+
     forward = new Node*[level+1]; 
-  
-    // Fill forward array with 0s 
+    
     memset(forward, 0, sizeof(Node*)*(level+1)); 
 };
   
-// Class for Skip list 
+
 class SkipList 
 { 
     // Maximum level for this skip list 
@@ -46,26 +39,19 @@ class SkipList
     Node *header; 
 
     public: 
-        //Constructor
         SkipList(int, float);
 
-        // Create a random level
         int randomLevel(); 
-        
-        // Create Node
+
         Node* createNode(int, int); 
-        
-        // Insert element at node with given key
+
         void insertElement(int); 
 
-        // Delete element with given key
         void deleteElement(int);
-
-        // Search element with given key
+    
         void searchElement(int);
 }; 
 
-//Skiplist Constructor  
 SkipList::SkipList(int MAXLVL, float P) 
 { 
     this->MAXLVL = MAXLVL; 
@@ -75,8 +61,7 @@ SkipList::SkipList(int MAXLVL, float P)
     // create header node and initialize key to -1 
     header = new Node(-1, MAXLVL); 
 }; 
-  
-// create random level for node 
+
 int SkipList::randomLevel() 
 { 
     float r = (float)rand()/RAND_MAX; 
@@ -95,8 +80,7 @@ Node* SkipList::createNode(int key, int level)
     Node *n = new Node(key, level); 
     return n; 
 }; 
-  
-// Insert given key in skip list 
+
 void SkipList::insertElement(int key) 
 { 
     Node *current = header; 
@@ -115,7 +99,9 @@ void SkipList::insertElement(int key)
     { 
         while (current->forward[i] != NULL && 
               current->forward[i]->key < key) 
+        {
             current = current->forward[i]; 
+        }
         update[i] = current; 
     }
   
@@ -132,35 +118,33 @@ void SkipList::insertElement(int key)
     if (current == NULL || current->key != key)
     { 
         // Generate a random level for node 
-        int rlevel = randomLevel(); 
+        int random_level = randomLevel(); 
   
         // If random level is greater than list's current 
         // level (node with highest level inserted in  
         // list so far), initialize update value with pointer 
         // to header for further use 
-        if (rlevel > level) 
+        if (random_level > level) 
         { 
-            for (int i=level+1;i<rlevel+1;i++) 
+            for (int i=level+1;i<random_level+1;i++) 
                 update[i] = header; 
   
             // Update the list current level 
-            level = rlevel; 
+            level = random_level; 
         } 
   
         // create new node with random level generated 
-        Node* n = createNode(key, rlevel); 
+        Node* n = createNode(key, random_level); 
   
         // insert node by rearranging pointers  
-        for (int i=0;i<=rlevel;i++) 
+        for (int i=0;i<=random_level;i++) 
         { 
             n->forward[i] = update[i]->forward[i]; 
             update[i]->forward[i] = n; 
         } 
-        cout << "Successfully Inserted key " << key << "\n"; 
     } 
 };
 
-// Delete element from skip list 
 void SkipList::deleteElement(int key) 
 { 
     Node *current = header; 
@@ -188,7 +172,7 @@ void SkipList::deleteElement(int key)
     current = current->forward[0]; 
   
     // If current node is target node 
-    if(current != NULL and current->key == key) 
+    if(current != NULL && current->key == key) 
     { 
         /* start from lowest level and rearrange 
            pointers just like we do in singly linked list 
@@ -208,12 +192,10 @@ void SkipList::deleteElement(int key)
         while(level>0 && 
               header->forward[level] == 0) 
             level--; 
-         cout<<"Successfully deleted key "<<key<<"\n"; 
     } 
 }; 
-  
-// Search for element in skip list 
-void SkipList::searchElement(int key) 
+
+bool SkipList::searchElement(int key) 
 { 
     Node *current = header; 
   
@@ -237,6 +219,8 @@ void SkipList::searchElement(int key)
   
     // If current node have key equal to 
     // search key, we have found our target node 
-    if(current and current->key == key)  
-        cout<<"Found key: "<<key<<"\n"; 
+    if(current && current->key == key)  
+        return True; 
+    
+    return False;
 };
