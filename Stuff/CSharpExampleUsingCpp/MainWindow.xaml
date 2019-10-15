@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="400" Width="400">
     <Grid>
-        <Button x:Name="CppInteropButton" Content="Call c++ dll and from c++ to C#" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="177" Click="CppInteropButton_Click" Height="25"/>
+        <Button x:Name="CppInteropButton" Content="Call c++ dll" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="177" Click="CppInteropButton_Click" Height="25"/>
         <TextBox x:Name="CppInteropButtonTextBox" HorizontalAlignment="Left" Height="41" Margin="10,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="177"/>
         <Button x:Name="InteropCppToCSharpButton" Content="C# -&gt; Cpp -&gt; C#" HorizontalAlignment="Left" Margin="192,10,0,0" VerticalAlignment="Top" Width="190" Click="InteropCppToCSharpButton_Click" Height="25"/>
         <TextBox x:Name="InteropCppToCSharpButtonTextBox" HorizontalAlignment="Left" Height="41" Margin="192,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190"/>

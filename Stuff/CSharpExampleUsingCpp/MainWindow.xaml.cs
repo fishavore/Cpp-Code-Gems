@@ -24,8 +24,9 @@ namespace CSharpExampleUsingCpp
         [DllImport(PATH, CallingConvention = CallingConvention.Cdecl)]
         public static extern void GetCSharpText(byte[] str, out System.Int32 strLength);
 
-        [DllImport(PATH, CallingConvention = CallingConvention.Cdecl)]
-        public static unsafe extern void GetCppText(byte[] str, out System.Int32 strLength);
+
+        [DllImport(PATH, EntryPoint = "GetCppText", CallingConvention = CallingConvention.Cdecl)]
+        public static extern void GetCppText(StringBuilder str, ref int strLength);
 
         //Cpp to C#
         //declare the callback prototype
@@ -40,21 +41,15 @@ namespace CSharpExampleUsingCpp
         public MainWindow()
         {
             InitializeComponent();
-
         }
 
         private void CppInteropButton_Click(object sender, RoutedEventArgs e)
         {
-            System.Int32 size = 256;
-            System.Byte[] str = new byte[size];
-            for (int i = 0; i < size; i++)
-            {
-                str[i] = (byte)'1';
-            }
+            int bufferSize = 512;
+            StringBuilder buffer = new StringBuilder(bufferSize);
+            GetCppText(buffer, ref bufferSize);
 
-            GetCppText(str, out size);
-            string result = System.Text.Encoding.UTF8.GetString(str, 0, size);
-            CppInteropButtonTextBox.Text = result;
+            CppInteropButtonTextBox.Text = buffer.ToString();
         }
 
         private void InteropCppToCSharpButton_Click(object sender, RoutedEventArgs e)
