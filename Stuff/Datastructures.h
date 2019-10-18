@@ -2,6 +2,7 @@
 
 #include "RedBlackTree.h"
 #include "AVLTree.h"
+#include "Skiplist.h"
 #include <assert.h>
 #include <random>
 
@@ -173,9 +174,15 @@ namespace Datastructures
         }
 	}
 
+	void SkiplistTest()
+	{
+		
+	}
+
 	inline void start()
 	{
 		RedBlackTreeWorkTest();
 		AVLTreeWorkTest();
+		SkiplistTest();
 	}
 }

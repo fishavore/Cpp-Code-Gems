@@ -297,6 +297,9 @@
     <ClInclude Include="ReadWriteToFile.h">
       <Filter>Read / Write to file</Filter>
     </ClInclude>
+    <ClInclude Include="Skiplist.h">
+      <Filter>Datastructures</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="inline.txt">
@@ -326,5 +329,6 @@
     <Text Include="NetworkAsPrivate.txt">
       <Filter>Windows</Filter>
     </Text>
+    <Text Include="ML.txt" />
   </ItemGroup>
 </Project>
