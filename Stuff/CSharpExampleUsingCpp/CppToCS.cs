@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSLibExample
+namespace CSharpExampleUsingCpp
 {
-    public class Class1
+    public class CppToCS
     {
         public static string InsideCS(string text, string moreText)
         {

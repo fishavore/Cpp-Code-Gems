@@ -163,8 +163,8 @@
     <ClCompile Include="CppToCS.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CSLibExample\CSLibExample.csproj">
-      <Project>{e0a0ce49-f354-4a66-a36e-f7e2c70dd8ec}</Project>
+    <ProjectReference Include="..\CSharpExampleUsingCpp\CSharpExampleUsingCpp.csproj">
+      <Project>{285d76a9-86ee-4f09-b1a4-3362e5e1b2e7}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
