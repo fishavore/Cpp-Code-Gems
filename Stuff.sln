@@ -15,9 +15,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpExampleUsingCpp", "St
 		{BD3B24BA-090C-4E93-9D38-88EDD154807E} = {BD3B24BA-090C-4E93-9D38-88EDD154807E}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppToCS", "CppToCS\CppToCS.vcxproj", "{04740A26-A3B9-4904-9840-0E242DCEC882}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppToCS", "Stuff\CppToCS\CppToCS.vcxproj", "{04740A26-A3B9-4904-9840-0E242DCEC882}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSLibExample", "CSLibExample\CSLibExample.csproj", "{E0A0CE49-F354-4A66-A36E-F7E2C70DD8EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSLibExample", "Stuff\CSLibExample\CSLibExample.csproj", "{E0A0CE49-F354-4A66-A36E-F7E2C70DD8EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cpp to CS interop", "Cpp to CS interop", "{F7CF1F57-5843-4E07-9F37-5BA07FACF8D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -88,6 +90,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{04740A26-A3B9-4904-9840-0E242DCEC882} = {F7CF1F57-5843-4E07-9F37-5BA07FACF8D9}
+		{E0A0CE49-F354-4A66-A36E-F7E2C70DD8EC} = {F7CF1F57-5843-4E07-9F37-5BA07FACF8D9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {68B29242-96FE-4030-99DD-0EE192762974}
