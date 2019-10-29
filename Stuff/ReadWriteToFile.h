@@ -95,7 +95,7 @@ namespace ReadWriteToFile
 		}
 		else
 		{
-			std::cout << "Write to file error.\n";
+			std::cout << "Read from file error.\n";
 		}
 	}
 
